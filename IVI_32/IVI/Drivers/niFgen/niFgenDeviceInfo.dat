@@ -1,0 +1,100 @@
+<ProviderID>NI-FGEN</ProviderID>
+<ProviderName>NI Signal Generator</ProviderName>
+<Version>2.6.0</Version>
+
+<DeviceData>
+
+<DefaultDevice>5421</DefaultDevice>
+
+<Device>
+<ProductID>5411</ProductID>
+<Name>NI 5411</Name>
+<MinWfmSize>256</MinWfmSize>
+<WfmQuantum>8</WfmQuantum>
+<MaxSampleRate>40E6</MaxSampleRate>
+<DefaultSampleRate>40E6</DefaultSampleRate>
+<DefaultDataType>I16</DefaultDataType>
+</Device>
+
+<Device>
+<ProductID>5412</ProductID>
+<Name>NI 5412</Name>
+<MinWfmSize>4</MinWfmSize>
+<WfmQuantum>4</WfmQuantum>
+<MaxSampleRate>100E6</MaxSampleRate>
+<DefaultSampleRate>100E6</DefaultSampleRate>
+<DefaultDataType>I16</DefaultDataType>
+</Device>
+
+<Device>
+<ProductID>5421</ProductID>
+<Name>NI 5421</Name>
+<MinWfmSize>4</MinWfmSize>
+<WfmQuantum>4</WfmQuantum>
+<MaxSampleRate>105E6</MaxSampleRate>
+<DefaultSampleRate>100E6</DefaultSampleRate>
+<DefaultDataType>I16</DefaultDataType>
+</Device>
+
+<Device>
+<ProductID>5422</ProductID>
+<Name>NI 5422</Name>
+<MinWfmSize>4</MinWfmSize>
+<WfmQuantum>4</WfmQuantum>
+<MaxSampleRate>200E6</MaxSampleRate>
+<DefaultSampleRate>200E6</DefaultSampleRate>
+<DefaultDataType>I16</DefaultDataType>
+</Device>
+
+<Device>
+<ProductID>5431</ProductID>
+<Name>NI 5431</Name>
+<MinWfmSize>256</MinWfmSize>
+<WfmQuantum>8</WfmQuantum>
+<MaxSampleRate>40E6</MaxSampleRate>
+<DefaultSampleRate>40E6</DefaultSampleRate>
+<DefaultDataType>I16</DefaultDataType>
+</Device>
+
+<Device>
+<ProductID>5441</ProductID>
+<Name>NI 5441</Name>
+<MinWfmSize>4</MinWfmSize>
+<WfmQuantum>4</WfmQuantum>
+<MaxSampleRate>105E6</MaxSampleRate>
+<DefaultSampleRate>100E6</DefaultSampleRate>
+<DefaultDataType>I16</DefaultDataType>
+</Device>
+
+<Device>
+<ProductID>5442</ProductID>
+<Name>NI 5442</Name>
+<MinWfmSize>1</MinWfmSize>
+<WfmQuantum>1</WfmQuantum>
+<MaxSampleRate>105E6</MaxSampleRate>
+<DefaultSampleRate>100E6</DefaultSampleRate>
+<DefaultDataType>I16</DefaultDataType>
+</Device>
+
+<Device>
+<ProductID>5450</ProductID>
+<Name>NI 5450</Name>
+<MinWfmSize>2</MinWfmSize>
+<WfmQuantum>2</WfmQuantum>
+<MaxSampleRate>400E6</MaxSampleRate>
+<DefaultSampleRate>400E6</DefaultSampleRate>
+<DefaultDataType>I16</DefaultDataType>
+</Device>
+
+<Device>
+<ProductID>5451</ProductID>
+<Name>NI 5451</Name>
+<MinWfmSize>2</MinWfmSize>
+<WfmQuantum>2</WfmQuantum>
+<MaxSampleRate>400E6</MaxSampleRate>
+<DefaultSampleRate>400E6</DefaultSampleRate>
+<DefaultDataType>I16</DefaultDataType>
+</Device>
+
+</DeviceData>
+

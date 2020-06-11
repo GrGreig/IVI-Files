@@ -1,0 +1,20 @@
+[SwitchNames]
+k01 = 0
+k23 = 16
+k45 = 32
+k67 = 48
+k03 = 64
+k47 = 80
+k07 = 96
+kcom = 112
+k89 = 128
+k1011 = 144
+k1213 = 160
+k1415 = 176
+k811 = 192
+k1215 = 208
+k815 = 224
+
+[Misc]
+isNonLatchingSwitch = 0
+relayClosedCounting = 0

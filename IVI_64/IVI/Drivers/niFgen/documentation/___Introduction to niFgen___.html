@@ -1,0 +1,407 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Introduction to niFgen</title>
+
+<style type="text/css">
+<!--
+/***************************************************/
+/* MINIMAL STYLES */
+/* The following section defines styles that every HTML Help project should need. */
+
+/* Specifies White Background color */
+body {background-color:#FFFFFF; font-family:Verdana, sans-serif; font-size:8pt; color: #000000;}
+
+/* The default style of P is red to alert you that you need to apply a style class, such as Body. */
+P { margin-top:6.00pt; margin-bottom:6.00pt;}
+
+BR { font-size:4.00pt; }
+
+/* Use H1 for all topic headings. */
+H1 { margin-top:3.00pt; margin-bottom:3.00pt; font-size:150%; font-weight:bold;  }
+
+/* Use H2 for second-level headings. */
+H2 { margin-top:9.00pt; margin-bottom:3.00pt; font-size:125%; font-weight:bold;  }
+
+/* Use H3 for third-level headings. */
+H3 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+/* Use H4 for fourth-level headings. */
+H4 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+/* H5 and H6 have the same definition as H4 because you should not need this level of heading in one topic. If you need to use H5 or H6, consider breaking up your topic into more than one topic. */
+H5 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+H6 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+/* Use the Body style class for normal paragraphs. */
+P.Body {  }
+
+/* Use the Anchor style class for graphic references on a line by themselves. */
+P.Anchor { font-size:125%;  }
+
+/* Use the Indent style classes to indent a paragraph. If you need to indent text below a list item, use <br><br> to start the new paragraph within the same set of <li></li> tags. If you need to indent a list within another list, nest the indented list within the first list's set of <ol></ol> or <ul></ul> tags. */
+P.Indent1 { margin-left:12.00pt; margin-bottom:3.00pt;  }
+P.Indent2 { margin-left:24.00pt; margin-bottom:3.00pt;  }
+P.Indent3 { margin-left:36.00pt; margin-bottom:3.00pt;  }
+P.Indent4 { margin-left:48.00pt; margin-bottom:3.00pt;  }
+P.Indent5 { margin-left:60.00pt; margin-bottom:3.00pt;  }
+
+/* Use the LI style for all list items. */
+LI { margin-top:3.00pt; margin-bottom:3.00pt; }
+
+/* Use the OL style for numbered lists. You do not have to type the number for each list item in a numbered list. */
+OL { margin-left:22.00pt; margin-top:3.00pt; margin-bottom:3.00pt; text-indent:0pt; list-style-type: decimal; }
+
+/* Use the OL style for numbered lists. Nested lists will use the bullet types according to the nesting scheme below */
+ol ol {list-style-type:lower-alpha}
+ol ol ol {list-style-type:decimal}
+ol ol ol ol {list-style-type:lower-alpha}
+ol ol ol ol ol {list-style-type:decimal}
+ol ol ol ol ol ol {list-style-type:lower-alpha}
+ol ol ol ol ol ol ol {list-style-type:decimal}
+ol ol ol ol ol ol ol ol {list-style-type:lower-alpha}
+
+/* Use the EquationNum style class for numbered lists of equations. You do not have to type the number for each list item in a numbered list. */
+OL.EquationNum { margin-left:36.00pt; text-indent:0pt; list-style-type: decimal; }
+
+/* Use the List-abc style class for lettered lists. You do not have to type the letter for each list item in a lettered list. */
+OL.List-abc { margin-left:22.00pt; text-indent:0pt; list-style-type:lower-alpha; }
+
+/* Use the UL style for bulleted lists. You do not have to type the bullet for each list item in a bulleted list. */
+UL { margin-left:22.00pt; text-indent:0pt; margin-top:3.00pt; margin-bottom:3.00pt; list-style-type: disc; }
+
+/* Use the UL style for bulleted lists. Nested lists will use the bullet types according to the nesting scheme below. */
+ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul ul ul ul ul ul{list-style-image: none;list-style-type: circle}
+
+/* Use the List-Box style class for bulleted lists with boxes instead of bullets. You do not have to type the box for each list item in a box list. */
+UL.List-Box {list-style-image: none;list-style-type: square}
+
+Table { font-size:100%; }
+
+/* Use the Borderless style class for tables that do not need borders, such as for 2-column or 3-column lists with no headings. */
+Table.Borderless { border:none; }
+
+/* Use the Bordered style class for tables that need borders. */
+Table.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; border-collapse: collapse; }
+
+/* Use the TD style for table cells in Borderless or Borderless-Wide tables. */
+TD { vertical-align:top; padding:3px; }
+
+/* Use the Bordered style class for table headings and cells in Bordered or Bordered-Wide tables. */
+.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; }
+
+/* Use the Icon style class for table cells that contain note, caution, warning, or tip icons, or LabVIEW datatype terminals. */
+TD.Icon { width:40px; }
+
+/* Use the TH style for table heading cells in Borderless or Borderless-Wide tables. */
+TH { font-weight:bold; padding:3px; }
+
+/* Use the Left-Align style class for table headings and cells that you want to left align instead of center align. */
+.Left-Align { text-align:left; }
+
+/***************************************************/
+/* CHARACTER FORMATS */
+/* The following section defines character formats that every HTML Help project should need. */
+
+/* CHARACTER FORMATS Updated to conform with the CSE HTML Validator Pro */
+/* The following section defines character formats that every HTML Help project should need. */
+
+/* Use the Dark-Red format for warnings or cautions. */
+.Dark-Red { color: #800000 }
+
+/* Use the Monospace format for code or syntax examples. */
+.Monospace { font-family: "Courier New",monospace; font-size: 100%; }
+
+/* Use the Monospace-Bold format for messages and responses that the computer automatically prints to the screen. */
+.Monospace-Bold { font-family: "Courier New",monospace; font-weight: bold; font-size: 100%; }
+
+/* Use the Monospace-Italic format to denote text that is a placeholder for a word or value that the user must supply. */
+.Monospace-Italic { font-family: "Courier New",monospace; font-style: italic; font-size: 100%; }
+
+/* small class */
+.smallFont { font-size:87.5%; }
+
+/* Bold class */
+.Bold { font-weight: bold; }
+
+/* Italic class */
+.Italic { font-style: italic; }
+
+/* Use the Platform format to denote a specific platform. */
+.Platform { color: #0000FF; font-weight: bold; }
+
+/* Use the Symbol format for characters not in the Verdana character set. Use this format sparingly. When possible, you should use the correct ASCII code for the symbol or use a graphic to recreate the symbol. */
+.Symbol { font-family: Symbol; }
+
+/* Use the Red-text format to call attention to text that needs  information added or edited by techcomm */
+.Red-text {color: #FF0000;}
+
+/* Use the Green-Underline format for the green defintion in the conventions topic */
+.Green-Underline {color: #007700; text-decoration : underline;}
+
+/* Use the glossButton format for the glossary buttons used in the glossary topic */
+.glossButton { font-size:12px; color:black; }
+
+/* Use for text sections and hyphenated words that should not break at line wraps */
+.nobreak{white-space:nowrap}
+
+/* Use for template instructions. */
+.instructions{color:red; font-style:italic}
+
+/*Use for words and text sections that do not need to be localized */
+.DNL { }
+
+/* The following styles define the color of links. */
+a:link { color: #007700 }
+a:visited { color: #7F007F }
+a:link:hover { color: #FF0000 }
+a:link:active { color: #FF0000 }
+
+/***************************************************/
+/* Forms */
+
+form { margin-top:0pt; margin-bottom:3pt; color:black; }
+select { font-size:100%; color:black; }
+
+/*******************************************************/
+/* Margins */
+/* Use these styles for block-level elements inside tables cells or list items where you do not want extra padding at the top or bottom of a cell. */
+.noTopMargin { margin-top:0pt;}
+.noBottomMargin { margin-bottom:0pt;}
+
+/***************************************************/
+/* CODE STYLES */
+/* The following section defines styles that you need to format entire sections of code or syntax examples. If you have just a few words you need to format as a code or syntax example, use the Monospace character format. */
+
+P.Code { margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace;  }
+P.Code1 { margin-left:12.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace;  }
+P.Code2 { margin-left:24.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace;  }
+P.Code3 { margin-left:36.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace;  }
+-->
+</style>
+
+</head>
+
+<body>
+
+<h1>___Introduction to niFgen___</h1>
+<p class="Body">Thank you for using NI-FGEN. This file contains important information about NI-FGEN and is organized into the following sections:</p>
+
+<p class="Body"><a href="#driverd">Driver Documentation</a></p>
+	<p class="Body"><a href="#examples">Examples</a></p>
+	<p class="Body"><a href="#connecting">Connecting to the Instrument</a></p>
+	<p class="Body"><a href="#configuring">Configuring Instrument Settings</a>	</p>
+<p class="Body"><a href="#Issues">Known Issues</a></p>
+<p class="Body"><a href="#support">Contacting Support</a>	</p>
+<p class="Body"><a href="#trademarks">Trademarks</a></p>
+    <hr>
+
+<h2><a name="driverd" id="driverd">Driver Documentation</a></h2>
+<h3>Installed Software</h3>
+<ul>
+	<li><span class="Monospace-Italic">&#60;NIDocDir&#62;</span> is an alias for the following National Instruments file folder location: <span class="Monospace">Users\Public\Public Documents\National Instruments</span></li>
+	<li><span class="Monospace-Italic">&#60;IVIROOTDIR32&#62;</span> is an alias for the following National Instruments file folder location:
+	<ul>
+		<li><strong>(32-bit)</strong> <span class="Monospace">Program Files\IVI Foundation\IVI\</span></li>
+		<li><strong>(64-bit)</strong> <span class="Monospace">Program Files (x86)\IVI Foundation\IVI\</span>
+		  <table class="Borderless">
+			<tr>
+				<td class="Borderless"><strong>Note</strong></td>
+				<td><span class="Monospace-Italic">$(IVIROOTDIR32)</span> is configured as an environment variable on the target system.</td>
+			</tr>
+			<tr>
+				<td class="Borderless"></td>
+				<td class="Borderless">If you upgraded an installation of IVI, your files may be located in the following location:
+				<ul>
+					<li><strong>(32-bit)</strong> <span class="Monospace">Program Files\IVI\</span></li>
+					<li><strong>(64-bit)</strong> <span class="Monospace">Program Files (x86)\IVI\</span></li>
+				</ul>
+				</td>
+			</tr>
+		</table>
+		</li>
+	</ul>
+	</li>
+	<li><span class="Monospace-Italic">&#60;IVIROOTDIR64&#62;</span> is an alias for the following National Instruments file folder location:
+	<ul>
+		<li><strong>(64-bit)</strong> <span class="Monospace">Program Files\IVI Foundation\IVI\</span>			
+		  <table class="Borderless">
+			<tr>
+				<td class="Borderless"><strong>Note</strong></td>
+				<td><span class="Monospace-Italic">$(IVIROOTDIR64)</span> is configured as an environment variable on the target system.</td>
+			</tr>
+		</table>
+		</li>
+	  </ul>
+	</li>
+</ul>
+
+<h4>File Locations</h4>
+
+<table class="Bordered">
+	<tr>
+		<th class="Bordered">Item</th>
+		<th class="Bordered">Installed Location</th>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-FGEN</td>
+		<td class="Bordered"><span class="Monospace-Italic">&#60;IVIROOTDIR32&#62;</span><span class="Monospace">\Drivers\niFgen</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-FGEN Function Panel</td>
+		<td class="Bordered"><span class="Monospace-Italic">&#60;IVIROOTDIR32&#62;</span><span class="Monospace">\Drivers\niFgen\niFgen.fp</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-FGEN Examples</td>
+		<td class="Bordered"><span class="Monospace-Italic">&#60;NIDocDir&#62;</span><span class="Monospace">\niFgen\Examples</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-FGEN Header files</td>
+		<td class="Bordered"><span class="Monospace-Italic">&#60;IVIROOTDIR32&#62;</span><span class="Monospace">\Include</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-FGEN Import Library files (32-bit)</td>
+		<td class="Bordered"><span class="Monospace-Italic">&#60;IVIROOTDIR32&#62;</span><span class="Monospace">\Lib</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-FGEN Import Library files (64-bit)</td>
+		<td class="Bordered"><span class="Monospace-Italic">&#60;IVIROOTDIR32&#62;</span><span class="Monospace">\Lib_x64</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-FGEN DLL (32-bit)</td>
+		<td class="Bordered"><span class="Monospace-Italic">&#60;IVIROOTDIR32&#62;</span><span class="Monospace">\Bin</span></td>
+	</tr>
+</table>
+
+
+<h3>Documentation</h3>
+
+<p class="Body">Documentation for NI-FGEN is located at <span class="Monospace">&#60;IVIROOTDIR32&#62;\Drivers\<span class="Monospace">niFgen</span>\documentation</span>. The documentation set is composed of the following documents.</p>
+
+<table class="Bordered">
+<tbody><tr>
+<th class="Bordered">Document</th>
+<th class="Bordered">Format</th>
+<th class="Bordered">Description</th>
+</tr>
+
+<tr>
+<td class="Bordered"><em>NI Signal Generators Help</em></td>
+<td class="Bordered">HTML/Windows Help</td>
+<td class="Bordered">Contains primary help content for NI-FGEN products. The help is an HTML version of a traditional user manual that includes the following information:
+  <ul>
+<li>An introduction to NI-FGEN</li>
+<li>Hardware device information</li>
+<li>How to get started with application development</li>
+<li>A complete reference for all NI-FGEN programming functions and VIs</li>
+  </ul>
+</td>
+</tr>
+
+<tr>
+<td class="Bordered">Getting started guide for your device</td>
+<td class="Bordered">Printed and PDF</td>
+<td class="Bordered">Contains software and hardware installation, MAX 
+configuration, signal connection, and troubleshooting information for 
+your device.</td>
+</tr>
+
+<tr>
+<td class="Bordered">Specifications for your device</td>
+<td class="Bordered">PDF</td>
+<td class="Bordered">Lists technical specifications for your device.</td>
+</tr>
+
+<tr>
+<td class="Bordered">Calibration procedures for your device</td>
+<td class="Bordered">PDF</td>
+<td class="Bordered">Contains calibration instructions for your device.</td>
+</tr>
+
+<tr>
+<td class="Bordered"><em>NI-FGEN Readme</em></td>
+<td class="Bordered">HTML </td>
+<td class="Bordered">Contains information about supported hardware and operating systems, new features, fixed issues, and legal notices.</td>
+</tr>
+<tr>
+<td class="Bordered"><em>NI-FGEN IVI Compliance Document</em></td>
+<td class="Bordered">TXT</td>
+<td class="Bordered">Contains information about IVI compliance.</td>
+</tr>
+<tr>
+<td class="Bordered"><em>Introduction to niFgen</em></td>
+<td class="Bordered">HTML (this document)</td>
+<td class="Bordered">Contains information about driver documentation, examples, connecting to your instrument, configuring instrument settings, and known issues.</td>
+</tr>
+</tbody></table>
+
+
+<h2><a name="examples" id="examples">Examples</a></h2>
+
+In LabVIEW, you can use the NI Example Finder to search or browse examples. NI-FGEN examples are classified by keyword, so you can search for a particular device or measurement function. In LabVIEW, select <strong>Help</strong>&#0187;<strong>Find Examples</strong> to launch the NI Example Finder. The NI Example Finder offers two ways to access all installed LabVIEW example VIs (including NI-FGEN and Modulation Toolkit examples) and their descriptions:</p>
+<ul>
+<li>Click the <strong>Browse</strong> tab to locate modulation examples by task at
+<strong>Hardware Input and Output</strong>&#0187;<strong>Modular Instruments</strong>&#0187;<strong>NI-FGEN</strong> or by directory structure at <strong>instr</strong>&#0187;<strong>niFgen</strong>.</li>
+<li>
+Click the <strong>Search</strong> tab to search all installed examples by keyword. For example, search for "FGEN" to locate all NI signal generator examples.</li>
+</ul>
+<p class="Body"><strong>Note</strong>&nbsp;&nbsp;The NI Example Finder is also available in LabWindows&#8482;/CVI&#8482; by selecting <strong>Help</strong>&#0187;<strong>Find Examples</strong>.</p>
+
+<p class="Body">You can also access all the installed NI&#8211;FGEN examples for LabVIEW and LabWindows/CVI at <strong>Start</strong>&#0187;<strong>All Programs</strong>&#0187;<strong>National Instruments</strong>&#0187;<strong>NI-FGEN</strong>&#0187;<strong>NI-FGEN Examples</strong>.  </p>
+
+<p class="Body">Examples also are available online that demonstrate integrating NI signal generators with NI toolkit software including the Modulation Toolkit. Refer to <span class="Monospace">ni.com/examples</span> for these examples and for more information. 
+</p>
+
+<!--Begin Windows Readme Boilerplate content from //TechComm/Templates/Readme Templates/Windows Boilerplate/readme.html -->
+<!--Critical updates-->
+
+<h2><a name="connecting" id="connecting">Connecting to the Instrument</a></h2>
+
+<p class="Body">The getting started guide for your device explains how to get started with an NI-FGEN IVI driver in different development environments. The getting started guide is located at <span class="Monospace"><em>&lt;IVIROOTDIR32&gt;</em>\Drivers\niFgen\documentation</span>.</p>
+
+
+<h2><a name="installed_files" id="installed_files">
+Configuring Instrument Settings</a></h2>
+
+<p class="Body"> An IVI instrument driver implements each readable or writable  setting on the instrument. For example, a driver uses an attribute to set the vertical voltage range on an oscilloscope.</p>
+<p class="Body">IVI instrument drivers export high-level functions that allow you  to set the value of multiple attributes in one function call. This feature can be useful when you need to send settings to an instrument in a particular order.</p>
+<p class="Body">IVI  instrument drivers also allow you to modify and get a value of individual  attributes. You do this by calling &lt;<em>Prefix</em>&gt;_SetAttributeVi&lt;<em>data  type</em>&gt; and &lt;<em>Prefix</em>&gt;_GetAttributeVi&lt;<em>data  type</em>&gt;  functions. To use these functions correctly, you must know the  data type, valid values, and ID of the attribute you want to access. How you access the attribute depends on the development environment you are using. </p>
+<h3>NI LabWindows/CVI Users</h3>
+  <p class="Body"> Open the <span class="Monospace">niFgen.fp</span>
+ file, expand the Configuration Functions class, and select one of the 
+Set/GetAttribute  functions.&nbsp; From the function panel  window, 
+click on the <strong>Attribute ID</strong> control  to display a dialog 
+box containing a hierarchical list of the available attributes. If you 
+do  not see the attribute you want, click on the <strong>All Data Types</strong> option in the Data Type pane of the dialog box.</p>
+  <h3>NI LabVIEW Users</h3>
+  <p class="Body">Use the niFgen Property Node to access the specific properties of the driver. The property node is available in LabVIEW on the LabVIEW Functions palette at&nbsp;<strong>Measurement I/O&raquo;NI-FGEN</strong>.</p>
+  <p class="Body">Refer to the <em>Programming </em>section  of the <em>NI Signal Generators Help</em> for more information about NI-FGEN properties.</p>
+  
+  <h3>Visual C/C++ and Visual C#/Visual Basic .NET Users</h3>
+<p class="Body">Refer to the <em>Programming</em> section of the <em>NI Signal Generators Help</em> for more information about attribute IDs, data types, and valid values, as well as information on device support.</p>
+
+<p class="Body">To use the .NET API, you must install the the .NET class libraries or the .NET Wrapper in addition to the NI device driver. For information about versions of the .NET Framework and the drivers each supports, as well as the download location of the installer files, refer to the <em>National Instruments .NET Driver Support</em> document at <span class="Monospace">ni.com/info</span> and enter Info Code <a href="http://digital.ni.com/express.nsf/bycode/NETAPIdriversupport" target="_blank">NETAPIdriversupport</a>.</p>
+  
+<h2><a name="configuring" id="configuring">Configuring Driver Settings</a></h2>
+<p>IVI instrument drivers implement inherent capabilities, such as  simulation, range checking, state caching, coercion recording, interchangeability  checking, and instrument status checking. You can enable/disable these  features either programmatically using an attribute or statically using a  configuration utility.</p>
+
+<h2><a name="Issues" id="Issues">Known Issues</a></h2>
+
+<p class="Body">You can access the software known issues list online.  Refer to the NI-FGEN  Readme for the most recent driver version for a link to the most up-to-date NI-FGEN Known Issues List web page on <a href="http://www.ni.com" target="_blank"><span class="DNL">ni.com</span></a>.</p>
+
+<h2><a name="support" id="support">Contacting Support</a></h2>
+
+<p class="Body">If  you have feedback or need help using this driver, contact <a href="http://www.ni.com/support/" target="_blank"><span class="DNL">ni.com/support</span></a>.</p>
+
+<h2><a name="trademarks">Trademarks</a></h2>
+<p class="Body">Refer to the <em><span class="DNL">NI Trademarks and Logo Guidelines</span></em> at <a href="http://digital.ni.com/express.nsf/bycode/rdtrad" target="_blank"><span class="DNL">ni.com/trademarks</span></a> for information on <span class="DNL">National Instruments</span> trademarks. Other product and company names mentioned herein are trademarks or trade names of their respective companies.<!--end Windows Readme Boilerplate content--></p>
+</body>
+</html>

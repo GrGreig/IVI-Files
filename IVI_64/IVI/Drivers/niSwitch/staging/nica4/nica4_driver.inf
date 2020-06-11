@@ -1,0 +1,181 @@
+; Copyright 2019 National Instruments Corporation
+;
+; nica4_driver.inf
+;
+
+
+[Version]
+Signature=$WINDOWS NT$
+Class=%nica4_driver_className%
+ClassGUID={cf781e93-a670-42a8-90a1-93354cdc3579}
+Provider=%NIString0%
+DriverVer=08/06/2019,19.1.0.49152
+CatalogFile=nica4_driver.cat
+DriverPackageDisplayName=%nica4_driver_SvcDesc%
+
+[ClassInstall32]
+AddReg=AddClassToRegistry
+
+[ControlFlags]
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_76EC1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_76ED1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_76EE1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_76EF1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_76F01093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_76F11093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_776A1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_77681093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_77691093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_771D1093
+
+[Manufacturer]
+%NIString0%=pci_Model,NTx86,NTamd64
+
+[pci_Model.NTx86]
+%dev0_dDesc%=dev0_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76EC1093
+%dev1_dDesc%=dev1_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76ED1093
+%dev2_dDesc%=dev2_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76EE1093
+%dev3_dDesc%=dev3_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76EF1093
+%dev4_dDesc%=dev4_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76F01093
+%dev5_dDesc%=dev5_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76F11093
+%dev6_dDesc%=dev6_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_776A1093
+%dev7_dDesc%=dev7_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_77681093
+%dev8_dDesc%=dev8_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_77691093
+%dev9_dDesc%=dev9_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_771D1093
+
+[pci_Model.NTamd64]
+%dev0_dDesc%=dev0_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76EC1093
+%dev1_dDesc%=dev1_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76ED1093
+%dev2_dDesc%=dev2_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76EE1093
+%dev3_dDesc%=dev3_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76EF1093
+%dev4_dDesc%=dev4_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76F01093
+%dev5_dDesc%=dev5_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76F11093
+%dev6_dDesc%=dev6_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_776A1093
+%dev7_dDesc%=dev7_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_77681093
+%dev8_dDesc%=dev8_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_77691093
+%dev9_dDesc%=dev9_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_771D1093
+
+[dev0_Cfg]
+CopyFiles=nica4_driver_CopyFiles
+
+[dev0_Cfg.Services]
+AddService= nica4_driver, 0x00000002, nica4_driver_Service_Inst
+
+
+
+[dev1_Cfg]
+CopyFiles=nica4_driver_CopyFiles
+
+[dev1_Cfg.Services]
+AddService= nica4_driver, 0x00000002, nica4_driver_Service_Inst
+
+
+
+[dev2_Cfg]
+CopyFiles=nica4_driver_CopyFiles
+
+[dev2_Cfg.Services]
+AddService= nica4_driver, 0x00000002, nica4_driver_Service_Inst
+
+
+
+[dev3_Cfg]
+CopyFiles=nica4_driver_CopyFiles
+
+[dev3_Cfg.Services]
+AddService= nica4_driver, 0x00000002, nica4_driver_Service_Inst
+
+
+
+[dev4_Cfg]
+CopyFiles=nica4_driver_CopyFiles
+
+[dev4_Cfg.Services]
+AddService= nica4_driver, 0x00000002, nica4_driver_Service_Inst
+
+
+
+[dev5_Cfg]
+CopyFiles=nica4_driver_CopyFiles
+
+[dev5_Cfg.Services]
+AddService= nica4_driver, 0x00000002, nica4_driver_Service_Inst
+
+
+
+[dev6_Cfg]
+CopyFiles=nica4_driver_CopyFiles
+
+[dev6_Cfg.Services]
+AddService= nica4_driver, 0x00000002, nica4_driver_Service_Inst
+
+
+
+[dev7_Cfg]
+CopyFiles=nica4_driver_CopyFiles
+
+[dev7_Cfg.Services]
+AddService= nica4_driver, 0x00000002, nica4_driver_Service_Inst
+
+
+
+[dev8_Cfg]
+CopyFiles=nica4_driver_CopyFiles
+
+[dev8_Cfg.Services]
+AddService= nica4_driver, 0x00000002, nica4_driver_Service_Inst
+
+
+
+[dev9_Cfg]
+CopyFiles=nica4_driver_CopyFiles
+
+[dev9_Cfg.Services]
+AddService= nica4_driver, 0x00000002, nica4_driver_Service_Inst
+
+
+
+
+
+
+[nica4_driver_CopyFiles]
+nica4_driver.sys
+
+[SourceDisksFiles]
+nica4_driver.sys=1
+
+[SourceDisksNames]
+1=%installationMedia%
+
+[DestinationDirs]
+DefaultDestDir=12
+
+[AddClassToRegistry]
+HKR,,,0,%nica4_driver_className%
+
+[nica4_driver_Service_Inst]
+DisplayName    = %nica4_driver_SvcDesc%
+ServiceType    = 1        ; SERVICE_KERNEL_DRIVER
+StartType      = 3        ; SERVICE_DEMAND_START
+ErrorControl   = 1        ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\nica4_driver.sys
+LoadOrderGroup = Base
+
+[Strings]
+NIString0            = "National Instruments"
+dev0_dDesc        = "NI PXIe-2524"
+dev1_dDesc        = "NI PXIe-2525"
+dev2_dDesc        = "NI PXIe-2526"
+dev3_dDesc        = "NI PXIe-2737"
+dev4_dDesc        = "NI PXIe-2738"
+dev5_dDesc        = "NI PXIe-2739"
+dev6_dDesc        = "NI PXIe-2746"
+dev7_dDesc        = "NI PXIe-2747"
+dev8_dDesc        = "NI PXIe-2748"
+dev9_dDesc        = "NI Unconfigured CA4 Switch"
+nica4_driver_className = "MIDevice"
+nica4_driver_SvcDesc      = "NI Switch Common Architecture 4 Driver"
+installationMedia    = "Installation Media"
+
+
+

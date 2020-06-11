@@ -1,0 +1,1821 @@
+FPAttributeValueFile
+
+n  SubType="IVI"
+
+n  SubVersion="1"
+
+v attrComplianceLimitSymmetry DataType="i"
+ NIDCPOWER_VAL_SYMMETRIC (0)
+  "Compliance limits are specified symmetrically about 0."
+  
+ NIDCPOWER_VAL_ASYMMETRIC (1)
+  "Compliance limits can be specified asymmetrically with respect to 0."
+
+v attrCurrentLimitBehaviorRangeTable DataType="i"
+ NIDCPOWER_VAL_CURRENT_REGULATE (0)
+  "When the output current reaches the value of the"
+  " NIDCPOWER_ATTR_CURRENT_LIMIT attribute, the power supply restricts the"
+  " output voltage such that the output current is not greater than the value"
+  " of the NIDCPOWER_ATTR_CURRENT_LIMIT attribute."
+
+v attrPowerSourceRangeTable DataType="i"
+ NIDCPOWER_VAL_INTERNAL (1003)
+  "Uses the PXI chassis power source."
+
+ NIDCPOWER_VAL_AUXILIARY (1004)
+  "Uses the auxiliary power source connected to the device."
+
+ NIDCPOWER_VAL_AUTOMATIC (1005)
+  "Uses the auxiliary power source if it is available; otherwise uses the PXI chassis power source."
+
+v attrPowerSourceInUseRangeTable DataType="i"
+ NIDCPOWER_VAL_INTERNAL (1003)
+  "Uses the PXI chassis power source."
+
+ NIDCPOWER_VAL_AUXILIARY (1004)
+  "Uses the auxiliary power source connected to the device. Only the NI PXI-4110,"
+  " NI PXIe-4112, NI PXIe-4113, and NI PXI-4130 support this value. This is the only supported value"
+  " for the NI PXIe-4112 and NI PXIe-4113."
+
+v attrSelfCalibrationPersistenceRangeTable DataType="i"
+ NIDCPOWER_VAL_KEEP_IN_MEMORY (1045)
+  "Keep new self calibration values in memory only."
+
+ NIDCPOWER_VAL_WRITE_TO_EEPROM (1046)
+  "Write new self calibration values to hardware."
+
+v measurementTypeRangeTable DataType="i"
+ NIDCPOWER_VAL_MEASURE_CURRENT (0)
+  "The power supply measures current."
+
+ NIDCPOWER_VAL_MEASURE_VOLTAGE (0)
+  "The power supply measures voltage."
+
+
+v outputStateRangeTable DataType="i"
+ NIDCPOWER_VAL_OUTPUT_CONSTANT_VOLTAGE (0)
+  "The power supply is maintaining a constant voltage by adjusting the current."
+
+ NIDCPOWER_VAL_OUTPUT_CONSTANT_CURRENT (0)
+  "The power supply is maintaining a constant current by adjusting the voltage."
+
+ NIDCPOWER_VAL_OUTPUT_OVER_VOLTAGE (0)
+  ""
+
+ NIDCPOWER_VAL_OUTPUT_OVER_CURRENT (0)
+  ""
+
+ NIDCPOWER_VAL_OUTPUT_UNREGULATED (0)
+  ""
+
+
+v rangeTypeRangeTable DataType="i"
+ NIDCPOWER_VAL_RANGE_CURRENT (0)
+  "NI-DCPower configures the current range."
+
+ NIDCPOWER_VAL_RANGE_VOLTAGE (0)
+  "NI-DCPower configures the voltage range."
+
+v attrOutputFunctionRangeTable DataType="i"
+ NIDCPOWER_VAL_DC_VOLTAGE (1006)
+  "Sets the output function to DC voltage."
+ NIDCPOWER_VAL_DC_CURRENT (1007)
+  "Sets the output function to DC current."
+ NIDCPOWER_VAL_PULSE_VOLTAGE (1049)
+  " "
+ NIDCPOWER_VAL_PULSE_CURRENT (1050)
+  " "
+
+v attrSenseRangeTable DataType="i"
+ NIDCPOWER_VAL_LOCAL (1008)
+  "Local sensing is selected."
+ NIDCPOWER_VAL_REMOTE (1009)
+  "Remote sensing is selected."
+
+v attrOutputCapacitanceRangeTable DataType="i"
+ NIDCPOWER_VAL_LOW (1010)
+  "Output Capacitance is low."
+ NIDCPOWER_VAL_HIGH (1011)
+  "Output Capacitance is high."
+
+v attrAutorangeRangeTable DataType="i"
+ NIDCPOWER_VAL_OFF (0)
+  "Autoranging is disabled."
+ NIDCPOWER_VAL_ON (1)
+  "Autoranging is enabled."
+
+v Boolean_values DataType="i"
+ VI_TRUE (1)
+  "True"
+
+ VI_FALSE (0)
+  "False"
+
+v attrSourceModeRangeTable DataType="i"
+ NIDCPOWER_VAL_SINGLE_POINT (1020)
+  "The source unit applies a single source configuration."
+ NIDCPOWER_VAL_SEQUENCE (1021)
+  "The source unit applies a list of voltage or current configurations sequentially."
+
+v attrAutoZeroRangeTable DataType="i"
+ NIDCPOWER_VAL_OFF (0)
+  "Disables auto zero."
+ NIDCPOWER_VAL_ONCE (1024)
+  "Makes zero conversions following the first measurement after initiating the device."
+  " The device uses these zero conversions for the preceding measurement and future"
+  " measurements until the device is reinitiated."
+ NIDCPOWER_VAL_ON (1)
+  "Makes zero conversions for every measurement."
+
+v attrApertureTimeUnitsRangeTable DataType="i"
+ NIDCPOWER_VAL_SECONDS (1028)
+  "Specifies aperture time in seconds."
+ NIDCPOWER_VAL_POWER_LINE_CYCLES (1029)
+  "Specifies aperture time in power line cycles (PLCs)."
+
+v attrPowerLineFrequencyRangeTable DataType="d"
+ NIDCPOWER_VAL_50_HERTZ (50.0)
+  "Specifies a power line frequency of 50 Hz."
+ NIDCPOWER_VAL_60_HERTZ (60.0)
+  "Specifies a power line frequency of 60 Hz."
+
+v attrMeasureWhenRangeTable DataType="i"
+ NIDCPOWER_VAL_AUTOMATICALLY_AFTER_SOURCE_COMPLETE (1025)
+  "Acquires a measurement after each Source Complete event completes."
+ NIDCPOWER_VAL_ON_DEMAND (1026)
+  "Acquires a measurement when the niDCPower_Measure function or niDCPower_MeasureMultiple function is called."
+ NIDCPOWER_VAL_ON_MEASURE_TRIGGER (1027)
+  "Acquires a measurement when a Measure trigger is received."
+
+v attrTriggerTypeRangeTable DataType="i"
+ NIDCPOWER_VAL_NONE (1012)
+  "No trigger is configured."
+ NIDCPOWER_VAL_DIGITAL_EDGE (1014)
+  "The data operation starts when a digital edge is detected."
+ NIDCPOWER_VAL_SOFTWARE_EDGE (1015)
+  "The data operation starts when a software trigger occurs. "
+
+v attrMeasureTriggerTypeRangeTable DataType="i"
+ NIDCPOWER_VAL_DIGITAL_EDGE (1014)
+  "The data operation starts when a digital edge is detected."
+ NIDCPOWER_VAL_SOFTWARE_EDGE (1015)
+  "The data operation starts when a software trigger occurs. "
+
+v attrDigitalEdgeRangeTable DataType="i"
+ NIDCPOWER_VAL_RISING (1016)
+  "Asserts the trigger on the rising edge of the digital signal."
+ NIDCPOWER_VAL_FALLING (1017)
+  "Asserts the trigger on the falling edge of the digital signal."
+
+v attrPulsePolarityRangeTable DataType="i"
+ NIDCPOWER_VAL_ACTIVE_HIGH (1018)
+  "A high pulse occurs when the event is generated."
+  " The exported signal is low level both before and after the event is generated."
+ NIDCPOWER_VAL_ACTIVE_LOW (1019)
+  "A low pulse occurs when the event is generated."
+  " The exported signal is high level both before and after the event is generated."
+
+v attrTransientResponseRangeTable DataType="i"
+ NIDCPOWER_VAL_NORMAL (1038)
+  "The output responds to changes in load at a normal speed."
+ NIDCPOWER_VAL_FAST (1039)
+  "The output responds to changes in load quickly."
+ NIDCPOWER_VAL_SLOW (1041)
+  "The output responds to changes in load slowly."
+ NIDCPOWER_VAL_CUSTOM (1042)
+  "The output responds to changes in load based on specified values."
+
+v attrDCNoiseRejectionRangeTable DataType="i"
+ NIDCPOWER_VAL_DC_NOISE_REJECTION_NORMAL (1044)
+  "Normal rejection of DC noise."
+ NIDCPOWER_VAL_DC_NOISE_REJECTION_SECOND_ORDER (1043)
+  "Second-order rejection of DC noise."
+
+0 niDCPower_SetAttributeViInt32 3 4 false s DataType="ViInt32"
+0 niDCPower_GetAttributeViInt32 3 4 false g DataType="ViInt32"
+0 niDCPower_CheckAttributeViInt32 3 4 false s DataType="ViInt32"
+0 niDCPower_SetAttributeViReal64 3 4 false s DataType="ViReal64"
+0 niDCPower_GetAttributeViReal64 3 4 false g DataType="ViReal64"
+0 niDCPower_CheckAttributeViReal64 3 4 false s DataType="ViReal64"
+0 niDCPower_SetAttributeViInt64 3 4 false s DataType="ViInt64"
+0 niDCPower_GetAttributeViInt64 3 4 false g DataType="ViInt64"
+0 niDCPower_CheckAttributeViInt64 3 4 false s DataType="ViInt64"
+0 niDCPower_SetAttributeViSession 3 4 false s DataType="ViSession"
+0 niDCPower_GetAttributeViSession 3 4 false g DataType="ViSession"
+0 niDCPower_CheckAttributeViSession 3 4 false s DataType="ViSession"
+0 niDCPower_SetAttributeViBoolean 3 4 false s DataType="ViBoolean"
+0 niDCPower_GetAttributeViBoolean 3 4 false g DataType="ViBoolean"
+0 niDCPower_CheckAttributeViBoolean 3 4 false s DataType="ViBoolean"
+0 niDCPower_SetAttributeViString 3 4 false s DataType="ViString"
+0 niDCPower_GetAttributeViString 3 5 false g DataType="ViString"
+0 niDCPower_CheckAttributeViString 3 4 false s DataType="ViString"
+
+1 all "Source"
+ "Attributes that configure the source unit."
+ ""
+
+2 all "Source Mode" NIDCPOWER_ATTR_SOURCE_MODE ViInt32 gs attrSourceModeRangeTable
+ "Specifies whether to run a single output point or a sequence. Refer to the Single Point Source Mode and Sequence Source"
+ " Mode topics in the NI DC Power Supplies and SMUs Help for more information about source modes.\n\n"
+ "Default value: NIDCPOWER_VAL_SINGLE_POINT"
+ " "
+
+2 all "Output Function" NIDCPOWER_ATTR_OUTPUT_FUNCTION ViInt32 gs attrOutputFunctionRangeTable
+ "Configures the function to generate on the specified channel(s).\n\n"
+ "When NIDCPOWER_VAL_DC_VOLTAGE is selected, the device generates the desired voltage level on the output as long as the"
+ " output current is below the current limit. You can use the following attributes to configure the channel when"
+ " NIDCPOWER_VAL_DC_VOLTAGE is selected:\n"
+ "NIDCPOWER_ATTR_VOLTAGE_LEVEL\n"
+ "NIDCPOWER_ATTR_CURRENT_LIMIT\n"
+ "NIDCPOWER_ATTR_CURRENT_LIMIT_HIGH\n"
+ "NIDCPOWER_ATTR_CURRENT_LIMIT_LOW\n"
+ "NIDCPOWER_ATTR_VOLTAGE_LEVEL_RANGE\n"
+ "NIDCPOWER_ATTR_CURRENT_LIMIT_RANGE\n"
+ "NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY\n\n"
+ "When NIDCPOWER_VAL_DC_CURRENT is selected, the device generates the desired current level on the output as long as the"
+ " output voltage is below the voltage limit. You can use the following attributes to configure the channel when"
+ " NIDCPOWER_VAL_DC_CURRENT is selected:\n"
+ "NIDCPOWER_ATTR_CURRENT_LEVEL\n"
+ "NIDCPOWER_ATTR_VOLTAGE_LIMIT\n"
+ "NIDCPOWER_ATTR_VOLTAGE_LIMIT_HIGH\n"
+ "NIDCPOWER_ATTR_VOLTAGE_LIMIT_LOW\n"
+ "NIDCPOWER_ATTR_CURRENT_LEVEL_RANGE\n"
+ "NIDCPOWER_ATTR_VOLTAGE_LIMIT_RANGE\n"
+ "NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY\n\n"
+
+ "When NIDCPOWER_VAL_PULSE_VOLTAGE is selected, the device generates pulses at the desired pulse voltage levels on the output as long as the output current is below the pulse current limit. The following attributes can be used to configure the channel when NIDCPOWER_VAL_PULSE_VOLTAGE is selected:\n"
+ "NIDCPOWER_ATTR_PULSE_VOLTAGE_LEVEL\n"
+ "NIDCPOWER_ATTR_PULSE_BIAS_VOLTAGE_LEVEL\n"
+ "NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT\n"
+ "NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_HIGH\n"
+ "NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_LOW\n"
+ "NIDCPOWER_ATTR_PULSE_BIAS_CURRENT_LIMIT\n"
+ "NIDCPOWER_ATTR_PULSE_BIAS_CURRENT_LIMIT_HIGH\n"
+ "NIDCPOWER_ATTR_PULSE_BIAS_CURRENT_LIMIT_LOW\n"
+ "NIDCPOWER_ATTR_PULSE_VOLTAGE_LEVEL_RANGE\n"
+ "NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_RANGE\n"
+ "NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY\n\n"
+
+ "When NIDCPOWER_VAL_PULSE_CURRENT is selected, the device generates pulses at the desired pulse current levels on the output as long as the output voltage is below the pulse voltage limit. The following attributes can be used to configure the channel when NIDCPOWER_VAL_PULSE_CURRENT is selected:\n"
+ "NIDCPOWER_ATTR_PULSE_CURRENT_LEVEL\n"
+ "NIDCPOWER_ATTR_PULSE_BIAS_CURRENT_LEVEL\n"
+ "NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT\n"
+ "NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_HIGH\n"
+ "NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_LOW\n"
+ "NIDCPOWER_ATTR_PULSE_BIAS_VOLTAGE_LIMIT\n"
+ "NIDCPOWER_ATTR_PULSE_BIAS_VOLTAGE_LIMIT_HIGH\n"
+ "NIDCPOWER_ATTR_PULSE_BIAS_VOLTAGE_LIMIT_LOW\n"
+ "NIDCPOWER_ATTR_PULSE_CURRENT_LEVEL_RANGE\n"
+ "NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_RANGE\n"
+ "NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY\n\n"
+
+ " "
+
+2 all "Output Enabled" NIDCPOWER_ATTR_OUTPUT_ENABLED ViBoolean gs Boolean_values
+ "Specifies whether the output is enabled (VI_TRUE) or disabled (VI_FALSE).\n\n"
+ "Depending on the value you specify for the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute, you also must set the"
+ " voltage level or current level in addition to"
+ " enabling the output\n\n"
+ "Note: If the session is in the Committed or Uncommitted states, enabling the output does not take effect until you call"
+ " the niDCPower_Initiate function. Refer to the Programming States topic in the NI DC Power Supplies and SMUs Help for"
+ " more information about NI-DCPower programming states.\n\n"
+ "Default Value: The default value is VI_TRUE if you use the niDCPower_InitializeWithChannels function to open"
+ " the session. Otherwise the default value is VI_FALSE, including when you use a calibration session or the deprecated programming model."
+ " "
+
+2 all "Output Connected" NIDCPOWER_ATTR_OUTPUT_CONNECTED ViBoolean gs Boolean_values
+ "Specifies whether the output relay is connected (closed) or disconnected (open). The NIDCPOWER_ATTR_OUTPUT_ENABLED"
+ " attribute does not change based on this attribute; they are independent of each other.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device for information"
+ " about supported devices.\n\n"
+ "Set this attribute to VI_FALSE to disconnect the output terminal from the output.\n\n"
+ "Note: Only disconnect the output when disconnecting is necessary for your application. For example, a battery connected"
+ " to the output terminal might discharge unless the relay is disconnected. Excessive connecting and disconnecting of the"
+ " output can cause premature wear on the relay.\n\n"
+ "Default Value: VI_TRUE"
+ " "
+
+2 all "Output Resistance" NIDCPOWER_ATTR_OUTPUT_RESISTANCE ViReal64 gs
+ "Specifies the output resistance that the device attempts to generate for the specified channel(s). This attribute is"
+ " available only when you set the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute on a support device. Refer to a supported device's topic about output resistance for more information about selecting an output resistance.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic for information"
+ " about supported devices.\n\n"
+ "Default Value: 0.0"
+ " "
+
+2 all "Transient Response" NIDCPOWER_ATTR_TRANSIENT_RESPONSE ViInt32 gs attrTransientResponseRangeTable
+ "Specifies the transient response. Refer to the Transient Response topic in the NI DC Power Supplies and SMUs Help"
+ " for more information about transient response.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_NORMAL"
+ " "
+2 all "Custom Transient Response"
+ "Attributes that configure the transient response when the Transient Response attribute is set to Custom."
+ ""
+
+3 all "Voltage"
+ "Attributes that configure the transient response when the Transient Response attribute is set to "
+ "Custom and when the device is in constant voltage mode."
+ ""
+
+4 all "Voltage Gain Bandwidth" NIDCPOWER_ATTR_VOLTAGE_GAIN_BANDWIDTH ViReal64 gs
+ "The frequency at which the unloaded loop gain extrapolates to 0 dB in the absence of additional poles and zeroes."
+ "This attribute takes effect when the channel is in Constant Voltage mode.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: Determined by the value of the NIDCPOWER_VAL_NORMAL setting of the"
+ " NIDCPOWER_ATTR_TRANSIENT_RESPONSE attribute."
+ ""
+
+4 all "Voltage Compensation Frequency" NIDCPOWER_ATTR_VOLTAGE_COMPENSATION_FREQUENCY ViReal64 gs
+ "The frequency at which a pole-zero pair is added to the system when the channel is in"
+ " Constant Voltage mode.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic "
+ " for information about supported devices.\n\n"
+ "Default value: Determined by the value of the NIDCPOWER_VAL_NORMAL setting of"
+ " the NIDCPOWER_ATTR_TRANSIENT_RESPONSE attribute."
+ ""
+
+4 all "Voltage Pole-Zero Ratio" NIDCPOWER_ATTR_VOLTAGE_POLE_ZERO_RATIO ViReal64 gs
+ "The ratio of the pole frequency to the zero frequency when the channel is in"
+ " Constant Voltage mode.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default value: Determined by the value of the NIDCPOWER_VAL_NORMAL setting of the"
+ " NIDCPOWER_ATTR_TRANSIENT_RESPONSE attribute."
+ ""
+
+3 all "Current"
+ "Attributes that configure the transient response when the Transient Response attribute is set to "
+ "Custom and when the device is in constant current mode."
+ ""
+
+4 all "Current Gain Bandwidth" NIDCPOWER_ATTR_CURRENT_GAIN_BANDWIDTH ViReal64 gs
+ "The frequency at which the unloaded loop gain extrapolates to 0 dB in the absence of additional poles and zeroes."
+ " This attribute takes effect when the channel is in Constant Current mode.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: Determined by the value of the NIDCPOWER_VAL_NORMAL setting of the"
+ " NIDCPOWER_ATTR_TRANSIENT_RESPONSE attribute."
+ ""
+
+4 all "Current Compensation Frequency" NIDCPOWER_ATTR_CURRENT_COMPENSATION_FREQUENCY ViReal64 gs
+ "The frequency at which a pole-zero pair is added to the system when the channel is in"
+ " Constant Current mode.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: Determined by the value of the NIDCPOWER_VAL_NORMAL setting of the"
+ " NIDCPOWER_ATTR_TRANSIENT_RESPONSE attribute."
+ ""
+
+4 all "Current Pole-Zero Ratio" NIDCPOWER_ATTR_CURRENT_POLE_ZERO_RATIO ViReal64 gs
+ "The ratio of the pole frequency to the zero frequency when the channel is in"
+ " Constant Current mode.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: Determined by the value of the NIDCPOWER_VAL_NORMAL setting of the"
+ "NIDCPOWER_ATTR_TRANSIENT_RESPONSE attribute."
+ ""
+
+2 all "DC Voltage"
+ "Attributes that change channel settings when the channel is configured for the DC Voltage output function."
+ ""
+
+3 all "Voltage Level" NIDCPOWER_ATTR_VOLTAGE_LEVEL ViReal64 gs
+ "Specifies the voltage level, in volts, that the device attempts to generate on the specified channel(s).\n\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_DC_VOLTAGE.\n\n"
+ "Note: The channel must be enabled for the specified voltage level to take effect. Refer to the"
+ " NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n\n"
+ "Valid Values: The valid values for this attribute are defined by the values you specify for the"
+ " NIDCPOWER_ATTR_VOLTAGE_LEVEL_RANGE attribute."
+ " "
+
+3 all "Voltage Level Range" NIDCPOWER_ATTR_VOLTAGE_LEVEL_RANGE ViReal64 gs
+ "Specifies the voltage level range, in volts, for the specified channel(s).\n\n"
+ "The range defines the valid values to which the voltage level can be set. Use the NIDCPOWER_ATTR_VOLTAGE_LEVEL_AUTORANGE"
+ " attribute to enable automatic selection of the voltage level range.\n\n"
+ " The NIDCPOWER_ATTR_VOLTAGE_LEVEL_RANGE attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is"
+ " set to NIDCPOWER_VAL_DC_VOLTAGE.\n\n"
+ "Note: The channel must be enabled for the specified voltage level range to take effect. Refer to the"
+ " NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n\n"
+ "For valid ranges, refer to the Ranges topic for your device in the NI DC Power Supplies and SMUs Help."
+ " "
+
+3 all "Voltage Level Autorange" NIDCPOWER_ATTR_VOLTAGE_LEVEL_AUTORANGE ViInt32 gs attrAutorangeRangeTable
+ "Specifies whether NI-DCPower automatically selects the voltage level range based on the desired voltage level"
+ " for the specified channel(s).\n\n"
+ "If you set this attribute to NIDCPOWER_VAL_ON, NI-DCPower ignores any changes you make to the"
+ " NIDCPOWER_ATTR_VOLTAGE_LEVEL_RANGE attribute. If you change the NIDCPOWER_ATTR_VOLTAGE_LEVEL_AUTORANGE attribute from"
+ " NIDCPOWER_VAL_ON to NIDCPOWER_VAL_OFF, NI-DCPower retains the last value the NIDCPOWER_ATTR_VOLTAGE_LEVEL_RANGE"
+ " attribute was set to (or the default value if the attribute was never set) and uses that value as"
+ " the voltage level range.\n\n"
+ "Query the NIDCPOWER_ATTR_VOLTAGE_LEVEL_RANGE attribute by using the niDCPower_GetAttributeViInt32 function for"
+ " information about which range NI-DCPower automatically selects.\n\n"
+ "The NIDCPOWER_ATTR_VOLTAGE_LEVEL_AUTORANGE attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute"
+ " is set to NIDCPOWER_VAL_DC_VOLTAGE.\n\n"
+ "Default Value: NIDCPOWER_VAL_OFF"
+ " "
+
+3 all "Current Limit" NIDCPOWER_ATTR_CURRENT_LIMIT ViReal64 gs
+ "Specifies the current limit, in amps, that the output cannot exceed when generating the desired voltage level"
+ " on the specified channel(s).\n\n "
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to"
+ " NIDCPOWER_VAL_DC_VOLTAGE and the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute is set to"
+ " NIDCPOWER_VAL_SYMMETRIC.\n\n "
+ "Note: The channel must be enabled for the specified current limit to take effect. Refer to the"
+ " NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n\n"
+ "Valid Values: The valid values for this attribute are defined by the values to which"
+ " NIDCPOWER_ATTR_CURRENT_LIMIT_RANGE attribute is set."
+ " "
+ 
+3 all "Current Limit High" NIDCPOWER_ATTR_CURRENT_LIMIT_HIGH ViReal64 gs
+ "Specifies the maximum current, in amps, that the output can produce when generating the desired voltage"
+ " on the specified channel(s).\n\n "
+ "This attribute is applicable only if the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute is set to"
+ "NIDCPOWER_VAL_ASYMMETRIC and the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to"
+ " NIDCPOWER_VAL_DC_VOLTAGE.\n\n "
+ "You must also specify NIDCPOWER_ATTR_CURRENT_LIMIT_LOW to complete the asymmetric range.\n\n "
+ "Note: The channel must be enabled and the output relay must be connected for the specified current limit to take"
+ " effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute and the NIDCPOWER_ATTR_OUTPUT_CONNECTED attribute"
+ " for more information about enabling the output channel and connecting the output relay respectively.\n\n"
+ "Note: Refer to Supported Attributes by Device for information about supported devices.\n\n"
+ "Valid Values: [1% of NIDCPOWER_ATTR_CURRENT_LIMIT_RANGE, NIDCPOWER_ATTR_CURRENT_LIMIT_RANGE]\n"
+ "The range bounded by the limit high and limit low must include zero.\n\n"
+ "Note: The limit may be extended beyond the selected limit range if the NIDCPOWER_ATTR_OVERRANGING_ENABLED attribute"
+ " is set to VI_TRUE.\n\n"
+ "Default Value: Refer to Supported Attributes by Device for the default value by device."
+ " "
+ 
+3 all "Current Limit Low" NIDCPOWER_ATTR_CURRENT_LIMIT_LOW ViReal64 gs
+ "Specifies the minimum current, in amps, that the output can produce when generating the desired voltage"
+ " on the specified channel(s).\n\n "
+ "This attribute is applicable only if the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute is set to"
+ "NIDCPOWER_VAL_ASYMMETRIC and the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to"
+ " NIDCPOWER_VAL_DC_VOLTAGE.\n\n "
+ "You must also specify NIDCPOWER_ATTR_CURRENT_LIMIT_HIGH to complete the asymmetric range.\n\n "
+ "Note: The channel must be enabled and the output relay must be connected for the specified current limit to take"
+ " effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute and the NIDCPOWER_ATTR_OUTPUT_CONNECTED attribute"
+ " for more information about enabling the output channel and connecting the output relay respectively.\n\n"
+ "Note: Refer to Supported Attributes by Device for information about supported devices.\n\n"
+ "Valid Values: [-NIDCPOWER_ATTR_CURRENT_LIMIT_RANGE, -1% of NIDCPOWER_ATTR_CURRENT_LIMIT_RANGE]\n"
+ "The range bounded by the limit high and limit low must include zero.\n\n"
+ "Note: The limit may be extended beyond the selected limit range if the NIDCPOWER_ATTR_OVERRANGING_ENABLED attribute"
+ " is set to VI_TRUE.\n\n"
+ "Default Value: Refer to Supported Attributes by Device for the default value by device."
+ " "
+
+3 all "Current Limit Range" NIDCPOWER_ATTR_CURRENT_LIMIT_RANGE ViReal64 gs
+ "Specifies the current limit range, in amps, for the specified channel(s).\n\n "
+ "The range defines the valid value to which the current limit can be set. Use the NIDCPOWER_ATTR_CURRENT_LIMIT_AUTORANGE"
+ " attribute to enable automatic selection of the current limit range.\n\n "
+ "The NIDCPOWER_ATTR_CURRENT_LIMIT_RANGE attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute"
+ " is set to NIDCPOWER_VAL_DC_VOLTAGE.\n\n"
+ "Note: The channel must be enabled for the specified current limit to take effect. Refer to the"
+ " NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n\n"
+ "For valid ranges, refer to the Ranges topic for your device in the NI DC Power Supplies and SMUs Help."
+ " "
+
+3 all "Current Limit Autorange" NIDCPOWER_ATTR_CURRENT_LIMIT_AUTORANGE ViInt32 gs attrAutorangeRangeTable
+ "Specifies whether NI-DCPower automatically selects the current limit range based on the desired current limit for the"
+ " specified channel(s).\n\n"
+ "If you set this attribute to NIDCPOWER_VAL_ON, NI-DCPower ignores any changes you make to the"
+ " NIDCPOWER_ATTR_CURRENT_LIMIT_RANGE attribute. If you change this attribute from NIDCPOWER_VAL_ON to"
+ " NIDCPOWER_VAL_OFF, NI-DCPower retains the last value the NIDCPOWER_ATTR_CURRENT_LIMIT_RANGE attribute was set to"
+ " (or the default value if the attribute was never set) and uses that value as the current limit range.\n\n"
+ "Query the NIDCPOWER_ATTR_CURRENT_LIMIT_RANGE attribute by using the niDCPower_GetAttributeViInt32 function for"
+ " information about which range NI-DCPower automatically selects.\n\n "
+ "The NIDCPOWER_ATTR_CURRENT_LIMIT_AUTORANGE attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute"
+ " is set to NIDCPOWER_VAL_DC_VOLTAGE.\n\n"
+ "Default Value: NIDCPOWER_VAL_OFF"
+ " "
+
+2 all "DC Current"
+ "Attributes that change channel settings when the channel is configured for the DC Current output function."
+ ""
+
+3 all "Current Level" NIDCPOWER_ATTR_CURRENT_LEVEL ViReal64 gs
+ "Specifies the current level, in amps, that the device attempts to generate on the specified channel(s).\n\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_DC_CURRENT.\n\n"
+ "Note: The channel must be enabled for the specified current level to take effect. Refer to the"
+ " NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n\n"
+ "Valid Values: The valid values for this attribute are defined by the values to which the"
+ " NIDCPOWER_ATTR_CURRENT_LEVEL_RANGE attribute is set."
+ " "
+
+3 all "Current Level Range" NIDCPOWER_ATTR_CURRENT_LEVEL_RANGE ViReal64 gs
+ "Specifies the current level range, in amps, for the specified channel(s).\n\n"
+ "The range defines the valid value to which the current level can be set. Use the"
+ " NIDCPOWER_ATTR_CURRENT_LEVEL_AUTORANGE attribute to enable automatic selection of the current level range.\n\n"
+ "The NIDCPOWER_ATTR_CURRENT_LEVEL_RANGE attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is"
+ " set to NIDCPOWER_VAL_DC_CURRENT.\n\n"
+ "Note: The channel must be enabled for the specified current level range to take effect. Refer to the"
+ " NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n\n"
+ "For valid ranges, refer to the Ranges topic for your device in the NI DC Power Supplies and SMUs Help."
+ " "
+
+3 all "Current Level Autorange" NIDCPOWER_ATTR_CURRENT_LEVEL_AUTORANGE ViInt32 gs attrAutorangeRangeTable
+ "Specifies whether NI-DCPower automatically selects the current level range based on the desired current level for"
+ " the specified channels.\n\n"
+ "If you set this attribute to NIDCPOWER_VAL_ON, NI-DCPower ignores any changes you make to the"
+ " NIDCPOWER_ATTR_CURRENT_LEVEL_RANGE attribute. If you change the NIDCPOWER_ATTR_CURRENT_LEVEL_AUTORANGE attribute from"
+ " NIDCPOWER_VAL_ON to NIDCPOWER_VAL_OFF, NI-DCPower retains the last value the NIDCPOWER_ATTR_CURRENT_LEVEL_RANGE"
+ " attribute was set to (or the default value if the attribute was never set) and uses that value as the"
+ " current level range.\n\n"
+ "Query the NIDCPOWER_ATTR_CURRENT_LEVEL_RANGE attribute by using the niDCPower_GetAttributeViInt32 function for"
+ " information about which range NI-DCPower automatically selects.\n\n "
+ "The NIDCPOWER_ATTR_CURRENT_LEVEL_AUTORANGE attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute"
+ " is set to NIDCPOWER_VAL_DC_CURRENT.\n\n"
+ "Default Value: NIDCPOWER_VAL_OFF"
+ " "
+
+3 all "Voltage Limit" NIDCPOWER_ATTR_VOLTAGE_LIMIT ViReal64 gs
+ "Specifies the voltage limit, in volts, that the output cannot exceed when generating the desired current level"
+ " on the specified channels.\n\n "
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_DC_CURRENT"
+ " and the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute is set to NIDCPOWER_VAL_SYMMETRIC.\n\n "
+ "Note: The channel must be enabled for the specified current level to take effect. Refer to the"
+ " NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n\n"
+ "Valid Values: The valid values for this attribute are defined by the values to which the"
+ " NIDCPOWER_ATTR_VOLTAGE_LIMIT_RANGE attribute is set."
+ " "
+
+3 all "Voltage Limit High" NIDCPOWER_ATTR_VOLTAGE_LIMIT_HIGH ViReal64 gs
+ "Specifies the maximum voltage, in volts, that the output can produce when generating the desired current"
+ " on the specified channel(s).\n\n "
+ "This attribute is applicable only if the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute is set to"
+ "NIDCPOWER_VAL_ASYMMETRIC and the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to"
+ " NIDCPOWER_VAL_DC_CURRENT.\n\n "
+ "You must also specify NIDCPOWER_ATTR_VOLTAGE_LIMIT_LOW to complete the asymmetric range.\n\n "
+ "Note: The channel must be enabled and the output relay must be connected for the specified current limit to take"
+ " effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute and the NIDCPOWER_ATTR_OUTPUT_CONNECTED attribute"
+ " for more information about enabling the output channel and connecting the output relay respectively.\n\n"
+ "Note: Refer to Supported Attributes by Device for information about supported devices.\n\n"
+ "Valid Values: [1% of NIDCPOWER_ATTR_VOLTAGE_LIMIT_RANGE, NIDCPOWER_ATTR_VOLTAGE_LIMIT_RANGE]\n"
+ "The range bounded by the limit high and limit low must include zero.\n\n"
+ "Note: The limit may be extended beyond the selected limit range if the NIDCPOWER_ATTR_OVERRANGING_ENABLED attribute"
+ " is set to VI_TRUE.\n\n"
+ "Default Value: Refer to Supported Attributes by Device for the default value by device."
+ " "
+ 
+3 all "Voltage Limit Low" NIDCPOWER_ATTR_VOLTAGE_LIMIT_LOW ViReal64 gs
+ "Specifies the minimum voltage, in volts, that the output can produce when generating the desired current"
+ " on the specified channel(s).\n\n "
+ "This attribute is applicable only if the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute is set to"
+ "NIDCPOWER_VAL_ASYMMETRIC and the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to"
+ " NIDCPOWER_VAL_DC_CURRENT.\n\n "
+ "You must also specify NIDCPOWER_ATTR_VOLTAGE_LIMIT_HIGH to complete the asymmetric range.\n\n "
+ "Note: The channel must be enabled and the output relay must be connected for the specified current limit to take"
+ " effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute and the NIDCPOWER_ATTR_OUTPUT_CONNECTED attribute"
+ " for more information about enabling the output channel and connecting the output relay respectively.\n\n"
+ "Note: Refer to Supported Attributes by Device for information about supported devices.\n\n"
+ "Valid Values: [-NIDCPOWER_ATTR_VOLTAGE_LIMIT_RANGE, -1% of NIDCPOWER_ATTR_VOLTAGE_LIMIT_RANGE]\n"
+ "The range bounded by the limit high and limit low must include zero.\n\n"
+ "Note: The limit may be extended beyond the selected limit range if the NIDCPOWER_ATTR_OVERRANGING_ENABLED attribute"
+ " is set to VI_TRUE.\n\n"
+ "Default Value: Refer to Supported Attributes by Device for the default value by device."
+ " "
+ 
+3 all "Voltage Limit Range" NIDCPOWER_ATTR_VOLTAGE_LIMIT_RANGE ViReal64 gs
+ "Specifies the voltage limit range, in volts, for the specified channel(s).\n\n "
+ "The range defines the valid values to which the voltage limit can be set. Use the NIDCPOWER_ATTR_VOLTAGE_LIMIT_AUTORANGE"
+ " attribute to enable automatic selection of the voltage limit range.\n\n"
+ "The NIDCPOWER_ATTR_VOLTAGE_LIMIT_RANGE attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is"
+ " set to NIDCPOWER_VAL_DC_CURRENT.\n\n"
+ "Note: The channel must be enabled for the specified voltage limit range to take effect. Refer to the"
+ " NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n\n"
+ "For valid ranges, refer to the Ranges topic for your device in the NI DC Power Supplies and SMUs Help."
+ " "
+
+3 all "Voltage Limit Autorange" NIDCPOWER_ATTR_VOLTAGE_LIMIT_AUTORANGE ViInt32 gs attrAutorangeRangeTable
+ "Specifies whether NI-DCPower automatically selects the voltage limit range based on the desired voltage limit for"
+ " the specified channel(s).\n\n"
+ "If this attribute is set to NIDCPOWER_VAL_ON, NI-DCPower ignores any changes you make to the"
+ " NIDCPOWER_ATTR_VOLTAGE_LIMIT_RANGE attribute. If you change the NIDCPOWER_ATTR_VOLTAGE_LIMIT_AUTORANGE attribute from"
+ " NIDCPOWER_VAL_ON to NIDCPOWER_VAL_OFF, NI-DCPower retains the last value the NIDCPOWER_ATTR_VOLTAGE_LIMIT_RANGE"
+ " attribute was set to (or the default value if the attribute was never set) and uses that value as the voltage limit"
+ " range.\n\n"
+ "Query the NIDCPOWER_ATTR_VOLTAGE_LIMIT_RANGE attribute by using the niDCPower_GetAttributeViInt32 function to find out"
+ " which range NI-DCPower automatically selects.\n\n"
+ "The NIDCPOWER_ATTR_VOLTAGE_LIMIT_AUTORANGE attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute"
+ " is set to NIDCPOWER_VAL_DC_CURRENT.\n\n"
+ "Default Value: NIDCPOWER_VAL_OFF"
+ " "
+
+2 all "Pulse Voltage"
+ "Attributes that change channel settings when the channel is configured for the Pulse Voltage output function."
+ " "
+
+3 all "Pulse Voltage Level" NIDCPOWER_ATTR_PULSE_VOLTAGE_LEVEL ViReal64 gs
+ "Specifies the pulse current limit, in amps, that the output cannot exceed when generating the desired pulse voltage on the specified channel(s) during the on phase of a pulse.\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_PULSE_VOLTAGE.\n"
+ "Note The channel must be enabled for the specified current limit to take effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Valid Values: The valid values for this attribute are defined by the values you specify for the NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_RANGE attribute."
+ " "
+
+
+
+3 all "Pulse Voltage Level Range" NIDCPOWER_ATTR_PULSE_VOLTAGE_LEVEL_RANGE ViReal64 gs
+ "Specifies the pulse voltage level range, in volts, for the specified channel(s).\n"
+ "The range defines the valid values at which you can set the pulse voltage level and pulse bias voltage level.\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_PULSE_VOLTAGE.\n"
+ "Note The channel must be enabled for the specified pulse voltage level range to take effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "For valid ranges, refer to the ranges topic for your device in the NI DC Power Supplies and SMUs Help. "
+
+ " "
+
+3 all "Pulse Bias Voltage Level" NIDCPOWER_ATTR_PULSE_BIAS_VOLTAGE_LEVEL ViReal64 gs
+ "Specifies the pulse bias voltage level, in volts, that the device attempts to generate on the specified channel(s) during the off phase of a pulse.\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_PULSE_VOLTAGE.\n"
+ "Note The channel must be enabled for the specified voltage level to take effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Valid Values: The valid values for this attribute are defined by the values you specify for the NIDCPOWER_ATTR_PULSE_VOLTAGE_LEVEL_RANGE attribute. "
+
+ " "
+
+3 all "Pulse Current Limit" NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT ViReal64 gs
+ "Specifies the pulse current limit, in amps, that the output cannot exceed when generating the desired pulse voltage on the specified channel(s) during the on phase of a pulse.\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_PULSE_VOLTAGE and the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY"
+ " attribute is set to NIDCPOWER_VAL_SYMMETRIC.\n\n"
+ "Note The channel must be enabled for the specified current limit to take effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Valid Values: The valid values for this attribute are defined by the values you specify for the NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_RANGE attribute. "
+
+ " "
+
+3 all "Pulse Current Limit High" NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_HIGH ViReal64 gs
+ "Specifies the maximum current, in amps, that the output can produce when generating the desired pulse current"
+ " on the specified channel(s) during the on phase of a pulse.\n\n "
+ "This attribute is applicable only if the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute is set to"
+ "NIDCPOWER_VAL_ASYMMETRIC and the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to"
+ " NIDCPOWER_VAL_PULSE_VOLTAGE.\n\n "
+ "You must also specify NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_LOW to complete the asymmetric range.\n\n "
+ "Note: The channel must be enabled and the output relay must be connected for the specified current limit to take"
+ " effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute and the NIDCPOWER_ATTR_OUTPUT_CONNECTED attribute"
+ " for more information about enabling the output channel and connecting the output relay respectively.\n\n"
+ "Note: Refer to Supported Attributes by Device for information about supported devices.\n\n"
+ "Valid Values: [1% of NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_RANG, NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_RANGE]\n"
+ "The range bounded by the limit high and limit low must include zero.\n\n"
+ "Note: The limit may be extended beyond the selected limit range if the NIDCPOWER_ATTR_OVERRANGING_ENABLED attribute"
+ " is set to VI_TRUE.\n\n"
+ "Default Value: Refer to Supported Attributes by Device for the default value by device."
+ " "
+ 
+3 all "Pulse Current Limit Low" NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_LOW ViReal64 gs
+ "Specifies the minimum current, in amps, that the output can produce when generating the desired pulse current"
+ " on the specified channel(s) during the on phase of a pulse.\n\n "
+ "This attribute is applicable only if the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute is set to"
+ "NIDCPOWER_VAL_ASYMMETRIC and the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to"
+ " NIDCPOWER_VAL_PULSE_VOLTAGE.\n\n "
+ "You must also specify NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_HIGH to complete the asymmetric range.\n\n "
+ "Note: The channel must be enabled and the output relay must be connected for the specified current limit to take"
+ " effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute and the NIDCPOWER_ATTR_OUTPUT_CONNECTED attribute"
+ " for more information about enabling the output channel and connecting the output relay respectively.\n\n"
+ "Note: Refer to Supported Attributes by Device for information about supported devices.\n\n"
+ "Valid Values: [-NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_RANGE, -1% of NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_RANGE]\n"
+ "The range bounded by the limit high and limit low must include zero.\n\n"
+ "Note: The limit may be extended beyond the selected limit range if the NIDCPOWER_ATTR_OVERRANGING_ENABLED attribute"
+ " is set to VI_TRUE.\n\n"
+ "Default Value: Refer to Supported Attributes by Device for the default value by device."
+ " "
+ 
+3 all "Pulse Current Limit Range" NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_RANGE ViReal64 gs
+ "Specifies the pulse current limit range, in amps, for the specified channel(s).\n"
+ "The range defines the valid values to which you can set the pulse current limit and pulse bias current limit.\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_PULSE_VOLTAGE.\n"
+ "Note The channel must be enabled for the specified current limit to take effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "For valid ranges, refer to the ranges topic for your device in the NI DC Power Supplies and SMUs Help. "
+
+ " "
+
+3 all "Pulse Bias Current Limit" NIDCPOWER_ATTR_PULSE_BIAS_CURRENT_LIMIT ViReal64 gs
+ "Specifies the pulse bias current limit, in amps, that the output cannot exceed when generating the desired pulse bias voltage on the specified channel(s) during the off phase of a pulse.\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_PULSE_VOLTAGE.\n"
+ "Note The channel must be enabled for the specified current limit to take effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Valid Values: The valid values for this attribute are defined by the values you specify for the NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_RANGE property. "
+
+ " "
+
+3 all "Pulse Bias Current Limit High" NIDCPOWER_ATTR_PULSE_BIAS_CURRENT_LIMIT_HIGH ViReal64 gs
+ "Specifies the maximum current, in amps, that the output can produce when generating the desired pulse voltage"
+ " on the specified channel(s) during the off phase of a pulse.\n\n "
+ "This attribute is applicable only if the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute is set to"
+ "NIDCPOWER_VAL_ASYMMETRIC and the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to"
+ " NIDCPOWER_VAL_PULSE_VOLTAGE.\n\n "
+ "You must also specify NIDCPOWER_ATTR_PULSE_BIAS_CURRENT_LIMIT_LOW to complete the asymmetric range.\n\n "
+ "Note: The channel must be enabled and the output relay must be connected for the specified current limit to take"
+ " effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute and the NIDCPOWER_ATTR_OUTPUT_CONNECTED attribute"
+ " for more information about enabling the output channel and connecting the output relay respectively.\n\n"
+ "Note: Refer to Supported Attributes by Device for information about supported devices.\n\n"
+ "Valid Values: [1% of NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_RANGE, NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_RANGE]\n"
+ "The range bounded by the limit high and limit low must include zero.\n\n"
+ "Note: The limit may be extended beyond the selected limit range if the NIDCPOWER_ATTR_OVERRANGING_ENABLED attribute"
+ " is set to VI_TRUE.\n\n"
+ "Default Value: Refer to Supported Attributes by Device for the default value by device."
+ " "
+ 
+3 all "Pulse Bias Current Limit Low" NIDCPOWER_ATTR_PULSE_BIAS_CURRENT_LIMIT_LOW ViReal64 gs
+ "Specifies the minimum current, in amps, that the output can produce when generating the desired pulse voltage"
+ " on the specified channel(s) during the off phase of a pulse.\n\n "
+ "This attribute is applicable only if the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute is set to"
+ "NIDCPOWER_VAL_ASYMMETRIC and the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to"
+ " NIDCPOWER_VAL_PULSE_VOLTAGE.\n\n "
+ "You must also specify NIDCPOWER_ATTR_PULSE_BIAS_CURRENT_LIMIT_HIGH to complete the asymmetric range.\n\n "
+ "Note: The channel must be enabled and the output relay must be connected for the specified current limit to take"
+ " effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute and the NIDCPOWER_ATTR_OUTPUT_CONNECTED attribute"
+ " for more information about enabling the output channel and connecting the output relay respectively.\n\n"
+ "Note: Refer to Supported Attributes by Device for information about supported devices.\n\n"
+ "Valid Values: [-NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_RANGE, -1% of NIDCPOWER_ATTR_PULSE_CURRENT_LIMIT_RANGE]\n"
+ "The range bounded by the limit high and limit low must include zero.\n\n"
+ "Note: The limit may be extended beyond the selected limit range if the NIDCPOWER_ATTR_OVERRANGING_ENABLED attribute"
+ " is set to VI_TRUE.\n\n"
+ "Default Value: Refer to Supported Attributes by Device for the default value by device."
+ " "
+ 
+2 all "Pulse Current"
+ "Attributes that change channel settings when the channel is configured for the Pulse Current output function."
+ " "
+
+3 all "Pulse Current Level" NIDCPOWER_ATTR_PULSE_CURRENT_LEVEL ViReal64 gs
+ "Specifies the pulse current level, in amps, that the device attempts to generate on the specified channel(s) during the on phase of a pulse.\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_PULSE_CURRENT.\n"
+ "Note The channel must be enabled for the specified current level to take effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Valid Values: The valid values for this attribute are defined by the values you specify for the NIDCPOWER_ATTR_PULSE_CURRENT_LEVEL_RANGE attribute. "
+ " "
+
+
+3 all "Pulse Current Level Range" NIDCPOWER_ATTR_PULSE_CURRENT_LEVEL_RANGE ViReal64 gs
+ "Specifies the pulse current level range, in amps, for the specified channel(s).\n"
+ "The range defines the valid values to which you can set the pulse current level and pulse bias current level.\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_PULSE_CURRENT.\n"
+ "Note The channel must be enabled for the specified pulse current level range to take effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "For valid ranges, refer to the ranges topic for your device in the NI DC Power Supplies and SMUs Help. "
+
+ " "
+
+3 all "Pulse Bias Current Level" NIDCPOWER_ATTR_PULSE_BIAS_CURRENT_LEVEL ViReal64 gs
+ "Specifies the pulse bias current level, in amps, that the device attempts to generate on the specified channel(s) during the off phase of a pulse.\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_PULSE_CURRENT.\n"
+ "Note The channel must be enabled for the specified current level to take effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Valid Values: The valid values for this attribute are defined by the values you specify for the NIDCPOWER_ATTR_PULSE_CURRENT_LEVEL_RANGE attribute. "
+
+ " "
+
+3 all "Pulse Voltage Limit" NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT ViReal64 gs
+ "Specifies the pulse voltage limit, in volts, that the output cannot exceed when generating the desired pulse current on the specified channel(s) during the on phase of a pulse.\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_PULSE_CURRENT and the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute"
+ " is set to NIDCPOWER_VAL_SYMMETRIC.\n\n"
+ "Note The channel must be enabled for the specified current limit to take effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Valid Values: The valid values for this attribute are defined by the values you specify for the NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_RANGE attribute. "
+
+ " "
+ 
+3 all "Pulse Voltage Limit High" NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_HIGH ViReal64 gs
+ "Specifies the maximum voltage, in volts, that the output can produce when generating the desired pulse current"
+ " on the specified channel(s) during the on phase of a pulse.\n\n "
+ "This attribute is applicable only if the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute is set to"
+ "NIDCPOWER_VAL_ASYMMETRIC and the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to"
+ " NIDCPOWER_VAL_PULSE_CURRENT.\n\n "
+ "You must also specify NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_LOW to complete the asymmetric range.\n\n "
+ "Note: The channel must be enabled and the output relay must be connected for the specified current limit to take"
+ " effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute and the NIDCPOWER_ATTR_OUTPUT_CONNECTED attribute"
+ " for more information about enabling the output channel and connecting the output relay respectively.\n\n"
+ "Note: Refer to Supported Attributes by Device for information about supported devices.\n\n"
+ "Valid Values: [1% of NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_RANGE, NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_RANGE]\n"
+ "The range bounded by the limit high and limit low must include zero.\n\n"
+ "Note: The limit may be extended beyond the selected limit range if the NIDCPOWER_ATTR_OVERRANGING_ENABLED attribute"
+ " is set to VI_TRUE.\n\n"
+ "Default Value: Refer to Supported Attributes by Device for the default value by device."
+ " "
+ 
+3 all "Pulse Voltage Limit Low" NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_LOW ViReal64 gs
+ "Specifies the minimum voltage, in volts, that the output can produce when generating the desired pulse current"
+ " on the specified channel(s) during the on phase of a pulse.\n\n "
+ "This attribute is applicable only if the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute is set to"
+ "NIDCPOWER_VAL_ASYMMETRIC and the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to"
+ " NIDCPOWER_VAL_PULSE_CURRENT.\n\n "
+ "You must also specify NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_HIGH to complete the asymmetric range.\n\n "
+ "Note: The channel must be enabled and the output relay must be connected for the specified current limit to take"
+ " effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute and the NIDCPOWER_ATTR_OUTPUT_CONNECTED attribute"
+ " for more information about enabling the output channel and connecting the output relay respectively.\n\n"
+ "Note: Refer to Supported Attributes by Device for information about supported devices.\n\n"
+ "Valid Values: [-NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_RANGE, -1% of NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_RANGE]\n"
+ "The range bounded by the limit high and limit low must include zero.\n\n"
+ "Note: The limit may be extended beyond the selected limit range if the NIDCPOWER_ATTR_OVERRANGING_ENABLED attribute"
+ " is set to VI_TRUE.\n\n"
+ "Default Value: Refer to Supported Attributes by Device for the default value by device."
+ " "
+
+3 all "Pulse Voltage Limit Range" NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_RANGE ViReal64 gs
+ "Specifies the pulse voltage limit range, in volts, for the specified channel(s).\n"
+ "The range defines the valid values to which you can set the pulse voltage limit and pulse bias voltage limit.\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_PULSE_CURRENT.\n"
+ "Note The channel must be enabled for the specified current limit to take effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n"
+ "For valid ranges, refer to the ranges topic for your device in the NI DC Power Supplies and SMUs Help. "
+
+ " "
+
+3 all "Pulse Bias Voltage Limit" NIDCPOWER_ATTR_PULSE_BIAS_VOLTAGE_LIMIT ViReal64 gs
+ "Specifies the pulse voltage limit, in volts, that the output cannot exceed when generating the desired current on the specified channel(s) during the off phase of a pulse.\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_PULSE_CURRENT.\n"
+ "Note The channel must be enabled for the specified current limit to take effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute for more information about enabling the output channel.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Valid Values: The valid values for this attribute are defined by the values you specify for the NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_RANGE attribute. "
+
+ " "
+
+3 all "Pulse Bias Voltage Limit High" NIDCPOWER_ATTR_PULSE_BIAS_VOLTAGE_LIMIT_HIGH ViReal64 gs
+ "Specifies the maximum voltage, in volts, that the output can produce when generating the desired pulse current"
+ " on the specified channel(s) during the off phase of a pulse.\n\n "
+ "This attribute is applicable only if the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute is set to"
+ "NIDCPOWER_VAL_ASYMMETRIC and the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to"
+ " NIDCPOWER_VAL_PULSE_CURRENT.\n\n "
+ "You must also specify NIDCPOWER_ATTR_PULSE_BIAS_VOLTAGE_LIMIT_LOW to complete the asymmetric range.\n\n "
+ "Note: The channel must be enabled and the output relay must be connected for the specified current limit to take"
+ " effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute and the NIDCPOWER_ATTR_OUTPUT_CONNECTED attribute"
+ " for more information about enabling the output channel and connecting the output relay respectively.\n\n"
+ "Note: Refer to Supported Attributes by Device for information about supported devices.\n\n"
+ "Valid Values: [1% of NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_RANGE, NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_RANGE]\n"
+ "The range bounded by the limit high and limit low must include zero.\n\n"
+ "Note: The limit may be extended beyond the selected limit range if the NIDCPOWER_ATTR_OVERRANGING_ENABLED attribute"
+ " is set to VI_TRUE.\n\n"
+ "Default Value: Refer to Supported Attributes by Device for the default value by device."
+ " "
+ 
+3 all "Pulse Bias Voltage Limit Low" NIDCPOWER_ATTR_PULSE_BIAS_VOLTAGE_LIMIT_LOW ViReal64 gs
+ "Specifies the minimum voltage, in volts, that the output can produce when generating the desired pulse current"
+ " on the specified channel(s) during the off phase of a pulse.\n\n "
+ "This attribute is applicable only if the NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY attribute is set to"
+ "NIDCPOWER_VAL_ASYMMETRIC and the NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to"
+ " NIDCPOWER_VAL_PULSE_CURRENT.\n\n "
+ "You must also specify NIDCPOWER_ATTR_PULSE_BIAS_VOLTAGE_LIMIT_HIGH to complete the asymmetric range.\n\n "
+ "Note: The channel must be enabled and the output relay must be connected for the specified current limit to take"
+ " effect. Refer to the NIDCPOWER_ATTR_OUTPUT_ENABLED attribute and the NIDCPOWER_ATTR_OUTPUT_CONNECTED attribute"
+ " for more information about enabling the output channel and connecting the output relay respectively.\n\n"
+ "Note: Refer to Supported Attributes by Device for information about supported devices.\n\n"
+ "Valid Values: [-NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_RANGE, -1% of NIDCPOWER_ATTR_PULSE_VOLTAGE_LIMIT_RANGE]\n"
+ "The range bounded by the limit high and limit low must include zero.\n\n"
+ "Note: The limit may be extended beyond the selected limit range if the NIDCPOWER_ATTR_OVERRANGING_ENABLED attribute"
+ " is set to VI_TRUE.\n\n"
+ "Default Value: Refer to Supported Attributes by Device for the default value by device."
+ " "
+ 
+2 all "Advanced"
+ "Attributes for controlling the advanced features of the source unit."
+ " "
+
+3 all "Source Delay" NIDCPOWER_ATTR_SOURCE_DELAY ViReal64 gs
+ "Determines when, in seconds, the device generates the Source Complete event, potentially starting a measurement if the"
+ " NIDCPOWER_ATTR_MEASURE_WHEN attribute is set to NIDCPOWER_VAL_AUTOMATICALLY_AFTER_SOURCE_COMPLETE.\n\n"
+ "Refer to the Single Point Source Mode and Sequence Source Mode topics for more information.\n\n"
+ "Note: Refer to Supported Attributes by Device for information about supported devices.\n\n"
+ "Valid Values: 0 to 167 seconds\n\n"
+ "Default Value: 0.01667 seconds"
+ " "
+
+3 all "Pulse Bias Delay" NIDCPOWER_ATTR_PULSE_BIAS_DELAY ViReal64 gs
+ "Determines when, in seconds, the device generates the Pulse Complete event after generating the "off" level of a pulse.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Valid Values: 0 to 167 seconds\n"
+ "Default Value: 16.67 milliseconds"
+
+ " "
+
+3 all "Pulse On Time" NIDCPOWER_ATTR_PULSE_ON_TIME ViReal64 gs
+ "Determines the length, in seconds, of the on phase of a pulse.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Valid Values: 10 microseconds to 167 seconds\n"
+ "Default Value: 34 milliseconds"
+
+ " "
+3 all "Pulse Off Time" NIDCPOWER_ATTR_PULSE_OFF_TIME ViReal64 gs
+ "Determines the length, in seconds, of the off phase of a pulse.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Valid Values: 10 microseconds to 167 seconds\n"
+ "Default Value: 34 milliseconds"
+
+ " "
+
+3 all "OVP Enabled" NIDCPOWER_ATTR_OVP_ENABLED ViBoolean gs Boolean_values
+ "Enables (VI_TRUE) or disables (VI_FALSE) overvoltage protection (OVP).\n\n"
+ "Refer to the Output Overvoltage Protection topic in the NI DC Power Supplies and SMUs Help for more information about"
+ " overvoltage protection.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: VI_FALSE"
+ " "
+
+3 all "OVP Limit" NIDCPOWER_ATTR_OVP_LIMIT ViReal64 gs
+ "Determines the voltage limit, in volts, beyond which overvoltage protection (OVP) engages.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Valid Values: 2 V to 210 V\n"
+ "Default Value: 210 V"
+
+ " "
+
+3 all "Overranging Enabled" NIDCPOWER_ATTR_OVERRANGING_ENABLED ViBoolean gs Boolean_values
+ "Specifies whether NI-DCPower allows setting the voltage level, current level, voltage limit and current limit outside the"
+ " device specification limits. VI_TRUE means that overranging is enabled.\n\n"
+ "Refer to the Ranges topic in the NI DC Power Supplies and SMUs Help for more information about overranging.\n\n"
+ "Default Value: VI_FALSE"
+ " "
+
+3 all "Output Capacitance" NIDCPOWER_ATTR_OUTPUT_CAPACITANCE ViInt32 gs attrOutputCapacitanceRangeTable
+ "Specifies whether to use a low or high capacitance on the output for the specified channel(s).\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Refer to the NI PXI-4130 Output Capacitance Selection topic in the NI DC Power Supplies and SMUs Help for more"
+ " information about capacitance.\n\n"
+ " "
+
+3 all "Sequence Loop Count" NIDCPOWER_ATTR_SEQUENCE_LOOP_COUNT ViInt32 gs
+ "Specifies the number of times a sequence is run after initiation.\n\n"
+ "Refer to the Sequence Source Mode topic in the NI DC Power Supplies and SMUs Help for more information about the sequence"
+ " loop count.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices. When the NIDCPOWER_ATTR_SEQUENCE_LOOP_COUNT_IS_FINITE attribute"
+ " is set to VI_FALSE, the NIDCPOWER_ATTR_SEQUENCE_LOOP_COUNT attribute is ignored.\n\n"
+ "Valid Range: 1 to 134217727\n\n"
+ "Default Value: 1"
+ " "
+
+3 all "Sequence Loop Count Is Finite" NIDCPOWER_ATTR_SEQUENCE_LOOP_COUNT_IS_FINITE ViBoolean gs Boolean_values
+ "Specifies whether a sequence should repeat indefinitely.\n\n"
+ "Refer to the Sequence Source Mode topic in the NI DC Power Supplies and SMUs Help for more information about"
+ " infinite sequencing.\n\n"
+ "Note: This attribute is not supported by all devices. When the"
+ " NIDCPOWER_ATTR_SEQUENCE_LOOP_COUNT_IS_FINITE attribute is set to VI_FALSE,"
+ " the NIDCPOWER_ATTR_SEQUENCE_LOOP_COUNT attribute is ignored.\n\n"
+ "Default Value: VI_TRUE"
+ ""
+
+3 all "Active Advanced Sequence" NIDCPOWER_ATTR_ACTIVE_ADVANCED_SEQUENCE ViString gs
+ " Specifies the advanced sequence to configure or generate.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic."
+ " "
+
+3 all "Active Advanced Sequence Step" NIDCPOWER_ATTR_ACTIVE_ADVANCED_SEQUENCE_STEP ViInt64 gs
+ " Specifies the advanced sequence step to configure.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic."
+ " "
+ 
+3 all "Compliance Limit Symmetry" NIDCPOWER_ATTR_COMPLIANCE_LIMIT_SYMMETRY ViInt32 gs
+ "Specifies whether current generation limits and voltage generation limits for the device are applied symmetrically about"
+ " 0 V and 0 A or asymmetrically with respect to 0 V and 0 A.\n\n"
+ "When set to NIDCPOWER_VAL_SYMMETRIC, voltage limits and current limits are set using a single attribute with a positive value."
+ " The resulting range is bounded by this positive value and its opposite.\n\n"
+ "When set to NIDCPOWER_VAL_ASYMMETRIC, you must separately set a limit high and a limit low using distinct attributes.\n\n"
+ "For asymmetric limits, the range bounded by the limit high and limit low must include zero.\n\n"
+ "Note: Refer to Supported Attributes by Device for information about supported devices.\n\n"
+ "Defined Values:\n\n"
+ "• NIDCPOWER_VAL_SYMMETRIC (0): Compliance limits are specified symmetrically about 0."
+ "• NIDCPOWER_VAL_ASYMMETRIC (1): Compliance limits can be specified asymmetrically with respect to 0.\n\n"
+ "Default Value: NIDCPOWER_VAL_SYMMETRIC"
+ " "
+ 
+3 all "Sequence Step Delta Time" NIDCPOWER_ATTR_SEQUENCE_STEP_DELTA_TIME ViReal64 gs
+ "Specifies the amount of time, in seconds, between the start of two consecutive steps in a sequence.\n\n"
+ "You can specify this attribute as one of the attributes reconfigured per step in an advanced sequence when calling"
+ " the niDCPower_CreateAdvancedSequence function. In this case, this attribute specifies the amount of time between the start"
+ " of the active step and the start of the next step.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to the Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_SEQUENCE_STEP_DELTA_TIME_ENABLED attribute is set to"
+ " VI_TRUE. Refer to the NIDCPOWER_ATTR_SEQUENCE_STEP_DELTA_TIME_ENABLED attribute for more information about the settings with"
+ " which this attribute is compatible. This attribute does not apply to the last step of the last iteration of a sequence.\n\n"
+ "Note: You can set values for the NIDCPOWER_ATTR_SOURCE_DELAY and Measure attributes in conjunction with this attribute.\n"
+ "Values for NIDCPOWER_ATTR_SOURCE_DELAY may conflict with the value of this attribute.\n"
+ "Measure attributes may conflict with the value of this attribute only if the NIDCPOWER_ATTR_MEASURE_WHEN attribute is set to"
+ " NIDCPOWER_VAL_AUTOMATICALLY_AFTER_SOURCE_COMPLETE.\n\n"
+ "Valid Values:\n"
+ "PXIe-4135/4136/4137/4138/4139: [12.5 us, 60 s]\n"
+ "PXIe-4140/4141/4142/4143/4144/4145: [10 us, 60 s]\n\n"
+ "Default Value: 50 ms\n\n"
+ "Note: NI-DCPower coerces the value you specify for this attribute to the nearest multiple of a device-specific resolution."
+ " You can read back the value of this property to determine the coerced value.\n\n"
+ "PXIe-4135/4136/4137/4138/4139: for [12.5 us, 21.4748 s], resolution = 10 ns. For (21.4748 s, 60 s], resolution = 10 us.\n"
+ "PXIe-4140/4141/4142/4143/4144/4145: For [10 us, 233.0169 ms], resolution = 27.7778 ns. For (233.0169 ms, 60 s], resolution = 10 us."
+ " "
+ 
+3 all "Sequence Step Delta Time Enabled" NIDCPOWER_ATTR_SEQUENCE_STEP_DELTA_TIME_ENABLED ViBoolean gs Boolean_values
+ "Specifies whether the NIDCPOWER_ATTR_SEQUENCE_STEP_DELTA_TIME attribute is enabled (VI_TRUE) or disabled (VI_FALSE).\n\n"
+ "When this attribute is set to VI_TRUE, you can set the NIDCPOWER_ATTR_SEQUENCE_STEP_DELTA_TIME attribute to control the time"
+ " between consecutive steps in the sequence.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to the Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "This attribute is applicable only if the NIDCPOWER_ATTR_SOURCE_MODE attribute is set to NIDCPOWER_VAL_SEQUENCE and may be set"
+ " to VI_TRUE only if:\n"
+ "The NIDCPOWER_ATTR_SOURCE_TRIGGER_TYPE attribute is set to NIDCPOWER_VAL_NONE;\n"
+ "The NIDCPOWER_ATTR_SEQUENCE_ADVANCE_TRIGGER_TYPE attribute is set to NIDCPOWER_VAL_NONE; and\n"
+ "The NIDCPOWER_ATTR_OUTPUT_FUNCTION attribute is set to NIDCPOWER_VAL_DC_VOLTAGE or NIDCPOWER_VAL_DC_CURRENT.\n\n"
+ "Default Value: VI_FALSE"
+ " " 
+
+1 all "Measure"
+ "Attributes that configure the measure unit and acquire measurements."
+ " "
+
+2 all "Sense" NIDCPOWER_ATTR_SENSE ViInt32 gs attrSenseRangeTable
+ "Selects either local or remote sensing of the output voltage for the specified channel(s).\n\n"
+ "Refer to the Local and Remote Sense topic in the NI DC Power Supplies and SMUs Help for more"
+ " information about sensing voltage on supported channels and about devices that support local and/or remote sensing.\n\n"
+ "Default Value: The default value is NIDCPOWER_VAL_LOCAL if the device supports local sense."
+ " Otherwise, the default and only supported value is NIDCPOWER_VAL_REMOTE."
+ " "
+
+2 all "Auto Zero" NIDCPOWER_ATTR_AUTO_ZERO ViInt32 gs attrAutoZeroRangeTable
+ "Specifies the auto-zero method to use on the device.\n\n"
+ "Refer to the NI PXI-4132 Measurement Configuration and Timing and Auto Zero topics for more information"
+ " about how to configure your measurements.\n\n"
+ "Default Value: The default value for the NI PXI-4132 is NIDCPOWER_VAL_ON. The default value for"
+ " all other devices is NIDCPOWER_VAL_OFF, which is the only supported value for these devices."
+ " "
+
+2 all "Aperture Time Units" NIDCPOWER_ATTR_APERTURE_TIME_UNITS ViInt32 gs attrApertureTimeUnitsRangeTable
+ "Specifies the units of the NIDCPOWER_ATTR_APERTURE_TIME attribute for the channel configuration.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Refer to the Aperture Time topic in the NI DC Power Supplies and SMUs Help for more information about"
+ " how to configure your measurements and for information about valid values.\n\n"
+ "Default Value: NIDCPOWER_VAL_SECONDS"
+ " "
+
+2 all "Aperture Time" NIDCPOWER_ATTR_APERTURE_TIME ViReal64 gs
+ "Specifies the measurement aperture time for the channel configuration. Aperture time is specified in the units set by"
+ " the NIDCPOWER_ATTR_APERTURE_TIME_UNITS attribute.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Refer to the Aperture Time topic in the NI DC Power Supplies and SMUs Help for more information about how to configure"
+ " your measurements and for information about valid values.\n\n"
+ "Default Value: 0.01666666 seconds\n\n"
+ " "
+
+2 all "Power Line Frequency" NIDCPOWER_ATTR_POWER_LINE_FREQUENCY ViReal64 gs attrPowerLineFrequencyRangeTable
+ "Specifies the power line frequency for specified channel(s). NI-DCPower uses this value to select a timebase for setting the"
+ " NIDCPOWER_ATTR_APERTURE_TIME attribute in power line cycles (PLCs).\n\n"
+ "Note: This attribute is not supported by all devices. Refer to the Supported Attributes by Device topic"
+ " in the NI DC Power Supplies and SMUs Help for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_60_HERTZ"
+ " "
+
+2 all "Number of Samples to Average" NIDCPOWER_ATTR_SAMPLES_TO_AVERAGE ViInt32 gs
+ "Specifies the number of samples to average when you take a measurement.\n\n"
+ "Increasing the number of samples to average decreases measurement noise but increases the time required to take "
+ "a measurement. Refer to the NI PXI-4110, NI PXI-4130, NI PXI-4132, or NI PXIe-4154 Averaging topic for"
+ " optional attribute settings to improve immunity to certain noise types, or refer to the NI PXIe-4140/4141"
+ " DC Noise Rejection, NI PXIe-4142/4143 DC Noise Rejection, or NI PXIe-4144/4145 DC Noise Rejection topic for"
+ " information about improving noise immunity for those devices.\n\n"
+ "Default Value:\n"
+ " NI PXI-4110 or NI PXI-4130—10\n"
+ " NI PXI-4132—1\n"
+ " NI PXIe-4112—1\n"
+ " NI PXIe-4113—1\n"
+ " NI PXIe-4140/4141—1\n"
+ " NI PXIe-4142/4143—1\n"
+ " NI PXIe-4144/4145—1\n"
+ " NI PXIe-4154—500\n"
+ " "
+
+2 all "Measure Record Length" NIDCPOWER_ATTR_MEASURE_RECORD_LENGTH ViInt32 gs
+ "Specifies how many measurements compose a measure record. When this attribute is set to a value greater than 1, the"
+ " NIDCPOWER_ATTR_MEASURE_WHEN attribute must be set to NIDCPOWER_VAL_AUTOMATICALLY_AFTER_SOURCE_COMPLETE or"
+ " NIDCPOWER_VAL_ON_MEASURE_TRIGGER.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Note: This attribute is not available in a session involving multiple channels.\n\n"
+ "Valid Values: 1 to 16,777,216\n\n"
+ "Default Value: 1"
+ " "
+
+2 all "Measure Record Length Is Finite" NIDCPOWER_ATTR_MEASURE_RECORD_LENGTH_IS_FINITE ViBoolean gs Boolean_values
+ "Specifies whether to take continuous measurements. Call the niDCPower_Abort function to stop continuous measurements."
+ " When this attribute is set to VI_FALSE and the NIDCPOWER_ATTR_SOURCE_MODE attribute is set to"
+ " NIDCPOWER_VAL_SINGLE_POINT, the NIDCPOWER_ATTR_MEASURE_WHEN attribute must be set to"
+ " NIDCPOWER_VAL_AUTOMATICALLY_AFTER_SOURCE_COMPLETE or NIDCPOWER_VAL_ON_MEASURE_TRIGGER. When this attribute is set to"
+ " VI_FALSE and the NIDCPOWER_ATTR_SOURCE_MODE attribute is set to NIDCPOWER_VAL_SEQUENCE, the NIDCPOWER_ATTR_MEASURE_WHEN"
+ " attribute must be set to NIDCPOWER_VAL_ON_MEASURE_TRIGGER.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Note: This attribute is not available in a session involving multiple channels.\n\n"
+ "Default Value: VI_TRUE"
+ " "
+
+2 all "Measure Record Delta Time" NIDCPOWER_ATTR_MEASURE_RECORD_DELTA_TIME ViReal64 g
+ "Queries the amount of time, in seconds, between between the start of two consecutive measurements in a measure record."
+ " Only query this attribute after the desired measurement settings are committed.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Note: This attribute is not available when Auto Zero is configured to Once because the amount of time between the first"
+ " two measurements and the rest would differ.\n\n"
+ " "
+
+2 all "Fetch Backlog" NIDCPOWER_ATTR_FETCH_BACKLOG ViInt32 g
+ "Returns the number of measurements acquired that have not been fetched yet."
+ " "
+
+2 all "Advanced"
+ "Attributes for controlling the advanced features of the measure unit."
+ " "
+
+3 all "Measure When" NIDCPOWER_ATTR_MEASURE_WHEN ViInt32 gs attrMeasureWhenRangeTable
+ "Specifies when the measure unit should acquire measurements. Unless this attribute is configured to"
+ " NIDCPOWER_VAL_ON_MEASURE_TRIGGER, the NIDCPOWER_ATTR_MEASURE_TRIGGER_TYPE attribute is ignored.\n\n"
+ "Refer to the Acquiring Measurements topic in the NI DC Power Supplies and SMUs Help for more information about how to"
+ " configure your measurements.\n\n"
+ "Default Value: If the NIDCPOWER_ATTR_SOURCE_MODE attribute is set to NIDCPOWER_VAL_SINGLE_POINT, the default value is"
+ " NIDCPOWER_VAL_ON_DEMAND. This value supports only the niDCPower_Measure function and niDCPower_MeasureMultiple"
+ " function. If the NIDCPOWER_ATTR_SOURCE_MODE attribute is set to NIDCPOWER_VAL_SEQUENCE, the default value is"
+ " NIDCPOWER_VAL_AUTOMATICALLY_AFTER_SOURCE_COMPLETE. This value supports only the niDCPower_FetchMultiple function."
+ " "
+
+3 all "Reset Average Before Measurement" NIDCPOWER_ATTR_RESET_AVERAGE_BEFORE_MEASUREMENT ViBoolean gs Boolean_values
+ "Specifies whether the measurement returned from any measurement call starts with a new measurement call (VI_TRUE) or"
+ " returns a measurement that has already begun or completed(VI_FALSE).\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "When you set the NIDCPOWER_ATTR_SAMPLES_TO_AVERAGE attribute in the Running state, the output channel measurements might"
+ " move out of synchronization. While NI-DCPower automatically synchronizes measurements upon the initialization of a"
+ " session, you can force a synchronization in the running state before you run the niDCPower_MeasureMultiple function. To"
+ " force a synchronization in the running state, set this attribute to VI_TRUE, and then run the niDCPower_MeasureMultiple"
+ " function, specifying all channels in the channel name parameter. You can set the"
+ " NIDCPOWER_ATTR_RESET_AVERAGE_BEFORE_MEASUREMENT attribute to VI_FALSE after the niDCPower_MeasureMultiple function"
+ " completes.\n\n"
+ "Default Value: VI_TRUE"
+ " "
+
+3 all "DC Noise Rejection" NIDCPOWER_ATTR_DC_NOISE_REJECTION ViInt32 gs attrDCNoiseRejectionRangeTable
+ "Determines the relative weighting of samples in a measurement. Refer to the NI PXIe-4140/4141 DC Noise Rejection,"
+ " NI PXIe-4142/4143 DC Noise Rejection, or NI PXIe-4144/4145 DC Noise Rejection topic in the NI DC Power Supplies"
+ " and SMUs Help for more information about noise rejection.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_NORMAL"
+ ""
+
+3 all "Measure Buffer Size" NIDCPOWER_ATTR_MEASURE_BUFFER_SIZE ViInt32 gs
+ "Specifies the number of samples that the active channel measurement buffer can hold.\n\n"
+ "The default value is the maximum number of samples that a device is capable of recording in one second.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Valid Values: 1000 to 2147483647\n\n"
+ "Default Value: Varies by device. Refer to Supported Attributes by Device topic in"
+ " the NI DC Power Supplies and SMUs Help for more information about default values.\n\n"
+ ""
+
+1 all "Triggers"
+ "Attributes that configure triggers for synchronization."
+ " "
+
+2 all "Start Trigger"
+ "Attributes that configure the Start trigger."
+ " "
+
+3 all "Trigger Type" NIDCPOWER_ATTR_START_TRIGGER_TYPE ViInt32 gs attrTriggerTypeRangeTable
+ "Specifies the behavior of the Start trigger.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_NONE"
+ " "
+
+3 all "Export Output Terminal" NIDCPOWER_ATTR_EXPORTED_START_TRIGGER_OUTPUT_TERMINAL ViString gs
+ "Specifies the output terminal for exporting the Start trigger.\n\n"
+ "Refer to the Device Routes tab in Measurement & Automation Explorer (MAX) for a list of the terminals available"
+ " on your device.\n\n"
+ "Output terminals can be specified in one of two ways. If the device is named Dev1 and your terminal is PXI_Trig0, you"
+ " can specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or with the shortened terminal name,"
+ " PXI_Trig0.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices."
+ " "
+
+3 all "Digital Edge"
+ "Attributes that configure the digital edge of the Start trigger."
+ " "
+
+4 all "Edge" NIDCPOWER_ATTR_DIGITAL_EDGE_START_TRIGGER_EDGE ViInt32 gs attrDigitalEdgeRangeTable
+ "Specifies whether to configure the Start trigger to assert on the rising or falling edge.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_RISING"
+ " "
+
+4 all "Input Terminal" NIDCPOWER_ATTR_DIGITAL_EDGE_START_TRIGGER_INPUT_TERMINAL ViString gs
+ "Specifies the input terminal for the Start trigger. Use this attribute only when the NIDCPOWER_ATTR_START_TRIGGER_TYPE"
+ " attribute is set to NIDCPOWER_VAL_DIGITAL_EDGE.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "You can specify any valid input terminal for this attribute. Valid terminals are listed in Measurement & Automation"
+ " Explorer under the Device Routes tab.\n\n"
+ "Input terminals can be specified in one of two ways. If the device is named Dev1 and your terminal is PXI_Trig0, you can"
+ " specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or with the shortened terminal name,"
+ " PXI_Trig0. The input terminal can also be a terminal from another device. For example, you can set the input terminal"
+ " on Dev1 to be /Dev2/SourceCompleteEvent."
+ " "
+
+2 all "Source Trigger"
+ "Attributes that configure the Source trigger."
+ " "
+
+3 all "Trigger Type" NIDCPOWER_ATTR_SOURCE_TRIGGER_TYPE ViInt32 gs attrTriggerTypeRangeTable
+ "Specifies the behavior of the Source trigger.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_NONE"
+ " "
+
+3 all "Export Output Terminal" NIDCPOWER_ATTR_EXPORTED_SOURCE_TRIGGER_OUTPUT_TERMINAL ViString gs
+ "Specifies the output terminal for exporting the Source trigger.\n\n"
+ "Refer to the Device Routes tab in MAX for a list of the terminals available on your device.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Output terminals can be specified in one of two ways. If the device is named Dev1 and your terminal is PXI_Trig0, you"
+ " can specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or with the shortened terminal"
+ " name, PXI_Trig0."
+ " "
+
+3 all "Digital Edge"
+ "Attributes that configure the digital edge of the Source trigger."
+ " "
+
+4 all "Edge" NIDCPOWER_ATTR_DIGITAL_EDGE_SOURCE_TRIGGER_EDGE ViInt32 gs attrDigitalEdgeRangeTable
+ "Specifies whether to configure the Source trigger to assert on the rising or falling edge.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_RISING"
+ " "
+
+4 all "Input Terminal" NIDCPOWER_ATTR_DIGITAL_EDGE_SOURCE_TRIGGER_INPUT_TERMINAL ViString gs
+ "Specifies the input terminal for the Source trigger. Use this attribute only when the"
+ " NIDCPOWER_ATTR_SOURCE_TRIGGER_TYPE attribute is set to NIDCPOWER_VAL_DIGITAL_EDGE.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "You can specify any valid input terminal for this attribute. Valid terminals are listed"
+ " in Measurement & Automation Explorer under the Device Routes tab.\n\n"
+ "Input terminals can be specified in one of two ways. If the device is named Dev1 and your terminal is PXI_Trig0, you"
+ " can specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or with the shortened terminal"
+ " name, PXI_Trig0. The input terminal can also be a terminal from another device. For example, you can set the input"
+ " terminal on Dev1 to be /Dev2/SourceCompleteEvent."
+ " "
+
+2 all "Measure Trigger"
+ "Attributes that configure the Measure trigger."
+ " "
+
+3 all "Trigger Type" NIDCPOWER_ATTR_MEASURE_TRIGGER_TYPE ViInt32 gs attrMeasureTriggerTypeRangeTable
+ "Specifies the behavior of the Measure trigger.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_DIGITAL_EDGE"
+ " "
+
+3 all "Export Output Terminal" NIDCPOWER_ATTR_EXPORTED_MEASURE_TRIGGER_OUTPUT_TERMINAL ViString gs
+ "Specifies the output terminal for exporting the Measure trigger.\n\n"
+ "Refer to the Device Routes tab in Measurement & Automation Explorer for a list of the terminals"
+ " available on your device.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Output terminals can be specified in one of two ways. If the device is named Dev1 and your terminal is PXI_Trig0, you"
+ " can specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or with the shortened terminal"
+ " name, PXI_Trig0."
+ " "
+
+3 all "Digital Edge"
+ "Attributes that configure the digital edge of the Measure trigger."
+ " "
+
+4 all "Edge" NIDCPOWER_ATTR_DIGITAL_EDGE_MEASURE_TRIGGER_EDGE ViInt32 gs attrDigitalEdgeRangeTable
+ "Specifies whether to configure the Measure trigger to assert on the rising or falling edge.\n\n"
+ " NIDCPOWER_ATTR_SOURCE_TRIGGER_TYPE attribute is set to NIDCPOWER_VAL_DIGITAL_EDGE.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_RISING"
+ " "
+
+4 all "Input Terminal" NIDCPOWER_ATTR_DIGITAL_EDGE_MEASURE_TRIGGER_INPUT_TERMINAL ViString gs
+ "Specifies the input terminal for the Measure trigger. This attribute is used only when the"
+ " NIDCPOWER_ATTR_MEASURE_TRIGGER_TYPE attribute is set to NIDCPOWER_VAL_DIGITAL_EDGE.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for this attribute.\n\n"
+ "You can specify any valid input terminal for this attribute. Valid terminals are listed in"
+ " Measurement & Automation Explorer under the Device Routes tab.\n\n"
+ "Input terminals can be specified in one of two ways. If the device is named Dev1 and your terminal is PXI_Trig0, you"
+ " can specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or with the shortened terminal"
+ " name, PXI_Trig0. The input terminal can also be a terminal from another device. For example, you can set the input"
+ " terminal on Dev1 to be /Dev2/SourceCompleteEvent."
+ " "
+
+2 all "Sequence Advance Trigger"
+ "Attributes that configure the Sequence Advance trigger."
+ " "
+
+3 all "Trigger Type" NIDCPOWER_ATTR_SEQUENCE_ADVANCE_TRIGGER_TYPE ViInt32 gs attrTriggerTypeRangeTable
+ "Specifies the behavior of the Sequence Advance trigger.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_NONE"
+ " "
+
+3 all "Export Output Terminal" NIDCPOWER_ATTR_EXPORTED_SEQUENCE_ADVANCE_TRIGGER_OUTPUT_TERMINAL ViString gs
+ "Specifies the output terminal for exporting the Sequence Advance trigger.\n\n"
+ "Refer to the Device Routes tab in Measurement & Automation Explorer for a list of the terminals"
+ " available on your device.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Output terminals can be specified in one of two ways. If the device is named Dev1 and your terminal is PXI_Trig0, you"
+ " can specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or with the shortened terminal"
+ " name, PXI_Trig0."
+ " "
+
+3 all "Digital Edge"
+ "Attributes that configure the digital edge of the Sequence Advance trigger."
+ " "
+
+4 all "Edge" NIDCPOWER_ATTR_DIGITAL_EDGE_SEQUENCE_ADVANCE_TRIGGER_EDGE ViInt32 gs attrDigitalEdgeRangeTable
+ "Specifies whether to configure the Sequence Advance trigger to assert on the rising or falling edge.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_RISING"
+ " "
+
+4 all "Input Terminal" NIDCPOWER_ATTR_DIGITAL_EDGE_SEQUENCE_ADVANCE_TRIGGER_INPUT_TERMINAL ViString gs
+ "Specifies the input terminal for the Sequence Advance trigger. Use this attribute only when the"
+ " NIDCPOWER_ATTR_SEQUENCE_ADVANCE_TRIGGER_TYPE attribute is set to NIDCPOWER_VAL_DIGITAL_EDGE.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic in"
+ " the NI DC Power Supplies and SMUs Help for information about supported devices.\n\n"
+ "You can specify any valid input terminal for this attribute. Valid terminals are listed in"
+ "Measurement & Automation Explorer under the Device Routes tab.\n\n"
+ Input terminals can be specified in one of two ways. If the device is named Dev1 and your terminal is PXI_Trig0, you can"
+ " specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or with the shortened terminal"
+ " name, PXI_Trig0. The input terminal can also be a terminal from another device. For example, you can set the"
+ " input terminal on Dev1 to be /Dev2/SourceCompleteEvent."
+ " "
+
+2 all "Pulse Trigger"
+ "Attributes that configure the Pulse trigger."
+ " "
+
+3 all "Trigger Type" NIDCPOWER_ATTR_PULSE_TRIGGER_TYPE ViInt32 gs attrTriggerTypeRangeTable
+ "Specifies the behavior of the Pulse trigger.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Default Value: NIDCPOWER_VAL_NONE"
+ " "
+
+3 all "Export Output Terminal" NIDCPOWER_ATTR_EXPORTED_PULSE_TRIGGER_OUTPUT_TERMINAL ViString gs
+ "Specifies the output terminal for exporting the Pulse trigger.\n"
+ "Refer to the Device Routes tab in Measurement & Automation Explorer for a list of the terminals available on your device.\n"
+ "Output terminals can be specified in one of two ways. If the device is named Dev1 and your terminal is PXI_Trig0, you can specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or with the shortened terminal name, PXI_Trig0. "
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices. "
+ " "
+
+3 all "Digital Edge"
+ "Attributes that configure the digital edge of the Pulse trigger."
+ " "
+
+4 all "Edge" NIDCPOWER_ATTR_DIGITAL_EDGE_PULSE_TRIGGER_EDGE ViInt32 gs attrDigitalEdgeRangeTable
+ "Specifies whether to configure the Pulse trigger to assert on the rising or falling edge.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Default Value: NIDCPOWER_VAL_RISING"
+ " "
+
+4 all "Input Terminal" NIDCPOWER_ATTR_DIGITAL_EDGE_PULSE_TRIGGER_INPUT_TERMINAL ViString gs
+ "Specifies the input terminal for the Pulse trigger. This attribute is used only when the NIDCPOWER_ATTR_PULSE_TRIGGER_TYPE attribute is set to digital edge.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "You can specify any valid input terminal for this attribute. Valid terminals are listed in Measurement & Automation Explorer under the Device Routes tab.\n"
+ "Input terminals can be specified in one of two ways. If the device is named Dev1 and your terminal is PXI_Trig0, you can specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or with the shortened terminal name, PXI_Trig0. The input terminal can also be a terminal from another device. For example, you can set the input terminal on Dev1 to be /Dev2/SourceCompleteEvent. "
+ " "
+
+1 all "Events"
+ "Attributes that configure events for synchronization."
+ " "
+
+2 all "Source Complete Event"
+ "Attributes that configure the Source Complete event."
+ " "
+
+3 all "Output Terminal" NIDCPOWER_ATTR_SOURCE_COMPLETE_EVENT_OUTPUT_TERMINAL ViString gs
+ "Specifies the output terminal for exporting the Source Complete event.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Output terminals can be specified in one of two ways. If the device is named Dev1 and your terminal is PXI_Trig0, you"
+ " can specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or with the shortened terminal"
+ " name, PXI_Trig0.
+ "
+ " "
+
+3 all "Pulse"
+ "Attributes that configure the pulse characteristics of the Source Complete event."
+ " "
+
+4 all "Polarity" NIDCPOWER_ATTR_SOURCE_COMPLETE_EVENT_PULSE_POLARITY ViInt32 gs attrPulsePolarityRangeTable
+ "Specifies the behavior of the Source Complete event.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic
+ " for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_ACTIVE_HIGH"
+ " "
+
+4 all "Width" NIDCPOWER_ATTR_SOURCE_COMPLETE_EVENT_PULSE_WIDTH ViReal64 gs
+ "Specifies the width of the Source Complete event, in seconds.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "The minimum event pulse width value for PXI devices is 150 ns, and the minimum event pulse width value"
+ " for PXI Express devices is 250 ns.\n\n"
+ "The maximum event pulse width value for all devices is 1.6 microseconds\n\n"
+ "Valid Values: 1.5e-7 to 1.6e-6 seconds\n\n"
+ "Default Value: The default value for PXI devices is 150 ns. The default value for PXI Express devices is 250 ns."
+ " "
+
+2 all "Measure Complete Event"
+ "Attributes that configure the Measure Complete event."
+ " "
+
+3 all "Output Terminal" NIDCPOWER_ATTR_MEASURE_COMPLETE_EVENT_OUTPUT_TERMINAL ViString gs
+ "Specifies the output terminal for exporting the Measure Complete event.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Output terminals can be specified in one of two ways. If the device is named Dev1 and your terminal"
+ " is PXI_Trig0, you can specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or"
+ " with the shortened terminal name, PXI_Trig0."
+ " "
+
+3 all "Delay" NIDCPOWER_ATTR_MEASURE_COMPLETE_EVENT_DELAY ViReal64 gs
+ "Specifies the amount of time to delay the generation of the Measure Complete event, in seconds.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Valid Values: 0 to 167 seconds\n\n"
+ "Default Value: The NI PXI-4132 and NI PXIe-4140/4141/4142/4143/4144/4145/4154 supports values from"
+ " 0 seconds to 167 seconds."
+ " "
+
+3 all "Pulse"
+ "Attributes that configure the pulse characteristics of the Measure Complete event."
+ " "
+
+4 all "Polarity" NIDCPOWER_ATTR_MEASURE_COMPLETE_EVENT_PULSE_POLARITY ViInt32 gs attrPulsePolarityRangeTable
+ "Specifies the behavior of the Measure Complete event.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_ACTIVE_HIGH"
+ " "
+
+4 all "Width" NIDCPOWER_ATTR_MEASURE_COMPLETE_EVENT_PULSE_WIDTH ViReal64 gs
+ "Specifies the width of the Measure Complete event, in seconds.\n\n"
+ "The minimum event pulse width value for PXI devices is 150 ns, and the minimum event pulse"
+ " width value for PXI Express devices is 250 ns.\n\n"
+ "The maximum event pulse width value for all devices is 1.6 microseconds.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Valid Values: 1.5e-7 to 1.6e-6\n\n"
+ "Default Value: The default value for PXI devices is 150 ns. The default value"
+ " for PXI Express devices is 250 ns."
+ " "
+
+2 all "Sequence Iteration Complete Event"
+ "Attributes that configure the Sequence Iteration Complete event."
+ " "
+
+3 all "Output Terminal" NIDCPOWER_ATTR_SEQUENCE_ITERATION_COMPLETE_EVENT_OUTPUT_TERMINAL ViString gs
+ "Specifies the output terminal for exporting the Sequence Iteration Complete event.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Output terminals can be specified in one of two ways. If the device is named Dev1 and your terminal"
+ " is PXI_Trig0, you can specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or"
+ " with the shortened terminal name, PXI_Trig0."
+ " "
+
+3 all "Pulse"
+ "Attributes that configure the pulse characteristics of the Sequence Iteration Complete event."
+ " "
+
+4 all "Polarity" NIDCPOWER_ATTR_SEQUENCE_ITERATION_COMPLETE_EVENT_PULSE_POLARITY ViInt32 gs attrPulsePolarityRangeTable
+ "Specifies the behavior of the Sequence Iteration Complete event.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_ACTIVE_HIGH"
+ " "
+
+4 all "Width" NIDCPOWER_ATTR_SEQUENCE_ITERATION_COMPLETE_EVENT_PULSE_WIDTH ViReal64 gs
+ "Specifies the width of the Sequence Iteration Complete event, in seconds.\n\n"
+ "The minimum event pulse width value for PXI devices is 150 ns, and the minimum event pulse width"
+ " value for PXI Express devices is 250 ns.\n\n"
+ "The maximum event pulse width value for all devices is 1.6 microseconds.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic in"
+ " the NI DC Power Supplies and SMUs Help for information about supported devices.\n\n"
+ "Valid Values: 1.5e-7 to 1.6e-6 seconds\n\n"
+ "Default Value: The default value for PXI devices is 150 ns. The default value for PXI Express devices is 250 ns."
+ " "
+
+2 all "Sequence Engine Done Event"
+ "Attributes that configure the Sequence Engine Done event."
+ " "
+
+3 all "Output Terminal" NIDCPOWER_ATTR_SEQUENCE_ENGINE_DONE_EVENT_OUTPUT_TERMINAL ViString gs
+ "Specifies the output terminal for exporting the Sequence Engine Done Complete event.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Output terminals can be specified in one of two ways. If the device is named Dev1 and your terminal"
+ " is PXI_Trig0, you can specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or"
+ " with the shortened terminal name, PXI_Trig0."
+ " "
+
+3 all "Pulse"
+ "Attributes that configure the pulse characteristics of the Sequence Engine Done event."
+ " "
+
+4 all "Polarity" NIDCPOWER_ATTR_SEQUENCE_ENGINE_DONE_EVENT_PULSE_POLARITY ViInt32 gs attrPulsePolarityRangeTable
+ "Specifies the behavior of the Sequence Engine Done event.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_ACTIVE_HIGH"
+ " "
+
+4 all "Width" NIDCPOWER_ATTR_SEQUENCE_ENGINE_DONE_EVENT_PULSE_WIDTH ViReal64 gs
+ "Specifies the width of the Sequence Engine Done event, in seconds.\n\n"
+ "The minimum event pulse width value for PXI devices is 150 ns, and the minimum event pulse width value"
+ " for PXI Express devices is 250 ns.\n\n"
+ "The maximum event pulse width value for all devices is 1.6 microseconds.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device topic"
+ " for information about supported devices.\n\n"
+ "Valid Values: 1.5e-7 to 1.6e-6 seconds\n\n"
+ "Default Value: The default value for PXI devices is 150 ns. The default value for PXI Express devices is 250 ns."
+ " "
+
+2 all "Pulse Complete Event"
+ "Attributes that configure the Pulse Complete event."
+ " "
+
+3 all "Output Terminal" NIDCPOWER_ATTR_PULSE_COMPLETE_EVENT_OUTPUT_TERMINAL ViString gs
+ "Specifies the output terminal for exporting the Pulse Complete event.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Output terminals can be specified in one of two ways. If the device is named Dev1 and your terminal is PXI_Trig0, you can specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or with the shortened terminal name, PXI_Trig0.\n"
+ "Default Value:The default value for PXI Express devices is 250 ns."
+ " "
+
+3 all "Pulse"
+ "Attributes that configure the pulse characteristics of the Pulse Complete event."
+ " "
+
+4 all "Polarity" NIDCPOWER_ATTR_PULSE_COMPLETE_EVENT_PULSE_POLARITY ViInt32 gs attrPulsePolarityRangeTable
+ "Specifies the behavior of the Pulse Complete event.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Default Value: NIDCPOWER_VAL_ACTIVE_HIGH"
+
+ " "
+
+4 all "Width" NIDCPOWER_ATTR_PULSE_COMPLETE_EVENT_PULSE_WIDTH ViReal64 gs
+ "Specifies the width of the Pulse Complete event, in seconds.\n"
+ "The minimum event pulse width value for PXI Express devices is 250 ns.\n"
+ "The maximum event pulse width value for PXI Express devices is 1.6 microseconds.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Default Value: The default value for PXI Express devices is 250 ns. "
+
+ " "
+
+2 all "Ready For Pulse Trigger Event"
+ "Attributes that configure the Ready For Pulse Trigger event."
+ " "
+
+3 all "Output Terminal" NIDCPOWER_ATTR_READY_FOR_PULSE_TRIGGER_EVENT_OUTPUT_TERMINAL ViString gs
+ "Specifies the output terminal for exporting the Ready For Pulse Trigger event.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Output terminals can be specified in one of two ways. If the device is named Dev1 and your terminal is PXI_Trig0, you can specify the terminal with the fully qualified terminal name, /Dev1/PXI_Trig0, or with the shortened terminal name, PXI_Trig0. "
+ " "
+
+3 all "Pulse"
+ "Attributes that configure the pulse characteristics of the Ready For Pulse Trigger event. "
+ " "
+
+4 all "Polarity" NIDCPOWER_ATTR_READY_FOR_PULSE_TRIGGER_EVENT_PULSE_POLARITY ViInt32 gs attrPulsePolarityRangeTable
+ "Specifies the behavior of the Ready For Pulse Trigger event.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Default Value: NIDCPOWER_VAL_ACTIVE_HIGH"
+
+ " "
+
+4 all "Width" NIDCPOWER_ATTR_READY_FOR_PULSE_TRIGGER_EVENT_PULSE_WIDTH ViReal64 gs
+ "Specifies the width of the Ready For Pulse Trigger event, in seconds.\n"
+ "The minimum event pulse width value for PXI Express devices is 250 ns.\n"
+ "The maximum event pulse width value for all devices is 1.6 microseconds.\n"
+ "Note This attribute is not supported by all devices. Refer to Supported Attributes by Device for information about supported devices.\n"
+ "Default Value: The default value for PXI Express devices is 250 ns"
+
+ " "
+
+1 all "Advanced"
+ "Attributes for controlling the advanced features of the DC power supply."
+ " "
+
+2 all "Power Source" NIDCPOWER_ATTR_POWER_SOURCE ViInt32 gs attrPowerSourceRangeTable
+ "Specifies the power source to use. NI-DCPower switches the power source used by the"
+ " device to the specified value.\n\n"
+ "Default Value: NIDCPOWER_VAL_AUTOMATIC\n\n"
+ "Note:  Automatic selection is not persistent and occurs only at the time this attribute"
+ " is set to NIDCPOWER_VAL_AUTOMATIC. However, if the session is in the Committed or Uncommitted state"
+ " when you set this attribute, the power source selection only occurs after you call the"
+ " niDCPower_Initiate function."
+ " "
+
+2 all "Power Source In Use" NIDCPOWER_ATTR_POWER_SOURCE_IN_USE ViInt32 g attrPowerSourceInUseRangeTable
+ "Indicates whether the device is using the internal or auxiliary power source to generate power."
+ " "
+
+2 all "Power Source Available" NIDCPOWER_ATTR_AUXILIARY_POWER_SOURCE_AVAILABLE ViBoolean g Boolean_values
+ "Indicates whether an auxiliary power source is connected to the device.\n\n"
+ "A value of VI_FALSE may indicate that the auxiliary input fuse has blown."
+ " Refer to the Detecting Internal/Auxiliary Power topic in the NI DC Power Supplies and SMUs Help for"
+ " more information about internal and auxiliary power.\n\n"
+ "Note: This attribute does not necessarily indicate if the device is using the auxiliary"
+ " power source to generate power. Use the NIDCPOWER_ATTR_POWER_SOURCE_IN_USE attribute to retrieve this information."
+ " "
+
+2 all "Self Calibration Persistence" NIDCPOWER_ATTR_SELF_CALIBRATION_PERSISTENCE ViInt32 gs attrSelfCalibrationPersistenceRangeTable
+ "Specifies whether the values calculated during self-calibration should be written to hardware to be used until the"
+ " next self-calibration or only used until the niDCPower_ResetDevice function is called or the machine"
+ " is powered down.\n\n"
+ "This attribute affects the behavior of the niDCPower_CalSelfCalibrate function. When set to"
+ " NIDCPOWER_VAL_KEEP_IN_MEMORY, the values calculated by the niDCPower_CalSelfCalibrate function are used in"
+ " the existing session, as well as in all further sessions until you call the niDCPower_ResetDevice function"
+ " or restart the machine. When you set this property to NIDCPOWER_VAL_WRITE_TO_EEPROM, the values calculated"
+ " by the niDCPower_CalSelfCalibrate function are written to hardware and used in the existing session and"
+ " in all subsequent sessions until another call to the niDCPower_CalSelfCalibrate function is made.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device for information"
+ " about supported devices.\n\n"
+ "Default Value: NIDCPOWER_VAL_KEEP_IN_MEMORY"
+ " "
+
+2 all "Interlock Input Open" NIDCPOWER_ATTR_INTERLOCK_INPUT_OPEN ViBoolean g Boolean_values
+ "Indicates whether the safety interlock circuit is open.\n\n"
+ "Refer to the Safety Interlock topic in the NI DC Power Supplies and SMUs Help for more information about"
+ " the safety interlock circuit.\n\n"
+ "Note: This attribute is not supported by all devices. Refer to Supported Attributes by Device for information"
+ " about supported devices.\n\n"
+ " "
+
+1 all "Inherent IVI Attributes"
+ "Attributes common to all IVI instrument drivers."
+ " "
+
+2 all "User Options"
+ "Attributes you can set to affect the operation of this instrument driver."
+ " "
+
+3 all "Range Check" NIDCPOWER_ATTR_RANGE_CHECK ViBoolean gs Boolean_values
+ "Specifies whether to validate attribute values and function parameters.\n\n"
+ "If this attribute is enabled, NI-DCPower validates the parameter values that you pass to NI-DCPower functions."
+ " Range checking parameters is useful for debugging. After you validate your program, you can set this"
+ " attribute to VI_FALSE to disable range checking and maximize performance.\n\n"
+ "Use the niDCPower_InitializeWithChannels function to override this value.\n\n"
+ "Default Value: VI_TRUE"
+ " "
+
+3 all "Query Instrument Status" NIDCPOWER_ATTR_QUERY_INSTRUMENT_STATUS ViBoolean gs Boolean_values
+ "Specifies whether NI-DCPower queries the device status after each operation.\n\n"
+ " Querying the device status is useful for debugging. After you validate your program, you can set this"
+ " attribute to VI_FALSE to disable status checking and maximize performance.\n\n"
+ "NI-DCPower ignores status checking for particular attributes regardless of the setting of this attribute.\n\n"
+ "Use the niDCPower_InitializeWithChannels function to override this value.\n\n"
+ "Default Value: VI_TRUE"
+ " "
+
+3 all "Cache" NIDCPOWER_ATTR_CACHE ViBoolean gs Boolean_values
+ "Specifies whether to cache the value of attributes.\n\n"
+ "When caching is enabled, NI-DCPower records the current power supply settings and avoids sending"
+ " redundant commands to the device. Enabling caching can significantly increase execution speed.\n\n"
+ "NI-DCPower might always cache or never cache particular attributes regardless of the setting of this attribute.\n\n"
+ "Use the niDCPower_InitializeWithChannels function to override this value.\n\n"
+ "Default Value: VI_TRUE"
+ " "
+
+3 all "Simulate" NIDCPOWER_ATTR_SIMULATE ViBoolean gs Boolean_values
+ "Specifies whether to simulate NI-DCPower I/O operations. VI_TRUE specifies that operation is simulated.\n\n"
+ "Default Value: VI_FALSE"
+ " "
+
+3 all "Record Value Coercions" NIDCPOWER_ATTR_RECORD_COERCIONS ViBoolean gs Boolean_values
+ "Specifies whether the IVI engine records the value coercions it makes for ViInt32 and ViReal64 attributes."
+ " Call the niDCPower_GetNextCoercionRecord function to read and delete the earliest coercion record from the list.\n\n"
+ "Default Value: The default value is VI_FALSE. Use the niDCPower_InitializeWithChannels function to override this value."
+ " "
+
+3 all "Interchange Check" NIDCPOWER_ATTR_INTERCHANGE_CHECK ViBoolean gs Boolean_values
+ "Specifies whether to perform interchangeability checking and log interchangeability warnings when you"
+ " call NI-DCPower functions. VI_TRUE specifies that interchangeability checking is enabled.\n\n"
+ "Interchangeability warnings indicate that using your application with a different power supply might"
+ " cause different behavior. Call the niDCPower_GetNextInterchangeWarning function to retrieve"
+ " interchange warnings.\n\n"
+ "Call the niDCPower_GetNextInterchangeWarning function to clear the list of interchangeability warnings"
+ " without reading them.\n\n"
+ "Interchangeability checking examines the attributes in a capability group only if you specify a value"
+ " for at least one attribute within that group. Interchangeability warnings can occur when an attribute"
+ " affects the behavior of the device and you have not set that attribute or when the attribute has been"
+ " invalidated since you set it.\n\n"
+ "Default Value: VI_FALSE"
+ " "
+
+2 all "Driver Identification"
+ "Attributes that provide identity and version information about this"
+ " instrument driver."
+ " "
+
+3 all "Description" NIDCPOWER_ATTR_SPECIFIC_DRIVER_DESCRIPTION ViString g
+ "Contains a brief description of the specific driver."
+ " "
+
+3 all "Driver Prefix" NIDCPOWER_ATTR_SPECIFIC_DRIVER_PREFIX ViString g
+ "Contains the prefix for NI-DCPower. The name of each user-callable"
+ " function in NI-DCPower begins with this prefix."
+ " "
+
+3 all "Driver Vendor" NIDCPOWER_ATTR_SPECIFIC_DRIVER_VENDOR ViString g
+ "Contains the name of the vendor that supplies NI-DCPower."
+ " "
+
+3 all "Revision" NIDCPOWER_ATTR_SPECIFIC_DRIVER_REVISION ViString g
+ "Contains additional version information about NI-DCPower."
+ " "
+
+3 all "Class Specification Major Version" NIDCPOWER_ATTR_SPECIFIC_DRIVER_CLASS_SPEC_MAJOR_VERSION ViInt32 g
+ "Contains the major version number of the class specification with which NI-DCPower is compliant."
+ " "
+
+3 all "Class Specification Minor Version" NIDCPOWER_ATTR_SPECIFIC_DRIVER_CLASS_SPEC_MINOR_VERSION ViInt32 g
+ "Contains the minor version number of the class specification with which NI-DCPower is compliant."
+ " "
+
+2 all "Driver Capabilities"
+ "Attributes that provide information about the capabilities of this"
+ " instrument driver."
+ " "
+
+3 all "Supported Instrument Models" NIDCPOWER_ATTR_SUPPORTED_INSTRUMENT_MODELS ViString g
+ "Contains a comma-separated (,) list of supported NI-DCPower device models."
+ " "
+
+3 all "Class Group Capabilities" NIDCPOWER_ATTR_GROUP_CAPABILITIES ViString g
+ "Contains a comma-separated list of class-extension groups that NI-DCPower implements."
+ " "
+
+3 all "Channel Count" NIDCPOWER_ATTR_CHANNEL_COUNT ViInt32 g
+ "Indicates the number of channels that NI-DCPower supports for the instrument that was chosen when"
+ " the current session was opened. For channel-based attributes, the IVI engine maintains a separate"
+ " cache value for each channel."
+ " "
+
+2 all "Instrument Identification"
+ "Attributes that provide identity information about the instrument that you"
+ " are using."
+ " "
+
+3 all "Manufacturer" NIDCPOWER_ATTR_INSTRUMENT_MANUFACTURER ViString g
+ "Contains the name of the manufacturer for the device you are currently using."
+ " "
+
+3 all "Model" NIDCPOWER_ATTR_INSTRUMENT_MODEL ViString g
+ "Contains the model number or name of the device that you are currently using."
+ " "
+
+3 all "Firmware Revision" NIDCPOWER_ATTR_INSTRUMENT_FIRMWARE_REVISION ViString g
+ "Contains the firmware revision information for the device you are currently using."
+ " "
+
+2 all "Advanced Session Information"
+ "Attributes that contain additional information concerning the instrument"
+ " driver session."
+ " "
+
+3 all "Driver Setup" NIDCPOWER_ATTR_DRIVER_SETUP ViString g
+ "Indicates the Driver Setup string that you specified when initializing the driver.\n\n"
+ "Some cases exist where you must specify the instrument driver options at initialization"
+ " time. An example of this case is specifying a particular device model from among a family"
+ " of devices that the driver supports. This attribute is useful when simulating a device."
+ " You can specify the driver-specific options through the DriverSetup keyword in the optionsString"
+ " parameter in the niDCPower_InitializeWithChannels function or through the"
+ " IVI Configuration Utility.\n\n"
+ "You can specify"
+ " driver-specific options through the DriverSetup keyword in the"
+ " optionsString parameter in the niDCPower_InitializeWithChannels function."
+ "If you do not specify a Driver Setup string, this attribute returns an empty string."
+ " "
+
+3 all "Logical Name" NIDCPOWER_ATTR_LOGICAL_NAME ViString g
+ "Contains the logical name you specified when opening the current IVI session.\n\n"
+ "You can pass a logical name to the niDCPower_InitializeWithChannels function."
+ " The IVI Configuration utility must contain an entry for the logical name. The logical name entry"
+ " refers to a function section in the IVI Configuration file. The function section specifies a physical"
+ " device and initial user options."
+ " "
+
+3 all "I/O Resource Descriptor" NIDCPOWER_ATTR_IO_RESOURCE_DESCRIPTOR ViString g
+ "Indicates the resource descriptor NI-DCPower uses to identify the physical device.\n\n"
+ "If you initialize NI-DCPower with a logical name, this attribute contains the resource descriptor"
+ " that corresponds to the entry in the IVI Configuration utility.\n\n"
+ "If you initialize NI-DCPower with the resource descriptor, this attribute contains that value."
+ " "

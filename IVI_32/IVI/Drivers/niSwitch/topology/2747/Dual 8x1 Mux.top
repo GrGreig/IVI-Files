@@ -1,0 +1,64 @@
+[InitialState]
+Open Line001 = "k01a,k23a,k03a,k45a,k67a,k47a,kcoma,k01b,k23b,k03b,k45b,k67b,k47b,kcomb"
+Close Line001 = ""
+
+[ChannelList]
+Names Line001 = "ch0a,ch1a,ch2a,ch3a,ch4a,ch5a,ch6a,ch7a,coma,ch0b,ch1b,ch2b,ch3b,ch4b,ch5b,ch6b,ch7b,comb"
+
+[MuxList]
+coma Line001 = "ch0a,ch1a,ch2a,ch3a,ch4a,ch5a,ch6a,ch7a"
+
+comb Line001 = "ch0b,ch1b,ch2b,ch3b,ch4b,ch5b,ch6b,ch7b"
+
+
+
+[ConnectionList]
+ch0a->coma=""
+ch1a->coma=""
+ch2a->coma=""
+ch3a->coma=""
+ch4a->coma=""
+ch5a->coma=""
+ch6a->coma=""
+ch7a->coma=""
+ch0b->comb=""
+ch1b->comb=""
+ch2b->comb=""
+ch3b->comb=""
+ch4b->comb=""
+ch5b->comb=""
+ch6b->comb=""
+ch7b->comb=""
+
+[LazyOpenConectionList]
+ch0a->coma=kcoma
+ch1a->coma=k01a,kcoma
+ch2a->coma=k03a,kcoma
+ch3a->coma=k23a,k03a,kcoma
+ch5a->coma=k45a
+ch6a->coma=k47a
+ch7a->coma=k67a,k47a
+ch0b->comb=k01b,k03b
+ch1b->comb=k03b
+ch2b->comb=k23b
+ch4b->comb=k45b,k47b,kcomb
+ch5b->comb=k47b,kcomb
+ch6b->comb=k67b,kcomb
+ch7b->comb=kcomb
+
+[LazyCloseConectionList]
+ch0a->coma=k01a,k03a
+ch1a->coma=k03a
+ch2a->coma=k23a
+ch4a->coma=k45a,k47a,kcoma
+ch5a->coma=k47a,kcoma
+ch6a->coma=k67a,kcoma
+ch7a->coma=kcoma
+ch0b->comb=kcomb
+ch1b->comb=k01b,kcomb
+ch2b->comb=k03b,kcomb
+ch3b->comb=k23b,k03b,kcomb
+ch5b->comb=k45b
+ch6b->comb=k47b
+ch7b->comb=k67b,k47b
+

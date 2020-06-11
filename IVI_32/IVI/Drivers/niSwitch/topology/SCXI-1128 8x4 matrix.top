@@ -1,0 +1,81 @@
+[Version]
+MajorVersion = 1
+MinorVersion = 0
+
+[TopologyInfo]
+Name = "SCXI-1128 8x4 Matrix"
+Hardware = "SCXI-1128"
+SCXIDescriptorTail = "MATRIX"
+
+[Characteristics]
+NumOfRows = 4
+NumOfColumns = 8
+WireMode = 2
+
+[SwitchConfiguration]
+Close = ""
+Open = ""
+
+[InitialState]
+Open = "ch0,ch1,ch2,ch3,ch4,ch5,ch6,ch7,ch8,ch9,ch10,ch11,ch12,ch13,ch14,ch15,ch16,ch17,ch18,ch19,ch20,ch21,ch22,ch23,ch24,ch25,ch26,ch27,ch28,ch29,ch30,ch31,ab0,ab1,ab2,ab3"
+Close = ""
+
+[ChannelList]
+Names = "r0,r1,r2,r3,c0,c1,c2,c3,c4,c5,c6,c7,ab0,ab1,ab2,ab3"
+
+[ConnectionList]
+r0->c0=ch0
+r0->c1=ch1
+r0->c2=ch2
+r0->c3=ch3
+r0->c4=ch4
+r0->c5=ch5
+r0->c6=ch6
+r0->c7=ch7
+r1->c0=ch8
+r1->c1=ch9
+r1->c2=ch10
+r1->c3=ch11
+r1->c4=ch12
+r1->c5=ch13
+r1->c6=ch14
+r1->c7=ch15
+r2->c0=ch16
+r2->c1=ch17
+r2->c2=ch18
+r2->c3=ch19
+r2->c4=ch20
+r2->c5=ch21
+r2->c6=ch22
+r2->c7=ch23
+r3->c0=ch24
+r3->c1=ch25
+r3->c2=ch26
+r3->c3=ch27
+r3->c4=ch28
+r3->c5=ch29
+r3->c6=ch30
+r3->c7=ch31
+r0->ab0=ab0
+r1->ab1=ab1
+r2->ab2=ab2
+r3->ab3=ab3
+
+[ChannelDescriptions]
+r0="Row 0"
+r1="Row 1"
+r2="Row 2"
+r3="Row 3"
+c0="Column 0"
+c1="Column 1"
+c2="Column 2"
+c3="Column 3"
+c4="Column 4"
+c5="Column 5"
+c6="Column 6"
+c7="Column 7"
+ab0="Analog Bus 0"
+ab1="Analog Bus 1"
+ab2="Analog Bus 2"
+ab3="Analog Bus 3"
+

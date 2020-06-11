@@ -1,0 +1,38 @@
+[Version]
+MajorVersion = 1
+MinorVersion = 0
+
+[HardwareInfo]
+Name = "PXI-2590"
+
+[Hardware]
+Bus = PXI
+Model = 0x9060
+
+[Characteristics]
+Bandwidth = 1300000000.0
+MaxDcVoltage = 24.0
+MaxAcVoltage = 24.0
+MaxSwitchingAcCurrent = 1.0
+MaxSwitchingDcCurrent = 1.0
+MaxCarryAcCurrent = 1.0
+MaxCarryDcCurrent = 1.0
+MaxSwitchingAcPower = 24.0
+MaxSwitchingDcPower = 24.0
+MaxCarryAcPower = 24.0
+MaxCarryDcPower = 24.0
+CharacteristicImpedance = 50.0
+SettlingTime = 0.016384
+
+[Registers]
+RTCRmin = 23884
+ClockPeriod = 62.5E-9
+;when scanning, module is break before make ONLY
+;I want to make this module BBMonly, but choose not to because of backward compatability issues
+BBMonly	= 0
+
+[SwitchNames]
+mux01 = 0
+mux0123 = 1
+mux23 = 2
+

@@ -1,0 +1,56 @@
+[Version]
+MajorVersion = 1
+MinorVersion = 0
+
+[TopologyInfo]
+Name = "PXI-2591 1-Wire MUX"
+Hardware = "PXI-2591"
+
+[Characteristics]
+NumOfRows = 1
+NumOfColumns = 4
+WireMode = 1
+
+[SwitchConfiguration]
+Close = ""
+Open = ""
+
+
+[InitialState]
+Open = "sw0,sw1,sw2,sw3"
+Close = ""
+
+[ChannelList]
+Names = "ch0,ch1,ch2,ch3,com"
+
+[MuxList]
+com = "ch0,ch1,ch2,ch3"
+
+[ConnectionList]
+ch0->com=""
+ch1->com=""
+ch2->com=""
+ch3->com=""
+
+[LazyCloseConectionList]
+ch0->com=sw0
+ch1->com=sw1
+ch2->com=sw2
+ch3->com=sw3
+
+[LazyOpenConectionList]
+ch0->com=sw1,sw2,sw3
+ch1->com=sw0,sw2,sw3
+ch2->com=sw0,sw1,sw3
+ch3->com=sw0,sw1,sw2
+
+[ChannelDescriptions]
+ch0="Channel 0"
+ch1="Channel 1"
+ch2="Channel 2"
+ch3="Channel 3"
+com="Common"
+
+
+[RequiresSlot]
+

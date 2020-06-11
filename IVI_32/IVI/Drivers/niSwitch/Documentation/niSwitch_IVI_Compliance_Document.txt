@@ -1,0 +1,85 @@
+IVI Compliance Category:
+-----------------------
+
+IVI-C IviSwtch Specific Instrument Driver
+Class Specification version:        4.00
+Group Capabilities Supported:
+   Base                 = Supported
+   Scanner              = Supported
+   SoftwareTrigger      = Supported
+IVI Generation:                     IVI-2014
+
+
+
+Optional Features:
+-----------------
+
+Interchangeability Checking =       True
+State Caching =                     True
+Coercion Recording =                True
+
+
+
+Driver Identification:
+---------------------
+
+Driver Revision:                    19.0.0
+Driver Vendor:                      National Instruments
+Prefix:                             niSwitch
+Description:                        NI-SWITCH Driver
+
+
+
+Hardware Information:
+--------------------
+
+Instrument Manufacturer:            National Instruments
+Supported Instrument Models:        SCXI-1127, SCXI-1128, SCXI-1129, SCXI-1130, SCXI-1160, SCXI-1161, SCXI-1163R, SCXI-1166, SCXI-1167, SCXI-1169, SCXI-1175, SCXI-1190, SCXI-1191, SCXI-1192, SCXI-1193, SCXI-1194, SCXI-1195, PXI-2501, PXI-2503, PXI-2510, PXI-2512, PXI-2514, PXI-2515, PXI-2520, PXI-2521, PXI-2522, PXI-2523, PXI-2527, PXI-2529, PXI-2530, PXI-2530B, PXI-2531, PXI-2532, PXI-2532B, PXI-2533, PXI-2534, PXI-2535, PXI-2536, PXI-2540, PXI-2541, PXI-2542, PXI-2543, PXI-2544, PXI-2545, PXI-2546, PXI-2547, PXI-2548, PXI-2549, PXI-2554, PXI-2555, PXI-2556, PXI-2557, PXI-2558, PXI-2559, PXI-2564, PXI-2565, PXI-2566, PXI-2567, PXI-2568, PXI-2569, PXI-2570, PXI-2571, PXI-2575, PXI-2576, PXI-2584, PXI-2585, PXI-2586, PXI-2590, PXI-2591, PXI-2593, PXI-2594, PXI-2595, PXI-2596, PXI-2597, PXI-2598, PXI-2599, PXI-2720, PXI-2722, PXI-2796, PXI-2797, PXI-2798, PXI-2799, PXIe-2512, PXIe-2514, PXIe-2515, PXIe-2524, PXIe-2525, PXIe-2526, PXIe-2527, PXIe-2529, PXIe-2531, PXIe-2532, PXIe-2532B, PXIe-2540, PXIe-2541, PXIe-2542, PXIe-2543, PXIe-2544, PXIe-2569, PXIe-2575, PXIe-2593, PXIe-2725, PXIe-2727, PXIe-2737, PXIe-2738, PXIe-2739, PXIe-2746, PXIe-2747, PXIe-2748, PXIe-2790, NI 2810, NI 2811, NI 2812, NI2813, NI 2814, NI 2815, NI 2816, NI 2817, NI 2833, NI 2834, NI 2865
+Supported Bus Interfaces:           SCXI, PXI, PXIe
+
+
+
+32-bit Software Information:
+---------------------------
+Supported Operating Systems:        Windows 7 (32 and 64-bit), Windows 8 (32 and 64-bit), Windows Server 2003 R2 (32-bit),
+                                    Windows Server 2008 R2 (64-bit), Windows 10 (32-bit and 64-bit)
+Support Software Required:          None
+Source Code Availability:           Source code is not available
+
+
+
+64-bit Software Information:
+---------------------------
+Supported Operating Systems:        Windows 7 (64-bit), Windows 8 (64-bit), Windows Server 2008 R2 (64-bit), Windows 10 (64-bit)
+Support Software Required:          None
+Source Code Availability:           Source code is not available
+
+
+
+Unit Testing:
+------------
+Test Setup:
+Instrument Model (Firmware Revision):  NI PXI-2530, NI PXIe-2737 (N/A)
+Bus Interface:                         PXI, PXIe
+Operating System (Service Pack):       Windows 10
+OS Bitness/Application Bitness:        64-bit/64-bit
+IVI Shared Components Version:         2.4.2
+
+
+
+Driver Installation Testing:
+---------------------------
+Operating System (Service Pack):      Windows 7, Windows 8, Windows 10,
+                                      Windows Server 2003 R2, Windows Server 2008 R2
+OS Bitness:                           OS Specific (See Above)
+
+
+
+Driver Test Failures:
+--------------------
+Known Issues:                        Refer to the NI-SWITCH Readme File for more information about known issues
+
+
+
+Note:
+National Instruments has evaluated and/or tested this driver to verify that it meets all applicable requirements of the IVI specifications at the time this compliance document was submitted to the IVI Foundation and agrees to abide by the dispute arbitration provisions in Section 7 of IVI-1.2: Operating Procedures, if the IVI Foundation finds this driver to be non-conformant.

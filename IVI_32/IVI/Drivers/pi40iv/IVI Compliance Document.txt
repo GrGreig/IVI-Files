@@ -1,0 +1,67 @@
+IVI Compliance Category:
+------------------------
+IVI-C IviSwtch Class Instrument Driver
+IVI Generation:							IVI-2014
+IVI Instrument Class:					IviSwtch
+IviScope Spec: 							IVI-4.6   Revision: 4.0
+
+
+Driver Identification:
+----------------------
+Driver Revision:						4.16
+Driver Vendor:							Pickering Interfaces Ltd
+Prefix:								pi40iv
+Description:							Pickering IVI Switch Driver
+
+
+Hardware Information:
+---------------------
+Instrument Manufacturer:				Pickering Interfaces Ltd
+Supported Instrument Models:			40 Series PXI Cards in PXI or LXI chassis plus LXI dedicated units
+Supported Bus Interfaces:				PXI and LXI
+
+
+32-bit Software Information:
+----------------------------
+Supported Operating Systems:			Windows XP, Windows 7 (32-bit), Windows 7 (64-bit), Windows 8 (32-bit), Windows 8 (64-bit)
+Unsupported Operating System:			Windows 2000, Windows Vista 32, Windows Vista 64 
+Support Software Required:				NI ICP 1.6 or later, VISA 2.6.0 or later
+Source Code Availability:				Source code not available.
+
+Unit Testing:
+-------------
+Test Setup Instrument 1:
+  Instrument Models:					40-110-121, 40-632-021, 40-725-721
+  Bus Interface:						PXI
+  Operating System (Service Pack):		Windows 7 (SP1)
+  OS Bitness/Application Bitness:		32-bit/32-BIT
+  VISA Vendor and Version:				NI-VISA 5.2
+  IVI compliance package:				NI ICP 4.5
+  IVI Shared Components Version:		2.2.1
+
+Test Setup Instrument 2:
+  Instrument Models:					60-390-003
+  Bus Interface:						LXI
+  Operating System (Service Pack):		Windows 7 (SP1)
+  OS Bitness/Application Bitness:		32-bit/32-BIT
+  VISA Vendor and Version:				NI-VISA 5.2
+  IVI compliance package:				NI ICP 4.5
+  IVI Shared Components Version:		2.2.1
+
+Test Setup Simulation: 
+  Instrument Models:					40-110-121, 40-632-021, 40-725-721
+  Bus Interface:						N/A
+  Operating System (Service Pack):		Windows 7 (SP1)
+  OS Bitness/Application Bitness:		32-bit/32-BIT
+  VISA Vendor and Version:				NI-VISA 5.2
+  IVI compliance package:				NI ICP 4.5
+  IVI Shared Components Version:		2.2.1
+
+Driver Installation Testing:
+  Operating System (Service Pack): 		WindowsXP (SP3), Windows 7 (SP1)
+  OS Bitness:							32-bit
+
+Driver Buildability:
+  Operating System (Service Pack): 		Windows 7 (SP1)
+  OS Bitness:							32-bit
+  Visual Studio Version:				VS2010

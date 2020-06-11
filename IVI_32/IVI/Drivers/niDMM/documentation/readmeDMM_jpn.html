@@ -1,0 +1,435 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="ContentType" content="readme">
+<meta name="ProductCategories" content="286757"/>
+<title>NI-DMM 19.5 Readme</title>
+
+<style type="text/css">
+<!--
+/***************************************************/
+/* MINIMAL STYLES */
+/* The following section defines styles that every HTML Help project should need. */
+
+/* Specifies white background color for page and font style for text. */
+body {background-color:#FFFFFF; font-family:Verdana, sans-serif; font-size:8pt; color: #000000;}
+
+/* Use P for normal paragraphs. */
+p { margin-top:6.00pt; margin-bottom:6.00pt; }
+
+br { font-size:4.00pt; }
+
+/* Use H1 for all topic headings. */
+h1 { margin-top:3.00pt; margin-bottom:3.00pt; font-size:150%; font-weight:bold; }
+
+/* Use H2 for second-level headings. */
+h2 { margin-top:9.00pt; margin-bottom:3.00pt; font-size:125%; font-weight:bold; }
+
+/* Use H3 for third-level headings. */
+h3 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold; }
+
+/* Use H4 for fourth-level headings. */
+h4 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold; }
+
+/* H5 and H6 have the same definition as H4 because you should not need this level of heading in one topic. If you need to use H5 or H6, consider breaking up your topic into more than one topic. */
+h5 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold; }
+h6 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold; }
+
+/* Deprecated. Use P for normal paragraphs. */
+p.Body { }
+
+/* Use the Anchor style class for graphic references on a line by themselves. */
+p.Anchor { font-size:125%; }
+
+/* Use the Indent style classes to indent a paragraph. If you need to indent text below a list item, use <br><br> to start the new paragraph within the same set of <li></li> tags. If you need to indent a list within another list, nest the indented list within the first list's set of <ol></ol> or <ul></ul> tags. */
+p.Indent1 { margin-left:12.00pt; margin-bottom:3.00pt; }
+p.Indent2 { margin-left:24.00pt; margin-bottom:3.00pt; }
+p.Indent3 { margin-left:36.00pt; margin-bottom:3.00pt; }
+p.Indent4 { margin-left:48.00pt; margin-bottom:3.00pt; }
+p.Indent5 { margin-left:60.00pt; margin-bottom:3.00pt; }
+
+/* Use the LI style for all list items. */
+li { margin-top:3.00pt; margin-bottom:3.00pt; }
+
+/* Use the OL style for numbered lists. You do not have to type the number for each list item in a numbered list. */
+ol { margin-left:22.00pt; margin-top:3.00pt; margin-bottom:3.00pt; text-indent:0pt; list-style-type: decimal; }
+
+/* Use the OL style for numbered lists. Nested lists will use the bullet types according to the nesting scheme below */
+ol ol {list-style-type:lower-alpha}
+ol ol ol {list-style-type:decimal}
+ol ol ol ol {list-style-type:lower-alpha}
+ol ol ol ol ol {list-style-type:decimal}
+ol ol ol ol ol ol {list-style-type:lower-alpha}
+ol ol ol ol ol ol ol {list-style-type:decimal}
+ol ol ol ol ol ol ol ol {list-style-type:lower-alpha}
+
+
+/* Use the EquationNum style class for numbered lists of equations. You do not have to type the number for each list item in a numbered list. */
+ol.EquationNum { margin-left:36.00pt; text-indent:0pt; list-style-type: decimal; }
+
+/* Use the List-abc style class for lettered lists. You do not have to type the letter for each list item in a lettered list. */
+ol.List-abc { margin-left:22.00pt; text-indent:0pt; list-style-type:lower-alpha; }
+
+/* Use the UL style for bulleted lists. You do not have to type the bullet for each list item in a bulleted list. */
+ul { margin-left:22.00pt; text-indent:0pt; margin-top:3.00pt; margin-bottom:3.00pt; list-style-type: disc; }
+
+/* Use the UL style for bulleted lists. Nested lists will use the bullet types according to the nesting scheme below. */
+ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul ul ul ul ul ul{list-style-image: none;list-style-type: circle}
+
+/* Use the List-Box style class for bulleted lists with boxes instead of bullets. You do not have to type the box for each list item in a box list. */
+ul.List-Box {list-style-image: none;list-style-type: square}
+
+table { font-size:8pt; }
+
+/* Use the Borderless style class for tables that do not need borders, such as for 2-column or 3-column lists with no headings. */
+table.Borderless { border:none; }
+
+/* Use the Bordered style class for tables that need borders. */
+table.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; border-collapse: collapse; }
+
+/* Use the TD style for table cells in Borderless or Borderless-Wide tables. */
+td { vertical-align:top; padding:3px; }
+
+/* Use the Bordered style class for table headings and cells in Bordered or Bordered-Wide tables. */
+.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; }
+
+/* Use the Icon style class for table cells that contain note, caution, warning, or tip icons, or LabVIEW datatype terminals. */
+td.Icon { width:40px; }
+
+/* Use the TH style for table heading cells in Borderless or Borderless-Wide tables. */
+th { font-weight:bold; padding:3px; }
+
+/* Use the Left-Align style class for table headings and cells that you want to left align instead of center align. */
+.Left-Align { text-align:left; }
+
+/***************************************************/
+/* CHARACTER FORMATS */
+/* The following section defines character formats that every HTML Help project should need. */
+
+/* CHARACTER FORMATS Updated to conform with the CSE HTML Validator Pro */
+/* The following section defines character formats that every HTML Help project should need. */
+
+/* Use the Dark-Red format for warnings or cautions. */
+.Dark-Red { color: #800000 }
+
+/* Use the Monospace format for code or syntax examples. */
+.Monospace { font-family: "Courier New",monospace; font-size: 100%; }
+
+/* Use the Monospace-Bold format for messages and responses that the computer automatically prints to the screen. */
+.Monospace-Bold { font-family: "Courier New",monospace; font-weight: bold; font-size: 100%; }
+
+/* Use the Monospace-Italic format to denote text that is a placeholder for a word or value that the user must supply. */
+.Monospace-Italic { font-family: "Courier New",monospace; font-style: italic; font-size: 100%; }
+
+/* small class */
+.smallFont { font-size:87.5%; }
+
+/* Bold class */
+.Bold { font-weight: bold; }
+
+/* Italic class */
+.Italic { font-style: italic; }
+
+/* Use the Platform format to denote a specific platform. */
+.Platform { color: #0000FF; font-weight: bold; }
+
+/* Use the Symbol format for characters not in the Verdana character set. Use this format sparingly. When possible, you should use the correct ASCII code for the symbol or use a graphic to recreate the symbol. */
+.Symbol { font-family: Symbol; }
+
+/* Use the Red-text format to call attention to text that needs information added or edited by techcomm */
+.Red-text {color: #FF0000;}
+
+/* Use the Green-Underline format for the green defintion in the conventions topic */
+.Green-Underline {color: #007700; text-decoration : underline;}
+
+/* Use the glossButton format for the glossary buttons used in the glossary topic */
+.glossButton { font-size:12px; color:black; }
+
+/* Use for text sections and hyphenated words that should not break at line wraps */
+.nobreak{white-space:nowrap}
+
+/* Use for template instructions. */
+.instructions{color:red; font-style:italic}
+
+/*Use for words and text sections that do not need to be localized */
+.DNL { }
+
+/* The following styles define the color of links. */
+a:link { color: #007700 }
+a:visited { color: #7F007F }
+a:link:hover { color: #FF0000 }
+a:link:active { color: #FF0000 }
+
+/***************************************************/
+/* Forms */
+
+form { margin-top:0pt; margin-bottom:3pt; color:black; }
+select { font-size:100%; color:black; }
+
+/*******************************************************/
+/* Margins */
+/* Use these styles for block-level elements inside tables cells or list items where you do not want extra padding at the top or bottom of a cell. */
+.noTopMargin { margin-top:0pt;}
+.noBottomMargin { margin-bottom:0pt;}
+
+/***************************************************/
+/* CODE STYLES */
+/* The following section defines styles that you need to format entire sections of code or syntax examples. If you have just a few words you need to format as a code or syntax example, use the Monospace character format. */
+
+p.Code { margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace; }
+p.Code1 { margin-left:12.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace; }
+p.Code2 { margin-left:24.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace; }
+p.Code3 { margin-left:36.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace; }
+-->
+</style>
+
+</head>
+
+<body><!--Remove content between these comments.--><h1>NI-DMM 19.5 Readme</h1>
+
+<p>2019年9月</p>
+
+<p>このファイルには、インストール手順、新機能、修正された主なバグのリスト、および既知の問題など、NI-DMMに関する重要な情報が記載されています。</p>
+
+
+<p>LabVIEW NXGをご使用の場合は、<a href="#nxginstructions">LabVIEW NXGのサポートおよび注意事項</a>を参照してください。</p>
+<hr>
+
+<p><a href="#overview">概要</a></p>
+<p><a href="#requirements">システム要件</a></p>
+<p><a href="#supportedOSes">サポートされているオペレーティングシステム</a></p>
+<p><a href="#app">アプリケーションソフトウェアのサポート</a></p>
+<p><a href="#installation">インストール手順</a></p>
+<p><a href="#updates">製品のセキュリティおよび重要な更新</a></p>
+<p><a href="#New">新機能</a></p>
+<p><a href="#hardware">サポートされているハードウェア</a></p>
+<p><a href="#changes">動作の変更</a></p>
+<p><a href="#known">既知の問題</a></p>
+<p><a href="#fixes">バグの修正</a></p>
+<p><a href="#help">ヘルプにアクセスする</a></p>
+<p><a href="#examples">サンプルを検索する</a></p>
+<p><a href="#nxginstructions">LabVIEW NXGのサポートおよび注意事項</a></p>
+<p><a href="#ivi">IVI Compliance Packageの機能</a></p>
+<p><a href="#autoinstall">NI製品のインストールを自動化する</a></p>
+<p><a href="#win10">NIソフトウェアをMicrosoft Windows 10と使用する</a></p>
+<p><a href="#win8">NIソフトウェアをMicrosoft Windows 8.1と使用する</a></p>
+<p><a href="#win32bit">NI-DMMは、2021年にWindows 7 (32および64ビット)、Windows Server 2008 R2、およびすべての32ビットWindowsオペレーティングシステムのサポートを終了します</a></p>
+<p><a href="#legal">法的情報</a></p>
+<hr>
+
+
+
+<h2><a name="overview">概要</a></h2>
+<p>NI-DMMは、NIのすべてのプログラム可能デジタルマルチメータ (DMM) と通信するための計測器ドライバです。NI-DMMは、IVI (Interchangeable Virtual Instrument) に準拠した計測器ドライバで、DMMの機能を実行する操作とプロパティのセットを提供します。また、NI-DMMには、対話型のソフトフロントパネルとサンプルが含まれています。</p>
+
+<h2><a name="requirements">システム要件</a></h2>
+<p>NI-DMM 19.5のシステム要件は、次のとおりです。</p>
+ <h3>最小システム要件</h3><ul><li>プロセッサ&mdash;2.53 GHz Intel Core 2 Duoプロセッサまたは同等のプロセッサ</li>
+
+    <li>RAM&mdash;1 GB、800 MHz DDR2 RAM</li>
+    <li>1,024 x 768の画面解像度</li></ul><h3>推奨システム</h3><ul><li>プロセッサ&mdash;2.3 GHzクアッドコアIntel Core i7または同等のプロセッサ</li>
+
+    <li>RAM&mdash;4 GB、デュアルチャンネル1600 MHz DDR3 RAM</li></ul><p>その他のシステム要件とLabVIEWでサポートされているオペレーティングシステムについては、『<em></em>LabVIEW Readme』を参照してください。</p>
+<h2><a name="supportedOSes">サポートされているオペレーティングシステム</a></h2>
+
+<p>NI-DMM 19.5は、次のオペレーティングシステムをサポートしています。</p><ul><li>Windows 10/8.1<sup>1</sup>/7 SP1<sup>2</sup></li>
+		<li>Windows Server 2012 R2<sup>1</sup></li>
+		<li>Windows Server 2008 R2 SP1<sup>2</sup></li></ul><!-- Windows XP support information --><p><sup>1</sup> NIソフトウェアは、VC2015ランタイムおよび.NET 4.6.2をインストールします。Windows 8.1およびWindows Server 2012 R2でこれらをサポートするには、Microsoft社の更新プログラムを適用する必要があります。これらの更新プログラムのインストール方法については、Microsoft <a href="http://www.ni.com/r/expfcj" target="_blank">KB2919442</a>および<a href="http://www.ni.com/r/exkd3p" target="_blank">KB2919355</a>を参照してください。</p>
+
+
+<p><sup>2</sup> NIソフトウェアは、SHA-256証明書により署名されています。Windows 7 SP1、Windows Embedded Standard 7 SP1、およびWindows Server 2008 R2 SP1でSHA-256をサポートするには、Microsoftの更新プログラムが必要です。このセキュリティ更新のインストール方法については、Microsoft <a href="http://www.ni.com/r/exf7ig" target="_blank">KB3033929</a>を参照してください。</p>
+<p><strong>メモ</strong>&nbsp;&nbsp;2016年に、NI-DMMによるWindows Vista、Windows XP、Windows Server 2003、およびサービスパックなしのWindows 7のサポートは終了しました。NI-DMM 19.5をサポートされていないOSにインストールしたり、その上で実行したりすることはできません。サポートされていないOSにNI-DMM 19.5を使用しているアプリケーションをデプロイしたり、配布したりすることはできません。また、NI-DMM 19.5がインストールされているコンピュータで作成されたインストーラは、サポートされていないOS上で実行されている、いかなるバージョンのLabVIEW、LabWindows&trade;/CVI&trade;、NI TestStand&trade;、またはMeasurement Studioとも一緒に使用することはできません。</p>
+<p>2016年に変更されたOSサポートの詳細については、「<a href="http://www.ni.com/r/OSSupport2016" target="_blank">Why Does My NI ADE Installer Fail on Windows XP/Vista and Windows Server 2003?</a>」を参照してください。</p>
+    
+<p><strong>メモ</strong>　Windows 32ビットオペレーティングシステムのサポートでは、物理アドレス拡張 (PAE) を無効にする必要がある場合があります。これによりシステムが受ける影響および必要な対策については、<a href="http://www.ni.com/r/PAESupport" target="_blank">ni.com/r/PAESupport</a>を参照してください。</p>
+ <p><strong>メモ</strong>&nbsp;&nbsp;今後のOSサポートについては、「<a href="#win32bit">NI-DMMは、2021年にWindows 7 (32および64ビット)、Windows Server 2008 R2、およびすべての32ビットWindowsオペレーティングシステムのサポートを終了します</a>」を参照してください。</p>
+    
+    
+<h2><a name="app">アプリケーションソフトウェアのサポート</a></h2>
+<p>NI-DMM 19.5では、次のバージョンのアプリケーションソフトウェア (サービスパックを含む) がサポートされています。NIアプリケーションソフトウェアを使用していない場合は、「Microsoft Visual Studioのサポート」を参照してください。</p>
+
+<table class="Bordered">
+<tr><th class="Bordered">アプリケーションソフトウェア</th><th class="Bordered">NI-DMMでサポートされているバージョン</th></tr>
+<tr><td class="Bordered">LabVIEW</td>
+<td class="Bordered">2016、2017、2018、2019</td>
+<tr>
+	<td class="Bordered">LabVIEW Real-Timeモジュール</td>
+	<td class="Bordered">2016、2017、2018、2019</td>
+</tr>
+<tr><td class="Bordered">LabVIEW NXG<sup></sup></td>
+	<td class="Bordered">4.0</td></tr>
+<tr>
+	<td class="Bordered">LabWindows&trade;/CVI&trade;</td>
+	<td class="Bordered">2013以降</td></tr>
+<tr>
+	<td class="Bordered">LabWindows/CVI Real-Timeモジュール</td>
+	<td class="Bordered">2013以降</td></tr>
+</table>
+
+<h3>Microsoft Visual Studioのサポート</h3>
+<p>NI-DMM .NETクラスライブラリを使用している場合、.NET Framework 4.0以上が必要です。NI-DMM .NETクラスライブラリは、.NET Framework 4.0または.NET Framework 4.5をターゲットにできる任意のVisual StudioバージョンのVisual C#またはVisual Basic .NETプログラミング言語で使用できます。</p>
+<p>.NET APIを使用するには、.NETクラスライブラリをインストールするために、NI-DMMインストーラで、NIデバイスドライバに加えて .NET Framework 4.0言語サポートまたは.NET Framework 4.5言語サポートパッケージを選択する必要があります。.NET Frameworkのバージョンとそれらでサポートされているドライバ、およびインストーラファイルのダウンロード場所については、<a href="http://www.ni.com/r/NETAPIdriversupport" target="_blank">National Instruments .NET Driver Support</a>を参照してください。</p>
+
+<h2><a name="installation">インストール手順</a><!--Begin LabVIEW-specific text--></h2>
+<p>NI パッケージマネージャを使用してNI-DMMをインストールしてください。これまでにNI ソフトウェアがインストールされていなければ、NI ソフトウェアをインストールするために、NI パッケージマネージャがNI-DMMによりインストールされます。NI パッケージマネージャは、<a href="http://www.ni.com/r/NIPMDownload" target="_blank">ni.com/r/NIPMDownload</a>からダウンロードできます。NI パッケージマネージャを使用してNIソフトウェアをインストール、削除、およびアップグレードする方法については、『<a href="http://www.ni.com/r/NIPMManual" target="_blank">NI パッケージマネージャマニュアル</a>』を参照してください。</p>
+<ol>
+<li>LabVIEWまたはLabWindows&trade;/CVI&trade; などのADEをインストールします。</li>
+	<li><a href="http://www.ni.com/downloads">ni.com/downloads</a>で「<span class="Monospace">NI-DMM 19.5</span>」を検索します。</li>
+	<li><strong>NI-DMM 19.5</strong>をクリックしてから、ダウンロードリンクをクリックし、実行可能ファイル (<span class="Monospace">.exe</span>) ファイルを実行します。</li>
+	<li>インストール画面の指示に従います。アクセス/セキュリティプロンプトが表示される場合があります。画面の指示に従って、インストールを完了します。</li>
+	<li>インストールが完了したら、再起動、シャットダウン、または後で再起動するかどうかを尋ねるダイアログボックスで<strong>再起動</strong>を選択します。</li></ol>
+
+<p><strong>メモ</strong></p><ul><li>Windows Updateが有効になっている場合、Windows UpdateがMicrosoft Visual C++ 2015 ランタイムのインストールと競合して、インストールプロセスが停止することがあります。この問題の詳細と解決法については、<a href="http://www.ni.com/r/exjq43" target="_blank">ni.com/r/exjq43<a>を参照してください。</li> <li>この製品をNIソフトウェアスイートまたはNI製品バンドルの一部として購入した場合は、同梱されているインストールメディアからこの製品をインストールできます。</li></ul><!--Critical updates--><h2><a name="updates">製品のセキュリティおよび重要な更新</a></h2>
+
+<p>NI製品のセキュリティに関する通知を表示または受信登録するには、<a href="http://www.ni.com/security" target="_blank">ni.com/security</a>を参照してください。NIからの重要な更新の情報については、<a href="http://www.ni.com/critical-updates" target="_blank">ni.com/critical-updates</a>を参照してください。</p>
+
+<h2><a name="New">新機能</a></h2><ul><li>NI-DMM 19.5では、LabVIEW NXG 4.0のサポートが追加されました。</li></ul><h2><a name="hardware">サポートされているハードウェア</a></h2>
+<p>NI-DMM 19.5でサポートされているハードウェアモデルは、次のとおりです。</p>
+
+	<p>PXIアンプモジュール<em></em></p><ul><li>PXI-4022</li></ul><p>PXIデジタルマルチメータ<em></em></p><ul><li>PXIe-4080</li>
+    <li>PXIe-4081</li>
+    <li>PXIe-4082</li>
+    <li>PXI-4072</li>
+    <li>PXI-4071</li>
+    <li>PXI-4070</li>
+    <li>PXI-4065</li></ul><p>デジタルマルチメータデバイス<em></em></p><ul><li>PCI-4070</li>
+    <li>PCIe-4065</li>
+    <li>PCI-4065</li>
+    <li>USB-4065</li></ul><h2><a name="changes">動作の変更</a></h2><!--Keep behavior changes for current and two previous releases so this content is easier to find for users who don't upgrade to every version.--><ul><li>
+	  <p>NI-DMM 19.0では、従来型DAQ (NI-DAQ) およびPCI/PXI-4060、DAQCard-4050 (PCMCIA-4050) デジタルマルチメータのサポートが終了しました。</p></li>
+	<li><p>NI-DMM 19.0では、LabVIEWでのExpress VIのサポートが終了しました。以前のバージョンのNI-DMMで作成されたExpress VIを使用している既存のコードは引き続き実行可能ですが、Express VIをダイアログボックスから再構成することはできません。</p> <p>Express VIを再構成するには、そのExpress VIを右クリックして、<strong>フロントパネルを開く</strong>&#8594;<strong>変換</strong>を選択します。これにより、Express VIはブロックダイアグラムで構成可能なコードに変換されます。コードをLabVIEW NXGで使用するために、LabVIEW NXGのコード変換ユーティリティを使用して変換する前に、Express VIをコードに変換することをお勧めします。</p></li></ul><h2><a name="known">既知の問題</a></h2>
+<p>ソフトウェアとドキュメントの既知の問題のリストはオンラインで参照できます。既知の問題の最新リストについては、<a href="http://www.ni.com/r/dmm195ki" target="_blank">NI-DMM 19.5 Known Issues</a>を参照してください。</p>
+
+<h2><a name="fixes">バグの修正</a></h2>
+<p>以下は、NI-DMMで修正された問題の一部のIDとタイトルです。このリストは、NI-DMMの現行バージョンで修正された問題をすべて網羅しているわけではありません。バグIDがわかっている場合は、この一覧で修正状況を確認できます。</p>
+
+<p class="Body">以下は、NI-DMM 19.0からNI-DMM 19.1での変更点です。</p>
+
+<table class="Bordered">
+	<tr>
+		<th class="Bordered">ID</th>
+		<th class="Bordered">修正された問題</th>
+	</tr>
+	<tr>
+		<td class="Bordered">726548</td>
+		<td class="Bordered"><span class="DNL">Fixed an issue in which the PXIe‑4080, PXIe‑4081, and PXIe‑4082 could use an incorrect default value for the Settle Time property after setting the Range property to -3.0 (Auto Range Once).</span></td>
+	</tr>
+</table>
+
+<p class="Body">以下は、NI-DMM 18.0からNI-DMM 18.1での変更点です。</p>
+
+<table class="Bordered">
+	<tr>
+		<th class="Bordered">ID</th>
+		<th class="Bordered">修正された問題</th>
+	</tr>
+	<tr>
+		<td class="Bordered">575369</td>
+		<td class="Bordered"><span class="DNL">Fixed an issue affecting the PXIe‑4080, PXIe‑4081, and PXIe‑4082 that caused additional trigger latency in waveform mode.</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">682078</td>
+		<td class="Bordered"><span class="DNL">Fixed an issue affecting the PXI/PCI/PCIe/USB‑4065 when the Range property was set to Auto Range Once that caused the device to perform an autorange each time the Read or Initiate VIs were called rather than for only the first measurement of an acquisition.</span></td>
+	</tr>
+</table>
+<h2><a name="help">ヘルプにアクセスする</a></h2>
+<p>NI-DMMについては、『<em></em>NI デジタルマルチメータヘルプ』を参照してください。『NI信号発生器ヘルプ』には、<strong>スタート</strong>&#8594;<strong>すべてのプログラム</strong>&#8594;<strong>National Instruments &#8594;</strong><strong>NI-DMM</strong>&#8594;<strong>NI-DMMドキュメント</strong>からアクセスできます。</p>
+<h2><a name="examples">サンプルを検索する</a></h2>
+<p class="Body">インストールされているすべてのNI-DMMのサンプルには、<strong>スタート</strong>&#8594;<strong>すべてのプログラム</strong>&#8594;<strong>National Instruments</strong>&#8594;<strong>NI-DMM</strong>&#8594;<strong>NI-DMMサンプル</strong>からアクセスできます。また、オンラインで<span class="Monospace">ni.com/examples</span>からもアクセスできます。</p>
+
+
+<p>LabVIEWまたは<span class="Body">LabWindows/CVI</span>から<strong>ヘルプ</strong>&#8594;<strong>サンプルを検索</strong>を選択してNI サンプルファインダを起動します。NI-DMM用のLabVIEWサンプルは、<span class="Monospace">LabVIEW <em>XXXX</em>\examples\instr\niDMM</span>ディレクトリに保存されています。サンプルVIをアプリケーションに合わせて変更したり、自分が作成したVIにサンプルVIをコピーして貼り付けて使用することができます。</p>
+<p>NIサンプルファインダで、インストールされているすべてのLabVIEWサンプルVIおよびその説明を表示するには、2つの方法があります。</p><ul><li>変調のサンプルをタスク別に参照するには、<strong>参照</strong>タブが開かれた状態で、タスクオプションをクリックして、<strong>ハードウェア入力と出力</strong>&#8594;<strong>モジュール式計測器</strong>&#8594;<strong>NI&ndash;DMM</strong>を選択します。サンプルをディレクトリ構造で参照するには、<strong>instr</strong>&#8594;<strong>niDMM</strong>を選択します。</li>
+  <li>インストールされているすべてのサンプルをキーワードで検索するには、<strong>検索</strong>タブをクリックします。たとえば、「DMM」で検索するとすべてのNI-DMMのサンプルが検索されます。</li></ul><h2><a name="nxginstructions">LabVIEW NXGのサポートおよび注意事項</a></h2>
+
+<p>NI-DMMをLabVIEW NXGと組み合わせて使用する場合は、以下のことについて注意してください。</p>
+<h3>LabVIEW NXGのオペレーティングシステムおよびシステム要件</h3>
+<p>LabVIEW NXGのソフトウェアサポートは、以下の点で異なります。</p><ul><li>システム要件&#8213;64ビット (x64) プロセッサのみをサポートします。</li>
+<li>オペレーティングシステム&#8213;64ビットのオペレーティングシステムのみをサポートします。詳細については、<a href="#supportedOSes">サポートされているオペレーティングシステム</a>セクションを参照してください。</li></ul><h3>LabVIEW NXGのハードウェアサポート</h3>
+	
+	<p>407x、406x、4050 DMM<em></em></p><ul><li>PCI-4065</li>
+<li>PCI-4070</li>
+  <li>PCIe-4065</li>  
+    
+        <li>PXI-4065</li>
+    <li>PXI-4070</li>
+<li>PXI-4071</li>
+<li>PXI-4072</li>
+ <li>USB-4065</li></ul><p>408x DMM<em></em></p><ul><li>PXIe-4080</li>
+    <li>PXIe-4081</li>
+    <li>PXIe-4082</li></ul><h3>LabVIEW NXGヘルプ</h3>
+<p>&lt;Ctrl-H&gt;を押してマウスカーソルをオブジェクトの上に置くと、LabVIEWのコンテキストヘルプが表示されます。</p>
+<p>LabVIEWウィンドウの右上隅にある検索バーを使用して項目を検索します。検索結果のコンテキストヘルプを参照することもできます。</p>
+<p>その他のドキュメントは、<a href="http://www.ni.com/manuals" target="_blank">ni.com/manuals</a>で参照できます。</p>
+<h3>LabVIEW NXGサンプル</h3>
+<p>LabVIEWを起動して<strong>学習</strong>タブをクリックします。</p>
+
+<p>LabVIEWのレッスンは<strong>レッスン</strong>タブにあり、LabVIEWのサンプルは<strong>サンプル</strong>タブにあります。レッスンとサンプルの手順に従ってください。</p>
+
+
+<h2><a name="ivi">IVI Compliance Packageの機能</a></h2>
+<p class="Body">IVI Compliance Packageは、NI-DMMと一緒にインストールされなくなりました。NI-DMMでは、IVI構成とランタイムはサポートされますが、以下のIVIコンポーネントはインストールされなくなりました。</p><ul><li>IVI間で移植交換可能なアプリケーションを開発するためのLabVIEWおよびCVI IVIクラスドライバAPI</li>
+		<li>IVIクラスシミュレーションドライバ</li>
+		<li>IVI-COMアダプタ</li></ul><p class="Body">これらの機能を使用するには、ICPを別途インストールする必要があります。ICPは、Software Platform Bundleメディアに含まれています。スタンドアロンのWebディストリビューションは、<a href="http://ni.com/downloads" target="_blank">ni.com/downloads</a>からダウンロードできます。</p>
+	
+  
+<h2><a name="autoinstall">NI製品のインストールを自動化する</a></h2>
+<p>コマンドライン引数を使用してインストーラのユーザインタフェースおよびダイアログボックスの一部またはすべてを非表示にすることにより、ほとんどのNI製品のインストールを自動化できます。</p>
+
+<p>インストールしようとしているNI製品にMicrosoft .NET 4.0が使用されている場合は、NIソフトウェアがインストールされる前に.NETインストーラが実行されるため、NIソフトウェアのインストールが始まる前にマシンの再起動が必要になる場合があります。.NETによる再起動を回避するには、NIソフトウェアをインストールする前に別途.NET 4.0をインストールしてください。</p>
+
+<p>NI製品のインストールの自動化の詳細については、以下の技術サポートデータベース記事を参照してください。</p><ul><li>個々のNI製品のサイレントインストールについては、「<a href="http://www.ni.com/r/InstallerAutomation" target="_blank">単一インストーラのインストールをカスタマイズおよび自動化する</a>」を参照してください。</li>
+<li>NI Developer Suiteなど、パッケージ化されたNI製品のサイレントインストールについては、「<a href="http://www.ni.com/r/SuiteInstallerAutomation" target="_blank">スイートインストーラのインストールをカスタマイズおよび自動化する</a>」を参照してください。</li>
+<li>製品に含まれているNIインストーラのバージョンを確認するには、「<a href="http://www.ni.com/r/InstallerVersion" target="_blank">ナショナルインスツルメンツのインストーラの種類とバージョンを確認する</a>」を参照してください。</li></ul><!-- Windows 10 Support Information--><h2><a name="win10">NIソフトウェアをMicrosoft Windows 10と使用する</a></h2>
+<p>Windowsオペレーティングシステムの最新バージョンであるMicrosoft Windows 10では、以前のバージョンと比べて機能が大幅に変更されています。Windows 10には、新機能が追加されているほか、Windows 7とWindows 8からの機能も統合されています。NIのWindows 10サポートについては、<a href="http://www.ni.com/windows10" target="_blank">ni.com/windows10</a>を参照してください。</p><!-- Windows 8 Support Information--><h2><a name="win8">NIソフトウェアをMicrosoft Windows 8.1と使用する</a></h2>
+
+<p>NIソフトウェアをMicrosoft Windows 8.1にインストールすると、LabVIEW、Measurement &amp; Automation Explorer (NI MAX)、およびNI 起動ツールなどのNIアプリケーションソフトウェア製品へのショートカットを含む新しいタイルがアプリ画面に表示されます。NIのWindows 8.1サポートについては、<a href="http://www.ni.com/windows8" target="_blank">ni.com/windows8</a>を参照してください。</p><!-- We are dropping support for various versions of Windows --><h2><a name="win32bit">NI-DMMは、2021年にWindows 7 (32および64ビット)、Windows Server 2008 R2、およびすべての32ビットWindowsオペレーティングシステムのサポートを終了します</a></h2>
+
+<p>NI-DMMは、2021年にWindows 7 (32および64ビット)、Windows Server 2008 R2、およびすべての32ビットWindowsオペレーティングシステムのサポートを終了します。この製品の2021年5月1日以降に出荷されるバージョンは、これらのOSにインストールできなかったり、正常に動作しない可能性があります。NIオペレーティングシステムのサポートの詳細については、<a href="http://www.ni.com/r/win32bitsupport" target="_blank">ni.com/r/win32bitsupport</a>を参照してください。</p>
+
+<p>NIアプリケーションソフトウェアの製品ライフサイクルの詳細については、<a href="http://ni.com/info" target="_blank">ni.com/info</a>で以下のInfo Codeを入力してください。</p>
+<table class="Bordered">
+	<tr><th class="Bordered">製品</th>
+<th class="Bordered">Info Code</th></tr>
+	<tr><td class="Bordered">LabVIEW</td><td class="Bordered"><a href="http://www.ni.com/r/lifecycle" target="_blank">lifecycle</a></td></tr>
+	<tr><td class="Bordered">LabWindows/CVI</td><td class="Bordered"><a href="http://www.ni.com/r/cvi_lifecycle" target="_blank">cvi_lifecycle</a></td></tr>
+	<tr><td class="Bordered">Measurement Studio</td><td class="Bordered"><a href="http://www.ni.com/r/mstudiolifecycle" target="_blank">mstudiolifecycle</a></td></tr>
+	<tr><td class="Bordered">TestStand</td><td class="Bordered"><a href="http://www.ni.com/r/tslcp" target="_blank">tslcp</a></td></tr>
+	<tr><td class="Bordered">DIAdem</td><td class="Bordered"><a href="http://www.ni.com/r/ddlcp" target="_blank">ddlcp</a></td></tr>
+	<tr><td class="Bordered">SignalExpress</td><td class="Bordered"><a href="http://www.ni.com/r/selcp" target="_blank">selcp</a></td></tr>
+	<tr><td class="Bordered">VeriStand</td><td class="Bordered"><a href="http://www.ni.com/r/nivslifecycle" target="_blank">nivslifecycle</a></td></tr>
+</table><!--Important Information--><hr>
+
+<h2><a name="legal">法的情報</a></h2><!--Copyright--><p><strong>著作権</strong></p>
+<p>&copy; 2007-2019 National Instruments. All rights reserved.</p>
+
+<p>著作権法に基づき、National Instruments Corporationの書面による事前の許可なく、本書のすべて又は一部を写真複写、記録、情報検索システムへの保存、及び翻訳を含め、電子的又は機械的ないかなる形式によっても複製又は転載することを禁止します。</p>
+
+<p>NIは他者の知的財産を尊重しています。お客様も同様の方針に従われますようお願いいたします。NIソフトウェアは著作権法その他知的財産権に関する法律により保護されています。NIソフトウェアを用いて他者に帰属するソフトウェアその他のマテリアルを複製することは、適用あるライセンスの条件その他の法的規制に従ってそのマテリアルを複製できる場合に限り可能であるものとします。</p>
+
+<p><strong>エンドユーザ使用許諾契約及び他社製品の法的注意事項</strong></p>
+<p>エンドユーザ使用許諾契約 (EULA) 及び他社製品の法的注意事項はインストール後の以下の場所にあります。</p><ul><li>注意事項は、<span class="Monospace">&lt;National Instruments&gt;&yen;_Legal Information</span>及び<span class="Monospace">&lt;National Instruments&gt;</span>ディレクトリにあります。</li> 
+<li>EULAは、<span class="Monospace">&lt;National Instruments&gt;&yen;Shared&yen;MDF&yen;Legal&yen;license</span>ディレクトリにあります。</li>
+<li>NI製品で作成したインストーラに法律情報を組み込む方法については、<span class="Monospace">&lt;National Instruments&gt;&yen;_Legal Information.txt</span>を確認してください。</li></ul><p><strong>米国政府の権利の制限</strong></p>
+<p>お客様が米国政府の機関、省又はその他の事業体 (「米国政府」と総称する) である場合、本書に記載の技術データの使用、複製、再製、公表、修正、開示又は転送は、民間機関用の連邦調達規則52.227-14と軍事機関用の国防省連邦調達規則補足252.227-7014及び252.227-7015に基づく限定権利条項の適用を受けます。</p>
+
+<p><strong>IVI Foundation Copyright Notice</strong></p>
+
+<p><span class="DNL">Content from the IVI specifications reproduced with permission from the IVI Foundation.</span></p>
+
+<p><span class="DNL">The IVI Foundation and its member companies make no warranty of any kind with regard to this material, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. The IVI Foundation and its member companies shall not be liable for errors contained herein or for incidental or consequential damages in connection with the furnishing, performance, or use of this material.</span></p><!--Trademarks--><p><strong>商標</strong></p>
+
+<p><span class="DNL">NI</span>の商標については、<em></em><span class="DNL">NI Trademarks and Logo Guidelines</span> (<a href="http://www.ni.com/r/rdtradjp" target="_blank"><span class="DNL">ni.com/trademarks</span></a>) を参照してください。本書中に記載されたその他の製品名及び企業名は、それぞれの企業の商標又は商号です。</p><!--Patents--><p><strong>特許</strong></p>
+<p>NI製品を保護する特許については、ソフトウェアで参照できる特許情報 (<strong>ヘルプ&#8594;特許</strong>)、メディアに含まれている<span class="Monospace">patents.txt</span>ファイル、又は<a href="http://www.ni.com/r/rdlv17ja" target="_blank">ni.com/patents/ja</a>からアクセスできる「ナショナルインスツルメンツ特許情報」<em></em>のうち、該当するリソースから参照してください。</p>
+
+<p>376310L-0112</p>
+</body>
+</html>

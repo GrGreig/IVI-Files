@@ -1,0 +1,108 @@
+
+IVI Compliance Category:
+-----------------------
+
+IVI.NET IviScope Specific Instrument Driver
+Class Specification version:         4.1
+IVI Generation:                      IVI-2014
+Group Capabilities Supported:
+
+IviScopeBase                       = Supported
+IviScopeInterpolation              = Not Supported
+IviScopeTVTrigger                  = Supported
+IviScopeRuntTrigger                = Supported
+IviScopeGlitchTrigger              = Supported
+IviScopeWidthTrigger               = Supported
+IviScopeAcLineTrigger              = Not Supported
+IviScopeWaveformMeasurement        = Supported
+IviScopeMinMaxWaveform             = Not Supported
+IviScopeProbeAutoSense             = Not Supported
+IviScopeContinuousAcquisition      = Not Supported
+IviScopeAverageAcquisition         = Not Supported
+IviScopeSampleMode                 = Supported
+IviScopeTriggerModifier            = Not Supported
+IviScopeAutoSetup                  = Supported
+
+
+Optional Features:
+-----------------
+
+Interchangeability Checking        = False
+State Caching                      = True
+Coercion Recording                 = False
+
+
+
+Driver Identification:
+---------------------
+
+Driver Revision:                  19.0
+Driver Vendor:                    National Instruments
+Component Identifier:             niScope
+Description:                      National Instruments High Speed Digitizers Oscilloscope Instrument Driver
+
+
+
+Hardware Information:
+--------------------
+
+Instrument Manufacturer:          National Instruments
+Supported Instrument Models:      NI 5105,  NI 5110, NI 5111, NI 5113, NI 5114, NI 5122, NI 5124, NI 5132, NI 5133, NI 5142, NI 5152, NI 5153, NI 5154, NI 5160, NI 5162, NI 5163, NI 5164, NI 5170, NI 5171, NI 5172, NI 5185, NI 5186, NI 5622, NI 5900, NI 5922
+Supported Bus Interfaces:         PXI, PXIe, PCI, USB
+
+
+
+32-bit Software Information:
+---------------------------
+
+Supported Operating Systems:      Windows Server 2008 R2 (64-bit),
+                                  Windows Server 2012 R2 (64-bit),
+                                  Windows 7 SP1 (32-bit and 64-bit),
+                                  Windows 8.1 (32-bit and 64-bit),
+                                  Windows 10 (32-bit and 64-bit)
+Unsupported Operating Systems:    Windows 2000
+.NET Minimum Runtime Version:     4.0
+Source Code Availability:         Source code is not available
+
+
+64-bit Software Information:
+---------------------------
+
+Supported Operating Systems:      Windows Server 2008 R2 (64-bit),
+                                  Windows Server 2012 R2 (64-bit),
+                                  Windows 7 SP1 (64-bit),
+                                  Windows 8.1 (64-bit),
+                                  Windows 10 (64-bit)
+Unsupported Operating Systems:    Windows XP (64-bit)
+.NET Minimum Runtime Version:     4.0
+Source Code Availability:         Source code is not available
+
+
+Unit Testing:
+------------
+
+Test Setup:
+
+Instrument Model:                     PXIe-5114
+Bus Interface:                        PXIe
+Operating System (Service Pack):      Windows Server 2008 R2 (64-bit), Windows Server 2012 R2 (64-bit), Windows 7 SP1, Windows 8.1, Windows 10
+OS Bitness/Application Bitness:       32-bit/32-bit, 64-bit/32-bit, 64-bit/64-bit
+VISA Vendor and Version:              NI-VISA 5.1
+IVI.NET Shared Components Version:    1.4
+
+
+Driver Installation Testing:
+---------------------------
+
+Operating System (Service Pack):      Windows Server 2008 R2 (64-bit), Windows Server 2012 R2 (64-bit), Windows 7 SP1, Windows 8.1, Windows 10
+OS Bitness:                           32-bit, 64-bit
+
+
+Driver Test Failures:
+--------------------
+
+Known Issues:    Refer to the NI-SCOPE .NET Class Library Readme file for more information about known issues.
+
+
+Note:
+National Instruments has evaluated and/or tested this driver to verify that it meets all applicable requirements of the IVI specifications at the time this compliance document was submitted to the IVI Foundation and agrees to abide by the dispute arbitration provisions in Section 7 of IVI-1.2: Operating Procedures, if the IVI Foundation finds this driver to be non-conformant.

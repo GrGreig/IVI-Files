@@ -1,0 +1,52 @@
+[Version]
+MajorVersion = 1
+MinorVersion = 0
+
+[HardwareInfo]
+Name = "SCXI-1191"
+
+[Hardware]
+Bus = SCXI
+Model = 0x322
+
+[Characteristics]
+Bandwidth = 4000000000.0
+MaxDcVoltage = 30.0
+MaxAcVoltage = 30.0
+MaxSwitchingAcCurrent = 0.33
+MaxSwitchingDcCurrent = 0.33
+MaxCarryAcCurrent = 0.33
+MaxCarryDcCurrent = 0.33
+MaxSwitchingAcPower = 10.0
+MaxSwitchingDcPower = 10.0
+MaxCarryAcPower = 10.0
+MaxCarryDcPower = 10.0
+CharacteristicImpedance = 50.0
+SettlingTime = 15.0
+
+[Registers]
+SettlingTime = 15000
+;SettlingTime is in micro-seconds
+ClockPeriod = 62.5E-9
+SupportsDebounce = 1
+
+[SwitchNames]
+sw0A=0
+sw1A=1
+sw2A=2
+sw3A=3
+
+sw0B=4
+sw1B=5
+sw2B=6
+sw3B=7
+
+sw0C=8
+sw1C=9
+sw2C=10
+sw3C=11
+
+sw0D=12
+sw1D=13
+sw2D=14
+sw3D=15

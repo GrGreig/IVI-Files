@@ -1,0 +1,560 @@
+;===================================================================
+;
+;  Windows Vista .inf file for National Instruments DAQ Devices
+;
+;===================================================================
+
+[Version]
+Signature=$WINDOWS NT$
+Class=DAQDevice
+ClassGUID={7c797140-F6D8-11cf-9FD6-00A024178A17}
+Provider=%NIString0%
+DriverPackageDisplayName=%DriverDisplayName%
+ClassName="DAQDevice"
+DriverVer=08/07/2019,19.1.0.49152
+CatalogFile=NIPS.cat
+
+[ClassInstall32]
+AddReg=AddClassToRegistry
+
+[ClassInstall]
+AddReg=AddClassToRegistry
+
+[ControlFlags]
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_77BA1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_736C1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_76AE1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_762C1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_75A51093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_762B1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_789A1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_7404
+ExcludeFromSelect=PCI\VEN_1093&DEV_7404&SUBSYS_00000000&REV_00
+ExcludeFromSelect=PCI\VEN_1093&DEV_7404&SUBSYS_74041093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_76291093
+ExcludeFromSelect=PCI\VEN_1093&DEV_75A4
+ExcludeFromSelect=PCI\VEN_1093&DEV_75A4&SUBSYS_00000000&REV_00
+ExcludeFromSelect=PCI\VEN_1093&DEV_75A4&SUBSYS_75A41093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_76AD1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_781E1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_762D1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_77BB1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_762A1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_730E
+ExcludeFromSelect=PCI\VEN_1093&DEV_730E&SUBSYS_00000000&REV_00
+ExcludeFromSelect=PCI\VEN_1093&DEV_730E&SUBSYS_730E1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_1AA0
+ExcludeFromSelect=PCI\VEN_1093&DEV_1AA0&SUBSYS_00000000&REV_00
+ExcludeFromSelect=PCI\VEN_1093&DEV_1AA0&SUBSYS_1AA01093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_770C1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_74B11093
+
+[Manufacturer]
+%NIString0%=DeviceList,ntx86,ntamd64
+
+[DeviceList.ntx86]
+%PXIe-4136.dDesc0%=PXIe-4136.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_77BA1093
+%PXIe-Flash.dDesc0%=PXIe-Flash.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_736C1093
+%PXIe-4113.dDesc0%=PXIe-4113.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_76AE1093
+%PXIe-4144.dDesc0%=PXIe-4144.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_762C1093
+%PXIe-4141.dDesc0%=PXIe-4141.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_75A51093
+%PXIe-4138.dDesc0%=PXIe-4138.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_762B1093
+%PXIe-4141HSR.dDesc0%=PXIe-4141HSR.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_789A1093
+%PXI-GreenLantern.dDesc0%=PXI-GreenLantern.Cfg,PCI\VEN_1093&DEV_7404
+%PXI-GreenLantern.dDesc1%=PXI-GreenLantern.Cfg,PCI\VEN_1093&DEV_7404&SUBSYS_00000000&REV_00
+%PXI-GreenLantern.dDesc2%=PXI-GreenLantern.Cfg,PCI\VEN_1093&DEV_7404&SUBSYS_74041093
+%PXIe-4142.dDesc0%=PXIe-4142.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_76291093
+%PXI-4131A.dDesc0%=PXI-4131A.Cfg,PCI\VEN_1093&DEV_75A4
+%PXI-4131A.dDesc1%=PXI-4131A.Cfg,PCI\VEN_1093&DEV_75A4&SUBSYS_00000000&REV_00
+%PXI-4131A.dDesc2%=PXI-4131A.Cfg,PCI\VEN_1093&DEV_75A4&SUBSYS_75A41093
+%PXIe-4112.dDesc0%=PXIe-4112.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_76AD1093
+%PXIe-4135.dDesc0%=PXIe-4135.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_781E1093
+%PXIe-4145.dDesc0%=PXIe-4145.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_762D1093
+%PXIe-4137.dDesc0%=PXIe-4137.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_77BB1093
+%PXIe-4143.dDesc0%=PXIe-4143.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_762A1093
+%PXI-Superman.dDesc0%=PXI-Superman.Cfg,PCI\VEN_1093&DEV_730E
+%PXI-Superman.dDesc1%=PXI-Superman.Cfg,PCI\VEN_1093&DEV_730E&SUBSYS_00000000&REV_00
+%PXI-Superman.dDesc2%=PXI-Superman.Cfg,PCI\VEN_1093&DEV_730E&SUBSYS_730E1093
+%PXI-4110.dDesc0%=PXI-4110.Cfg,PCI\VEN_1093&DEV_1AA0
+%PXI-4110.dDesc1%=PXI-4110.Cfg,PCI\VEN_1093&DEV_1AA0&SUBSYS_00000000&REV_00
+%PXI-4110.dDesc2%=PXI-4110.Cfg,PCI\VEN_1093&DEV_1AA0&SUBSYS_1AA01093
+%PXIe-4139.dDesc0%=PXIe-4139.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_770C1093
+%PXIe-Hawkwoman.dDesc0%=PXIe-Hawkwoman.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_74B11093
+
+[DeviceList.ntamd64]
+%PXIe-4136.dDesc0%=PXIe-4136.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_77BA1093
+%PXIe-Flash.dDesc0%=PXIe-Flash.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_736C1093
+%PXIe-4113.dDesc0%=PXIe-4113.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_76AE1093
+%PXIe-4144.dDesc0%=PXIe-4144.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_762C1093
+%PXIe-4141.dDesc0%=PXIe-4141.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_75A51093
+%PXIe-4138.dDesc0%=PXIe-4138.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_762B1093
+%PXIe-4141HSR.dDesc0%=PXIe-4141HSR.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_789A1093
+%PXI-GreenLantern.dDesc0%=PXI-GreenLantern.Cfg,PCI\VEN_1093&DEV_7404
+%PXI-GreenLantern.dDesc1%=PXI-GreenLantern.Cfg,PCI\VEN_1093&DEV_7404&SUBSYS_00000000&REV_00
+%PXI-GreenLantern.dDesc2%=PXI-GreenLantern.Cfg,PCI\VEN_1093&DEV_7404&SUBSYS_74041093
+%PXIe-4142.dDesc0%=PXIe-4142.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_76291093
+%PXI-4131A.dDesc0%=PXI-4131A.Cfg,PCI\VEN_1093&DEV_75A4
+%PXI-4131A.dDesc1%=PXI-4131A.Cfg,PCI\VEN_1093&DEV_75A4&SUBSYS_00000000&REV_00
+%PXI-4131A.dDesc2%=PXI-4131A.Cfg,PCI\VEN_1093&DEV_75A4&SUBSYS_75A41093
+%PXIe-4112.dDesc0%=PXIe-4112.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_76AD1093
+%PXIe-4135.dDesc0%=PXIe-4135.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_781E1093
+%PXIe-4145.dDesc0%=PXIe-4145.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_762D1093
+%PXIe-4137.dDesc0%=PXIe-4137.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_77BB1093
+%PXIe-4143.dDesc0%=PXIe-4143.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_762A1093
+%PXI-Superman.dDesc0%=PXI-Superman.Cfg,PCI\VEN_1093&DEV_730E
+%PXI-Superman.dDesc1%=PXI-Superman.Cfg,PCI\VEN_1093&DEV_730E&SUBSYS_00000000&REV_00
+%PXI-Superman.dDesc2%=PXI-Superman.Cfg,PCI\VEN_1093&DEV_730E&SUBSYS_730E1093
+%PXI-4110.dDesc0%=PXI-4110.Cfg,PCI\VEN_1093&DEV_1AA0
+%PXI-4110.dDesc1%=PXI-4110.Cfg,PCI\VEN_1093&DEV_1AA0&SUBSYS_00000000&REV_00
+%PXI-4110.dDesc2%=PXI-4110.Cfg,PCI\VEN_1093&DEV_1AA0&SUBSYS_1AA01093
+%PXIe-4139.dDesc0%=PXIe-4139.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_770C1093
+%PXIe-Hawkwoman.dDesc0%=PXIe-Hawkwoman.Cfg,PCI\VEN_1093&DEV_C4C4&SUBSYS_74B11093
+
+[PXIe-4136.Cfg]
+AddReg=Reg_PXIe-4136
+CopyFiles=nipsdkw.sys
+[PXIe-4136.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-4136.Cfg.HW]
+AddReg=Reg_PXIe-4136_HW
+
+[PXIe-Flash.Cfg]
+AddReg=Reg_PXIe-Flash
+CopyFiles=nipsdkw.sys
+[PXIe-Flash.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-Flash.Cfg.HW]
+AddReg=Reg_PXIe-Flash_HW
+
+[PXIe-4113.Cfg]
+AddReg=Reg_PXIe-4113
+CopyFiles=nipsdkw.sys
+[PXIe-4113.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-4113.Cfg.HW]
+AddReg=Reg_PXIe-4113_HW
+
+[PXIe-4144.Cfg]
+AddReg=Reg_PXIe-4144
+CopyFiles=nipsdkw.sys
+[PXIe-4144.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-4144.Cfg.HW]
+AddReg=Reg_PXIe-4144_HW
+
+[PXIe-4141.Cfg]
+AddReg=Reg_PXIe-4141
+CopyFiles=nipsdkw.sys
+[PXIe-4141.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-4141.Cfg.HW]
+AddReg=Reg_PXIe-4141_HW
+
+[PXIe-4138.Cfg]
+AddReg=Reg_PXIe-4138
+CopyFiles=nipsdkw.sys
+[PXIe-4138.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-4138.Cfg.HW]
+AddReg=Reg_PXIe-4138_HW
+
+[PXIe-4141HSR.Cfg]
+AddReg=Reg_PXIe-4141HSR
+CopyFiles=nipsdkw.sys
+[PXIe-4141HSR.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-4141HSR.Cfg.HW]
+AddReg=Reg_PXIe-4141HSR_HW
+
+[PXI-GreenLantern.Cfg]
+AddReg=Reg_PXI-GreenLantern
+CopyFiles=nipsdkw.sys
+[PXI-GreenLantern.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+
+[PXIe-4142.Cfg]
+AddReg=Reg_PXIe-4142
+CopyFiles=nipsdkw.sys
+[PXIe-4142.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-4142.Cfg.HW]
+AddReg=Reg_PXIe-4142_HW
+
+[PXI-4131A.Cfg]
+AddReg=Reg_PXI-4131A
+CopyFiles=nipsdkw.sys
+[PXI-4131A.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+
+[PXIe-4112.Cfg]
+AddReg=Reg_PXIe-4112
+CopyFiles=nipsdkw.sys
+[PXIe-4112.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-4112.Cfg.HW]
+AddReg=Reg_PXIe-4112_HW
+
+[PXIe-4135.Cfg]
+AddReg=Reg_PXIe-4135
+CopyFiles=nipsdkw.sys
+[PXIe-4135.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-4135.Cfg.HW]
+AddReg=Reg_PXIe-4135_HW
+
+[PXIe-4145.Cfg]
+AddReg=Reg_PXIe-4145
+CopyFiles=nipsdkw.sys
+[PXIe-4145.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-4145.Cfg.HW]
+AddReg=Reg_PXIe-4145_HW
+
+[PXIe-4137.Cfg]
+AddReg=Reg_PXIe-4137
+CopyFiles=nipsdkw.sys
+[PXIe-4137.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-4137.Cfg.HW]
+AddReg=Reg_PXIe-4137_HW
+
+[PXIe-4143.Cfg]
+AddReg=Reg_PXIe-4143
+CopyFiles=nipsdkw.sys
+[PXIe-4143.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-4143.Cfg.HW]
+AddReg=Reg_PXIe-4143_HW
+
+[PXI-Superman.Cfg]
+AddReg=Reg_PXI-Superman
+CopyFiles=nipsdkw.sys
+[PXI-Superman.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+
+[PXI-4110.Cfg]
+AddReg=Reg_PXI-4110
+CopyFiles=nipsdkw.sys
+[PXI-4110.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+
+[PXIe-4139.Cfg]
+AddReg=Reg_PXIe-4139
+CopyFiles=nipsdkw.sys
+[PXIe-4139.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-4139.Cfg.HW]
+AddReg=Reg_PXIe-4139_HW
+
+[PXIe-Hawkwoman.Cfg]
+AddReg=Reg_PXIe-Hawkwoman
+CopyFiles=nipsdkw.sys
+[PXIe-Hawkwoman.Cfg.Services]
+AddService= nipsdkw, 0x00000002, nipsdkw_Service_Inst
+[PXIe-Hawkwoman.Cfg.HW]
+AddReg=Reg_PXIe-Hawkwoman_HW
+
+[Reg_PXIe-4136]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4136_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[Reg_PXIe-Flash]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-Flash_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[Reg_PXIe-4113]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4113_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[Reg_PXIe-4144]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4144_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[Reg_PXIe-4141]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4141_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[Reg_PXIe-4138]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4138_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[Reg_PXIe-4141HSR]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4141HSR_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[Reg_PXI-GreenLantern]
+HKR,,ProductNumber,1,04,74
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4142]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4142_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[Reg_PXI-4131A]
+HKR,,ProductNumber,1,a4,75
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4112]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4112_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[Reg_PXIe-4135]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4135_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[Reg_PXIe-4145]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4145_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[Reg_PXIe-4137]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4137_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[Reg_PXIe-4143]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4143_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[Reg_PXI-Superman]
+HKR,,ProductNumber,1,0e,73
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXI-4110]
+HKR,,ProductNumber,1,a0,1a
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4139]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-4139_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[Reg_PXIe-Hawkwoman]
+HKR,,ProductNumber,1,c4,c4
+HKR,,BridgeType,1,10,00,00,00
+HKR,,DeviceClass,1,78,71,61,64
+HKR,,DMA,1,00,00,00,00
+HKR,,DAR,1,00,00,00,00
+HKR,,ELC,1,00,00,00,00
+HKR,,MITERetry,1,00,00,00,00
+
+[Reg_PXIe-Hawkwoman_HW]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",MSISupported, 0x00010001, 1
+
+[AddClassToRegistry]
+HKR,,,0,%NIDAQClassName%
+HKR,,Installer32,0,%DaqClassInstallerStr%
+HKR,,Icon,,103
+
+[nipsdkw_Service_Inst]
+ServiceType    = 1; SERVICE_KERNEL_DRIVER
+StartType      = 3; SERVICE_DEMAND_START
+ErrorControl   = 1; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\nipsdkw.sys
+
+[nipsdkw.sys]
+nipsdkw.sys,,,0x00000004
+
+[SourceDisksNames]
+1="NextToINF"
+
+[SourceDisksFiles]
+nipsdkw.sys=1
+
+[DestinationDirs]
+DefaultDestDir=12
+
+[Strings]
+DriverDisplayName="NI Data Acquisition Device"
+NIString0="National Instruments"
+NIDAQClassName="NI Data Acquisition Devices"
+nipalk.SvcDesc="NI-PAL Driver"
+nipalusb.SvcDesc="NI-PAL USB Driver"
+nipal1394.SvcDesc="NI-PAL 1394 Driver"
+DaqClassInstallerStr="nindciu.dll,DaqClassInstaller"
+PXIe-4136.dDesc0="NI PXIe-4136"
+PXIe-Flash.dDesc0="NI PXIe-4140"
+PXIe-4113.dDesc0="NI PXIe-4113"
+PXIe-4144.dDesc0="NI PXIe-4144"
+PXIe-4141.dDesc0="NI PXIe-4141"
+PXIe-4138.dDesc0="NI PXIe-4138"
+PXIe-4141HSR.dDesc0="NI PXIe-4141 (High Sense Resistance)"
+PXI-GreenLantern.dDesc0="NI PXI-4132"
+PXI-GreenLantern.dDesc1="NI PXI-4132"
+PXI-GreenLantern.dDesc2="NI PXI-4132"
+PXIe-4142.dDesc0="NI PXIe-4142"
+PXI-4131A.dDesc0="NI PXI-4131A"
+PXI-4131A.dDesc1="NI PXI-4131A"
+PXI-4131A.dDesc2="NI PXI-4131A"
+PXIe-4112.dDesc0="NI PXIe-4112"
+PXIe-4135.dDesc0="NI PXIe-4135"
+PXIe-4145.dDesc0="NI PXIe-4145"
+PXIe-4137.dDesc0="NI PXIe-4137"
+PXIe-4143.dDesc0="NI PXIe-4143"
+PXI-Superman.dDesc0="NI PXI-4130"
+PXI-Superman.dDesc1="NI PXI-4130"
+PXI-Superman.dDesc2="NI PXI-4130"
+PXI-4110.dDesc0="NI PXI-4110"
+PXI-4110.dDesc1="NI PXI-4110"
+PXI-4110.dDesc2="NI PXI-4110"
+PXIe-4139.dDesc0="NI PXIe-4139"
+PXIe-Hawkwoman.dDesc0="NI PXIe-4154"

@@ -1,0 +1,574 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="ContentType" content="readme">
+<meta name="ProductCategories" content="320806"/>
+<title>NI-FGEN 19.5.1 Readme</title>
+
+<style type="text/css"> <!--
+/***************************************************/
+/* MINIMAL STYLES */
+/* The following section defines styles that every HTML Help project should need. */
+
+/* Specifies white background color for page and font style for text. */
+body {background-color:#FFFFFF; font-family:Verdana, sans-serif; font-size:8pt; color: #000000;}
+
+/* Use P for normal paragraphs. */
+p { margin-top:6.00pt; margin-bottom:6.00pt; }
+
+br { font-size:4.00pt; }
+
+/* Use H1 for all topic headings. */
+h1 { margin-top:3.00pt; margin-bottom:3.00pt; font-size:150%; font-weight:bold; }
+
+/* Use H2 for second-level headings. */
+h2 { margin-top:9.00pt; margin-bottom:3.00pt; font-size:125%; font-weight:bold; }
+
+/* Use H3 for third-level headings. */
+h3 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold; }
+
+/* Use H4 for fourth-level headings. */
+h4 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold; }
+
+/* H5 and H6 have the same definition as H4 because you should not need this level of heading in one topic. If you need to use H5 or H6, consider breaking up your topic into more than one topic. */
+h5 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold; }
+h6 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold; }
+
+/* Deprecated. Use P for normal paragraphs. */
+p.Body { }
+
+/* Use the Anchor style class for graphic references on a line by themselves. */
+p.Anchor { font-size:125%; }
+
+/* Use the Indent style classes to indent a paragraph. If you need to indent text below a list item, use <br><br> to start the new paragraph within the same set of <li></li> tags. If you need to indent a list within another list, nest the indented list within the first list's set of <ol></ol> or <ul></ul> tags. */
+p.Indent1 { margin-left:12.00pt; margin-bottom:3.00pt; }
+p.Indent2 { margin-left:24.00pt; margin-bottom:3.00pt; }
+p.Indent3 { margin-left:36.00pt; margin-bottom:3.00pt; }
+p.Indent4 { margin-left:48.00pt; margin-bottom:3.00pt; }
+p.Indent5 { margin-left:60.00pt; margin-bottom:3.00pt; }
+
+/* Use the LI style for all list items. */
+li { margin-top:3.00pt; margin-bottom:3.00pt; }
+
+/* Use the OL style for numbered lists. You do not have to type the number for each list item in a numbered list. */
+ol { margin-left:22.00pt; margin-top:3.00pt; margin-bottom:3.00pt; text-indent:0pt; list-style-type: decimal; }
+
+/* Use the OL style for numbered lists. Nested lists will use the bullet types according to the nesting scheme below */
+ol ol {list-style-type:lower-alpha}
+ol ol ol {list-style-type:decimal}
+ol ol ol ol {list-style-type:lower-alpha}
+ol ol ol ol ol {list-style-type:decimal}
+ol ol ol ol ol ol {list-style-type:lower-alpha}
+ol ol ol ol ol ol ol {list-style-type:decimal}
+ol ol ol ol ol ol ol ol {list-style-type:lower-alpha}
+
+
+/* Use the EquationNum style class for numbered lists of equations. You do not have to type the number for each list item in a numbered list. */
+ol.EquationNum { margin-left:36.00pt; text-indent:0pt; list-style-type: decimal; }
+
+/* Use the List-abc style class for lettered lists. You do not have to type the letter for each list item in a lettered list. */
+ol.List-abc { margin-left:22.00pt; text-indent:0pt; list-style-type:lower-alpha; }
+
+/* Use the UL style for bulleted lists. You do not have to type the bullet for each list item in a bulleted list. */
+ul { margin-left:22.00pt; text-indent:0pt; margin-top:3.00pt; margin-bottom:3.00pt; list-style-type: disc; }
+
+/* Use the UL style for bulleted lists. Nested lists will use the bullet types according to the nesting scheme below. */
+ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul ul ul ul ul ul{list-style-image: none;list-style-type: circle}
+
+/* Use the List-Box style class for bulleted lists with boxes instead of bullets. You do not have to type the box for each list item in a box list. */
+ul.List-Box {list-style-image: none;list-style-type: square}
+
+table { font-size:8pt; }
+
+/* Use the Borderless style class for tables that do not need borders, such as for 2-column or 3-column lists with no headings. */
+table.Borderless { border:none; }
+
+/* Use the Bordered style class for tables that need borders. */
+table.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; border-collapse: collapse; }
+
+/* Use the TD style for table cells in Borderless or Borderless-Wide tables. */
+td { vertical-align:top; padding:3px; }
+
+/* Use the Bordered style class for table headings and cells in Bordered or Bordered-Wide tables. */
+.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; }
+
+/* Use the Icon style class for table cells that contain note, caution, warning, or tip icons, or LabVIEW datatype terminals. */
+td.Icon { width:40px; }
+
+/* Use the TH style for table heading cells in Borderless or Borderless-Wide tables. */
+th { font-weight:bold; padding:3px; }
+
+/* Use the Left-Align style class for table headings and cells that you want to left align instead of center align. */
+.Left-Align { text-align:left; }
+
+/***************************************************/
+/* CHARACTER FORMATS */
+/* The following section defines character formats that every HTML Help project should need. */
+
+/* CHARACTER FORMATS Updated to conform with the CSE HTML Validator Pro */
+/* The following section defines character formats that every HTML Help project should need. */
+
+/* Use the Dark-Red format for warnings or cautions. */
+.Dark-Red { color: #800000 }
+
+/* Use the Monospace format for code or syntax examples. */
+.Monospace { font-family: "Courier New",monospace; font-size: 100%; }
+
+/* Use the Monospace-Bold format for messages and responses that the computer automatically prints to the screen. */
+.Monospace-Bold { font-family: "Courier New",monospace; font-weight: bold; font-size: 100%; }
+
+/* Use the Monospace-Italic format to denote text that is a placeholder for a word or value that the user must supply. */
+.Monospace-Italic { font-family: "Courier New",monospace; font-style: italic; font-size: 100%; }
+
+/* small class */
+.smallFont { font-size:87.5%; }
+
+/* Bold class */
+.Bold { font-weight: bold; }
+
+/* Italic class */
+.Italic { font-style: italic; }
+
+/* Use the Platform format to denote a specific platform. */
+.Platform { color: #0000FF; font-weight: bold; }
+
+/* Use the Symbol format for characters not in the Verdana character set. Use this format sparingly. When possible, you should use the correct ASCII code for the symbol or use a graphic to recreate the symbol. */
+.Symbol { font-family: Symbol; }
+
+/* Use the Red-text format to call attention to text that needs information added or edited by techcomm */
+.Red-text {color: #FF0000;}
+
+/* Use the Green-Underline format for the green defintion in the conventions topic */
+.Green-Underline {color: #007700; text-decoration : underline;}
+
+/* Use the glossButton format for the glossary buttons used in the glossary topic */
+.glossButton { font-size:12px; color:black; }
+
+/* Use for text sections and hyphenated words that should not break at line wraps */
+.nobreak{white-space:nowrap}
+
+/* Use for template instructions. */
+.instructions{color:red; font-style:italic}
+
+/*Use for words and text sections that do not need to be localized */
+.DNL { }
+
+/* The following styles define the color of links. */
+a:link { color: #007700 }
+a:visited { color: #7F007F }
+a:link:hover { color: #FF0000 }
+a:link:active { color: #FF0000 }
+
+/***************************************************/
+/* Forms */
+
+form { margin-top:0pt; margin-bottom:3pt; color:black; }
+select { font-size:100%; color:black; }
+
+/*******************************************************/
+/* Margins */
+/* Use these styles for block-level elements inside tables cells or list items where you do not want extra padding at the top or bottom of a cell. */
+.noTopMargin { margin-top:0pt;}
+.noBottomMargin { margin-bottom:0pt;}
+
+/***************************************************/
+/* CODE STYLES */
+/* The following section defines styles that you need to format entire sections of code or syntax examples. If you have just a few words you need to format as a code or syntax example, use the Monospace character format. */
+
+p.Code { margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace; }
+p.Code1 { margin-left:12.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace; }
+p.Code2 { margin-left:24.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace; }
+p.Code3 { margin-left:36.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace; }
+--> </style>
+
+</head>
+
+<body><!--Remove content between these comments.--><h1>NI-FGEN 19.5.1 Readme</h1>
+
+<p>2019年10月</p>
+
+<p>このファイルには、インストール手順、修正された主なバグのリスト、および既知の問題など、NI-FGENに関する重要な情報が記載されています。<p>LabVIEW NXGをご使用の場合は、<a href="#nxginstructions">LabVIEW NXGのサポートおよび注意事項</a>を参照してください。</p>
+<hr>
+
+<p><a href="#overview">概要</a></p>
+<p><a href="#requirements">システム要件</a></p>
+<p><a href="#supportedOSes">サポートされているオペレーティングシステム</a></p>
+<p><a href="#app">アプリケーションソフトウェアのサポート</a></p>
+<p><a href="#installation">インストール手順</a></p>
+<p><a href="#updates">製品のセキュリティおよび重要な更新</a></p>
+<p class="Body"><a href="#firmware">ファームウェアのアップグレード</a></p>
+<p><a href="#hardware">サポートされているハードウェア</a></p>
+<p><a href="#known">既知の問題</a></p>
+<p><a href="#fixes">バグの修正</a></p>
+<p><a href="#help">ヘルプにアクセスする</a></p>
+<p><a href="#examples">サンプルを検索する</a></p>
+<p><a href="#nxginstructions">LabVIEW NXGのサポートおよび注意事項</a></p>
+<p><a href="#ivicompliance">IVI Compliance Packageの機能</a></p>
+<p><a href="#autoinstall">NI製品のインストールを自動化する</a></p>
+<p><a href="#win10">NIソフトウェアをMicrosoft Windows 10と使用する</a></p>
+<p><a href="#win8">NIソフトウェアをMicrosoft Windows 8.1と使用する</a></p>
+<p><a href="#win32bit">NI-FGENは、2021年にWindows 7 (32および64ビット)、Windows Server 2008 R2、およびすべての32ビットWindowsオペレーティングシステムのサポートを終了します</a></p>
+<p><a href="#legal">法的情報</a></p>
+<hr>
+
+
+
+<h2><a name="overview">概要</a></h2>
+<p>NI-FGENは、複雑な計測ソリューションのために周波数スイープとホッピング、波形リンクとループ、および周波数シフトキーイング (FSK) 変調を実装できるNI計測器ドライバです。NI-FGENは、IVI (Interchangeable Virtual Instrument) に準拠した計測器ドライバで、波形または信号発生器の機能を実行する操作とプロパティのセットを提供します。また、NI-FGENには、対話型のソフトフロントパネルとサンプルが含まれています。</p>
+
+<h2><a name="requirements">システム要件</a></h2>
+
+<p>NI-FGEN 19.5.1のシステム要件は、次のとおりです。</p><ul><li>プロセッサ&#8213;1 GHz以上の32ビット (x86) または64ビット (x64) プロセッサ</li>
+<li>RAM&#8213;1 GB RAM (32ビット) または2 GB RAM (64ビット)</li>
+<li>1,024 x 768の画面解像度</li>
+<li>すべての緊急アップデートおよびService Packが適用されているWindows 10/8.1/7</li></ul> <!--Begin LabVIEW-specific text--><p>その他のシステム要件とLabVIEWでサポートされているオペレーティングシステムについては、『<em></em>LabVIEW Readme』を参照してください。</p>
+<h2><a name="supportedOSes">サポートされているオペレーティングシステム</a></h2>
+
+<p>NI-FGEN 19.5.1は、以下のオペレーティングシステムをサポートしています。</p><ul><li>Windows 10/8.1<sup>1</sup>/7 SP1<sup>2</sup> (32ビットおよび64ビット)</li>
+		<li>Windows Server 2012 R2<sup>1</sup> (64ビット)</li>
+		<li>Windows Server 2008 R2 SP1<sup>2</sup> (64ビット)</li></ul> <!-- Windows XP support information --><p><sup>1</sup> NIソフトウェアは、VC2015ランタイムおよび.NET 4.6.2をインストールします。Windows 8.1およびWindows Server 2012 R2でこれらをサポートするには、Microsoft更新プログラムが必要です。これらの更新プログラムのインストール方法については、Microsoft <a href="http://www.ni.com/r/expfcj" target="_blank">KB2919442</a>および<a href="http://www.ni.com/r/exkd3p" target="_blank">KB2919355</a>を参照してください。</p>
+
+
+<p><sup>2</sup> NIソフトウェアは、SHA-256証明書により署名されています。Windows 7 SP1、Windows Embedded Standard 7 SP1、およびWindows Server 2008 R2 SP1でSHA-256をサポートするには、Microsoft更新プログラムが必要です。このセキュリティ更新のインストール方法については、Microsoft <a href="http://www.ni.com/r/exf7ig" target="_blank">KB3033929</a>を参照してください。</p>
+<p><strong>メモ</strong>&nbsp;&nbsp;2016年に、NI-FGENによるWindows Vista、Windows XP、Windows Server 2003、およびサービスパックなしのWindows 7のサポートは終了しました。NI-FGEN 19.5.1をサポートされていないOSにインストールしたり、その上で実行したりすることはできません。サポートされていないOSにNI-FGEN 19.5.1を使用しているアプリケーションをデプロイしたり、配布したりすることはできません。また、NI-FGEN 19.5.1がインストールされているコンピュータで作成されたインストーラは、サポートされていないOS上で実行されている、いかなるバージョンのLabVIEW、LabWindows&trade;/CVI&trade;、NI TestStand&trade;、またはMeasurement Studioとも一緒に使用することはできません。</p>
+<p>2016年に変更されたOSサポートの詳細については、「<a href="http://www.ni.com/r/OSSupport2016" target="_blank">Why Does My NI ADE Installer Fail on Windows XP/Vista and Windows Server 2003?</a>」を参照してください。</p>
+    
+<p><strong>メモ</strong>　Windows 32ビットオペレーティングシステムのサポートでは、物理アドレス拡張 (PAE) を無効にする必要がある場合があります。これによりシステムが受ける影響および必要な対策については、<span class="Monospace">ni.com/info</span>でInfo Codeに「<a href="http://www.ni.com/r/PAESupport" target="_blank">PAESupport</a>」と入力してください。</p>
+<p><strong>メモ</strong>&nbsp;&nbsp;今後のOSサポートについては、「<a href="#win32bit">NI-FGENは、2021年にWindows 7 (32および64ビット)、Windows Server 2008 R2、およびすべての32ビットWindowsオペレーティングシステムのサポートを終了します</a>」を参照してください。</p> 
+
+
+<h2><a name="app">アプリケーションソフトウェアのサポート</a></h2>
+<p>NI-FGEN 19.5.1では、以下のバージョンのアプリケーションソフトウェア (サービスパックを含む) がサポートされています。NIアプリケーションソフトウェアを使用していない場合は、「Microsoft Visual Studioのサポート」を参照してください。</p>
+<table class="Bordered">
+<tr><th class="Bordered">アプリケーションソフトウェア</th><th class="Bordered">NI-FGENでサポートされているバージョン</th></tr>
+<tr><td class="Bordered">LabVIEW</td>
+<td class="Bordered">2016、2017、2018、2019</td>
+<tr><td class="Bordered">LabVIEW Real-Timeモジュール<sup>3</sup></td>
+<td class="Bordered">2016、2017、2018、2019</td>
+<tr><td class="Bordered">LabVIEW NXG<sup></sup></td>
+<td class="Bordered">4.0</td>
+<tr><td class="Bordered">LabWindows&trade;/CVI&trade;</td>
+<td class="Bordered">2013以降</td></tr>
+<tr><td class="Bordered">LabWindows&trade;/CVI&trade; Real-Timeモジュール<sup>3</sup></td>
+<td class="Bordered">2013以降</td></tr>
+
+</table>
+<p><sup>3</sup>PXIe-5413/5423/5433波形発生器はサポートされていません。</p>
+<h3>Microsoft Visual Studioのサポート</h3>
+<p>NI-FGEN .NETクラスライブラリを使用している場合、.NET Framework 4.0 (最低限) が必要です。NI-FGEN .NETクラスライブラリは、.NET Framework 4.0または.NET Framework 4.5をターゲットにできる任意のVisual StudioバージョンのVisual C#またはVisual Basic .NETプログラミング言語で使用できます。</p>
+<p>.NET APIを使用するには、.NETクラスライブラリをインストールするために、NI-FGENインストーラで、NIデバイスドライバに加えて .NET Framework 4.0言語サポートまたは.NET Framework 4.5言語サポートパッケージを選択する必要があります。.NET Frameworkのバージョンとそれらでサポートされているドライバ、およびインストーラファイルのダウンロード場所については、<a href="http://www.ni.com/r/NETAPIdriversupport" target="_blank">National Instruments .NET Driver Support</a>を参照してください。</p>
+
+<h2><a name="installation">インストール手順</a></h2><!--Begin LabVIEW-specific text--><ol>
+	<li>LabVIEWまたはLabWindows&trade;/CVI&trade; などのADEをインストールします。</li>
+	<li><a href="http://www.ni.com/downloads/drivers">ni.com/downloads/drivers</a>で「<span class="Monospace">NI-FGEN</span>」を検索します。</li>
+	<li>「バージョン」ドロップダウンリストで<strong>NI-FGEN 19.5.1</strong>を選択して、<strong>ダウンロード</strong>をクリックします。</li>
+	<li>実行可能ファイル (<span class="Monospace">EXE</span>) ファイルを実行します。</li>
+	<li>インストール画面の指示に従います。アクセス/セキュリティプロンプトが表示される場合があります。画面の指示に従って、インストールを完了します。</li>
+	<li>インストールが完了したら、再起動、シャットダウン、または後で再起動するかどうかを尋ねるダイアログボックスで<strong>再起動</strong>を選択します。</li>
+</ol>
+
+
+<p><strong>メモ</strong></p><ul><li>Windows Updateが有効になっている場合、Windows UpdateがMicrosoft Visual C++ 2015 ランタイムのインストールと競合して、インストールプロセスが停止することがあります。この問題の詳細と解決法については、<a href="http://www.ni.com/r/exjq43" target="_blank">ni.com/r/exjq43</a>を参照してください。</li> <li>この製品をNIソフトウェアスイートまたはNI製品バンドルの一部として購入した場合は、同梱されているインストールメディアからこの製品をインストールできます。</li></ul><h3><span>LabVIEW NXG用NI-FGEN 19.5.1をインストールする</span></h3>
+<p>LabVIEW NXGのインストールは、NI パッケージマネージャを使用して行います。NI パッケージマネージャをダウンロードするには、<span class="Monospace">ni.com/info</span>で、Info Codeに「<a href="http://www.ni.com/r/NIPMDownload" target="_blank">NIPMDownload</a>」と入力します。NI パッケージマネージャを使用してNI ソフトウェアをインストール、削除、およびアップグレードする方法については、『<a href="http://www.ni.com/r/NIPMManual" target="_blank">NI パッケージマネージャマニュアル</a>』を参照してください。</p><!--End LabVIEW-Specific text--> <!-- Windows XP support information --> <!--Critical updates--><h2><a name="updates">製品のセキュリティおよび重要な更新</a></h2>
+
+<p>NI製品のセキュリティに関する通知を表示または受信登録するには、<a href="http://www.ni.com/security" target="_blank">ni.com/security</a>を参照してください。NIからの重要な更新の情報については、<a href="http://ni.com/critical-updates" target="_blank">ni.com/critical-updates</a>を参照してください。</p>
+<h2><a name="firmware" id="firmware"></a>ファームウェアのアップグレード</h2>
+
+<p class="Body">PXIe-5442、PXIe-5450、およびPXIe-5451には、アップグレード可能なデバイスファームウェアが組み込まれています。アップグレードされたファームウェアには新機能と重要なバグ修正が含まれているため、ファームウェアをアップグレードすることを推奨します (アップグレードが必須な場合もあります)。デバイスでファームウェアをアップグレードするには、「<span class="Monospace">Program Files&yen;IVI Foundation&yen;IVI&yen;Drivers&yen;niFgen&yen;</span>」ディレクトリまたは「<span class="Monospace">Program Files (x86)&yen;IVI Foundation&yen;IVI&yen;Drivers&yen;niFgen&yen;</span>」ディレクトリにインストールされる「Firmware Updater」アプリケーション (<span class="Monospace-Italic">54xx</span><span class="Monospace">FirmwareUpdater_</span><span class="Monospace-Italic">X.Y.Z.exe</span>、「54xx<em></em>」はデバイス名、「X.Y.Z<em></em>」はファームウェアのバージョンを示す) を実行してください。このアプリケーションにより、ファームウェアはドライバと動作する最新バージョンにアップグレードされます。アプリケーションの実行の終了後、ファームウェアのアップデートを完了するには、コンピュータおよびPXI Expressシャーシの電源を切断する必要があります。</p>
+
+
+
+<h2><a name="hardware">サポートされているハードウェア</a></h2>
+<p>NI-FGEN 19.5.1でサポートされているハードウェアモデルは、以下のとおりです。</p>
+<table class="bordered">
+<tr>
+<th class="bordered">ハードウェア製品</th>
+<th class="Bordered">Windows 10 (32ビット)/8.1 (32ビット)/7 (32ビット) でのサポート</th>
+		<th class="Bordered">Windows 10 (64ビット)<sup>1</sup>/8.1 (64ビット)<sup>1</sup>/7 (64ビット)<sup>1</sup> でのサポート</th>
+  </tr>
+<tr>
+  <td class="bordered" colspan="3"><strong>NI-DAQmxベースの波形発生器</strong></td> 
+
+
+<tr>
+  <td class="bordered">PXI/PCI-5402</td>
+  <td class="bordered"><div align="center">&radic;</div></td>
+  <td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXI-5404</td>
+<td class="bordered"><div align="center">&radic;<sup>2</sup></div></td>
+<td class="bordered"><div align="center">&radic;<sup>2</sup></div></td>
+</tr>
+
+<tr>
+  <td class="bordered">PXI/PCI-5406</td>
+  <td class="bordered"><div align="center">&radic;</div></td>
+  <td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+  <td class="bordered">PXI/PCI-5412</td>
+  <td class="bordered"><div align="center">&radic;</div></td>
+  <td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+
+<tr>
+<td class="bordered">PXI/PCI-5421</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+  <td class="bordered">PXI-5422</td>
+  <td class="bordered"><div align="center">&radic;</div></td>
+  <td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+
+<tr>
+  <td class="bordered">PXI-5441</td>
+  <td class="bordered"><div align="center">&radic;</div></td>
+  <td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXIe-5442</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXIe-5450</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXIe-5451</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+  <td class="bordered" colspan="3"><strong>NI 5413/5423/5433 波形発生器</strong></td> 
+<tr>
+<td class="bordered">PXIe-5413</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXIe-5423</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXIe-5433</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+	<tr><td class="bordered" colspan="3"><br> <sup>1</sup> 64ビット版のWindowsでは、SCOPEソフトフロントパネルではなく、InstrumentStudioがインストールされます。InstrumentStudioを使用してFGENデバイスを制御および監視することができます。 <br> <sup>2</sup> PXI-5404の外部キャリブレーションは、Windows 8.1/7ではサポートされていません。PXI-5404の外部キャリブレーションは、Windows&nbsp;XPで実行してください。</td>
+  </tr>
+</table>
+<h2><a name="known">既知の問題</a></h2>
+<p>ソフトウェアとドキュメントの既知の問題のリストはオンラインで参照できます。NI-FGEN 19.5の既知の問題の最新リストについては、<span class="Monospace">ni.com/info</span>でInfo Codeに「<a href="http://ni.com/r/1erfod" target="_blank">1erfod</a>」と入力してください。</p>
+
+<h2><a name="fixes">バグの修正</a></h2>
+<p>以下は、NI-FGENで修正された一部の問題のIDとタイトルです。このリストは、NI-FGENの現行バージョンで修正された問題をすべて網羅しているわけではありません。バグIDがわかっている場合は、この一覧で修正状況を確認できます。</p>
+
+<p class="body">以下は、NI-FGEN 19.5からNI-FGEN 19.5.1での変更点です。</p>
+<table class="bordered">
+<tr><th class="bordered">ID</th><th class="bordered">修正された問題</th></tr>
+<div class="DNL">
+<tr>
+  <td class="bordered">228037</td>
+<td class="bordered">Fixed an issue in which the PXI-5404 fails to initialize or&mdash;in rare circumstances&mdash;generates inaccurate output signal characteristics with computers with high CPU clock rates and/or with NI-ORB 18.5 or later installed. Visit <a href="http://www.ni.com/r/5404-patch" target="_blank">ni.com/r/5404-patch</a> for more information.</td></tr>
+</div></table>
+
+<h2><a name="help">ヘルプにアクセスする</a></h2>
+<p>NI-FGENについては、『<em></em>NI信号発生器ヘルプ』を参照してください。『NI信号発生器ヘルプ』には、<strong>スタート</strong>&#8594;<strong>すべてのプログラム</strong>&#8594;<strong>National Instruments &#8594;</strong><strong>NI-FGEN</strong>&#8594;<strong>NI-FGENドキュメント</strong>からアクセスできます。</p>
+<h2><a name="examples">サンプルを検索する</a></h2>
+<p class="Body">LabVIEW, LabWindows/CVI、C、および.NET用のインストールされているすべてのNI-FGENのサンプルには、<strong>スタート</strong>&#8594;<strong>すべてのプログラム</strong>&#8594;<strong>National Instruments</strong>&#8594;<strong>NI-FGEN</strong>&#8594;<strong>NI-FGENサンプル</strong>からアクセスできます。また、オンラインで<span class="Monospace">ni.com/examples</span>からもアクセスできます。また、NI波形発生器とモジュレーションツールキットなどのNIツールキットソフトウェアを統合する方法を示したサンプルもあります。これらのサンプルの詳細については、<span class="Monospace">ni.com/examples</span>を参照してください。</p>
+
+
+<p>LabVIEWまたは<span class="Body">LabWindows/CVI</span>から<strong>ヘルプ</strong>&#8594;<strong>サンプルを検索</strong>を選択してNI サンプルファインダを起動します。NI-FGEN用のLabVIEWサンプルは、<span class="Monospace">LabVIEW <em>XXXX</em>\examples\instr\niFgen</span>ディレクトリに保存されています。サンプルVIをアプリケーションに合わせて変更したり、1つまたは複数のサンプルVIのコードをコピーして、自分が作成したVIに貼り付けて使用したりできます。</p>
+<p>NIサンプルファインダで、インストールされているすべてのLabVIEWサンプルVIおよびその説明を表示するには、2つの方法があります。</p><ul><li>変調のサンプルを参照するには、<strong>参照</strong>タブを開き、「タスク」を選択して、<strong>ハードウェア入力と出力</strong>&#8594;<strong>モジュール式計測器</strong>&#8594;<strong>NI&ndash;FGEN</strong>を開くか、「ディレクトリ別」を選択して、<strong>instr</strong>&#8594;<strong>niFgen</strong>を開きます。</li>
+  <li>インストールされているすべてのサンプルをキーワードで検索するには、<strong>検索</strong>タブをクリックします。たとえば、「FGEN」で検索するとすべての波形発生器のサンプルが検索されます。</li></ul><h2><a name="nxginstructions">LabVIEW NXGのサポートおよび注意事項</a></h2>
+<p>NI-FGENをLabVIEW NXGと組み合わせて使用する場合は、以下のことに注意してください。</p>
+<h3>LabVIEW NXGのオペレーティングシステムおよびシステム要件</h3>
+<p>LabVIEW NXGのソフトウェアサポートは、以下の点で異なります。</p><ul><li>システム要件&#8213;64ビット (x64) プロセッサのみをサポートします。</li>
+<li>オペレーティングシステム&#8213;64ビットのオペレーティングシステムのみをサポートします。詳細については、<a href="#supportedOSes">サポートされているオペレーティングシステム</a>セクションを参照してください。</li></ul><h3>LabVIEW NXGのハードウェアサポート</h3>
+<table class="bordered">
+<tr>
+<th class="bordered">ハードウェア製品</th>
+
+		<th class="Bordered">Windows 10 (64ビット)/8.1 (64ビット)/7 (64ビット) でのサポート</th>
+  </tr>
+<tr>
+  <td class="bordered" colspan="3"><strong>NI-DAQmxベースの波形発生器</strong></td> 
+
+
+<tr>
+<td class="bordered">PXI/PCI-5402</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXI-5404</td>
+<td class="bordered"><div align="center">&radic;<sup>1</sup></div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXI/PCI-5406</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXI/PCI-5412</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXI/PCI-5421</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXI-5422</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXI-5441</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXIe-5442</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXIe-5450</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXIe-5451</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+<tr>
+  <td class="bordered" colspan="3"><strong>NI 5413/5423/5433 波形発生器</strong></td> 
+<tr>
+<tr>
+<td class="bordered">PXIe-5413</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXIe-5423</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+
+<tr>
+<td class="bordered">PXIe-5433</td>
+<td class="bordered"><div align="center">&radic;</div></td>
+</tr>
+<tr>
+	<td class="bordered" colspan="3"><sup>1</sup>このモジュールの外部キャリブレーションは、LabVIEW NXGではサポートされていません。</td>
+  </tr>
+</table>
+<h3>LabVIEW NXGヘルプ</h3>
+<p>&lt;Ctrl-H&gt;を押してマウスカーソルをオブジェクトの上に置くと、LabVIEWのコンテキストヘルプが表示されます。</p>
+<p>LabVIEWウィンドウの右上隅にある検索バーを使用して項目を検索します。検索結果のコンテキストヘルプを参照することもできます。</p>
+<p>その他のドキュメントは、<a href="http://www.ni.com/manuals" target="_blank">ni.com/manuals</a>で参照できます。</p>
+<h3>LabVIEW NXGサンプル</h3>
+<p>LabVIEWを起動して、<strong>学習</strong>タブをクリックします。</p>
+
+<p>LabVIEWのレッスンは<strong>レッスン</strong>タブにあり、LabVIEWのサンプルは<strong>サンプル</strong>タブにあります。レッスンとサンプルの手順に従ってください。</p>
+<h2><a name="ivicompliance">IVI Compliance Packageの機能</a></h2>
+<p class="Body">IVI Compliance Packageは、NI-FGENと一緒にインストールされなくなりました。NI-FGENでは、IVI構成とランタイムはサポートされていますが、以下の機能はサポートされなくなりました。</p><ul><li>IVI間で移植交換可能なアプリケーションを開発するためのLabVIEWおよびCVI IVIクラスドライバAPI</li>
+<li>IVIクラスシミュレーションドライバ</li>
+<li>IVI-COMアダプタ</li></ul><p>これらの機能を使用するためには、<a href="http://www.ni.com/downloads/">ni.com/downloads</a>またはNIデバイスドライバ 2018 DVDからIVI Compliance Packageを別途インストールする必要があります。</p>
+<h2><a name="autoinstall">NI製品のインストールを自動化する</a></h2>
+<p>コマンドライン引数を使用してインストーラのユーザインタフェースおよびダイアログボックスの一部またはすべてを非表示にすることにより、ほとんどのNI製品のインストールを自動化できます。</p>
+
+<p>インストールしようとしているNI製品にMicrosoft .NET 4.0が使用されている場合は、NIソフトウェアがインストールされる前に.NETインストーラが実行されるため、NIソフトウェアのインストールが始まる前にマシンの再起動が必要になる場合があります。.NETによる再起動を回避するには、NIソフトウェアをインストールする前に別途.NET 4.0をインストールしてください。</p>
+
+<p>NI製品のインストールの自動化の詳細については、以下の技術サポートデータベース記事を参照してください。</p><ul><li>個々のNI製品のサイレントインストールについては、「<a href="http://www.ni.com/r/InstallerAutomation" target="_blank">単一インストーラのインストールをカスタマイズおよび自動化する</a>」を参照してください。</li>
+<li>NI Developer Suiteなど、パッケージ化されたNI製品のサイレントインストールについては、「<a href="http://www.ni.com/r/SuiteInstallerAutomation" target="_blank">スイートインストーラのインストールをカスタマイズおよび自動化する</a>」を参照してください。</li>
+<li>製品に含まれているNIインストーラのバージョンを確認するには、「<a href="http://www.ni.com/r/InstallerVersion" target="_blank">ナショナルインスツルメンツのインストーラの種類とバージョンを確認する</a>」を参照してください。</li></ul> <!-- Windows 10 Support Information--><h2><a name="win10">NIソフトウェアをMicrosoft Windows 10と使用する</a></h2>
+<p>Windowsオペレーティングシステムの最新バージョンであるMicrosoft Windows 10では、以前のバージョンと比べて機能が大幅に変更されています。Windows 10には、新機能が追加されているほか、Windows 7とWindows 8からの機能も統合されています。NIのWindows 10サポートについては、<a href="http://ni.com/windows10" target="_blank">ni.com/windows10</a>を参照してください。</p><!-- Windows 8 Support Information--><h2><a name="win8">NIソフトウェアをMicrosoft Windows 8.1と使用する</a></h2>
+
+<p>NIソフトウェアをMicrosoft Windows 8.1にインストールすると、LabVIEW、Measurement &amp; Automation Explorer (NI MAX)、およびNI 起動ツールなどのNIアプリケーションソフトウェア製品へのショートカットを含む新しいタイルがアプリ画面に表示されます。NIのWindows 8.1サポートについては、<a href="http://ni.com/windows8" target="_blank">ni.com/windows8</a>を参照してください。</p><!-- WinXP Support Information --> <!-- We are dropping support for various versions of Windows --><h2><a name="win32bit">NI-FGENは、2021年にWindows 7 (32および64ビット)、Windows Server 2008 R2、およびすべての32ビットWindowsオペレーティングシステムのサポートを終了します</a></h2>
+
+<p>NI-FGENは、2021年にWindows 7 (32および64ビット)、Windows Server 2008 R2、およびすべての32ビットWindowsオペレーティングシステムのサポートを終了します。この製品の2021年5月1日以降に出荷されるバージョンは、これらのOSにインストールしたり、その上で実行したりすることはできません。NIオペレーティングシステムのサポートの詳細については、<a href="http://www.ni.com/r/win32bitsupport" target="_blank">ni.com/r/win32bitsupport</a>を参照してください。</p>
+
+<p>NIアプリケーションソフトウェアの製品ライフサイクルの詳細については、<a href="http://ni.com/info" target="_blank">ni.com/info</a>で以下のInfo Codeを入力してください。</p>
+<table class="Bordered">
+	<tr><th class="Bordered">製品</th>
+<th class="Bordered">Info Code</th></tr>
+	<tr><td class="Bordered">LabVIEW</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/lifecycle" target="_blank">lifecycle</a></td></tr>
+	<tr><td class="Bordered">LabWindows/CVI</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/cvi_lifecycle" target="_blank">cvi_lifecycle</a></td></tr>
+	<tr><td class="Bordered">Measurement Studio</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/mstudiolifecycle" target="_blank">mstudiolifecycle</a></td></tr>
+	<tr><td class="Bordered">TestStand</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/tslcp" target="_blank">tslcp</a></td></tr>
+	<tr><td class="Bordered">DIAdem</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/ddlcp" target="_blank">ddlcp</a></td></tr>
+	<tr><td class="Bordered">SignalExpress</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/selcp" target="_blank">selcp</a></td></tr>
+	<tr><td class="Bordered">VeriStand</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/nivslifecycle" target="_blank">nivslifecycle</a></td></tr>
+</table><!-- Keeping this legacy content in readme for any products that may still support XP
+<p class="Red-text"><em>Use the following text for the NIWeek 2013 releases if your product will extend support for Windows XP and Windows Server 2003 beyond NI's cut-off date. <strong>At this point, it is highly unlikely that anyone should be using this section. Please consult your project manager to ensure that you are exempt from our Windows OS policy.</strong></em></p>
+
+<h2><span class="Red-text">&lt;<em>NI Product</em>&gt;</span> Extends Support for Microsoft Windows Vista, Windows XP, and Windows Server 2003</h2>
+
+<p>Although most NI software products will drop support for Microsoft Windows Vista, Windows XP, and Windows Server 2003 as of July 1, 2016, NI <span class="Red-text">&lt;<em>Product</em>&gt;</span> will provide extended support until <span class="Red-text">&lt;<em>MMDDYY</em>&gt;</span>. For detailed information about NI application software product life cycles, visit <a href="http://ni.com/info" target="_blank">ni.com/info</a> and enter one of the following Info Codes:</p>
+<table class="Bordered">
+	<tr><th class="Bordered">Product</th>
+<th class="Bordered">Info Code</th></tr>
+	<tr><td class="Bordered"> LabVIEW</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/lifecycle" target="_blank">lifecycle</a></td></tr>
+	<tr><td class="Bordered"> LabWindows/CVI</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/cvi_lifecycle" target="_blank">cvi_lifecycle</a></td></tr>
+	<tr><td class="Bordered"> Measurement Studio</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/mstudiolifecycle" target="_blank">mstudiolifecycle</a></td></tr>
+	<tr><td class="Bordered"> TestStand</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/tslcp" target="_blank">tslcp</a></td></tr>
+	<tr><td class="Bordered"> DIAdem</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/ddlcp" target="_blank">ddlcp</a></td></tr>
+	<tr><td class="Bordered"> SignalExpress</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/selcp" target="_blank">selcp</a></td></tr>
+	<tr><td class="Bordered"> VeriStand</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/nivslifecycle" target="_blank">nivslifecycle</a></td></tr>
+</table>
+--> <!--Important Information--><hr>
+
+
+<h2><a name="legal">法的情報</a></h2><!--Copyright--><p><strong>著作権</strong></p>
+<p>&copy; 2007-2019 National Instruments.  All rights reserved.</p>
+
+<p>著作権法に基づき、National Instruments Corporationの書面による事前の許可なく、本書のすべて又は一部を写真複写、記録、情報検索システムへの保存、及び翻訳を含め、電子的又は機械的ないかなる形式によっても複製又は転載することを禁止します。</p>
+
+<p>NIは他者の知的財産を尊重しており、お客様も同様の方針に従われますようお願いいたします。NIソフトウェアは著作権法その他知的財産権に関する法律により保護されています。NIソフトウェアを用いて他者に帰属するソフトウェアその他のマテリアルを複製することは、適用あるライセンスの条件その他の法的規制に従ってそのマテリアルを複製できる場合に限り可能であるものとします。</p>
+
+<p><strong>エンドユーザ使用許諾契約及び他社製品の法的注意事項</strong></p>
+<p>エンドユーザ使用許諾契約 (EULA) 及び他社製品の法的注意事項はインストール後の以下の場所にあります。</p><ul><li>注意事項は、<span class="Monospace">&lt;National Instruments&gt;&yen;_Legal Information</span>及び<span class="Monospace">&lt;National Instruments&gt;</span>ディレクトリにあります。</li> 
+<li>EULAは、<span class="Monospace">&lt;National Instruments&gt;&yen;Shared&yen;MDF&yen;Legal&yen;license</span>ディレクトリにあります。</li>
+<li>NI製品で作成したインストーラに法律情報を組み込む方法については、<span class="Monospace">&lt;National Instruments&gt;&yen;_Legal Information.txt</span>を確認してください。</li></ul><p><strong>米国政府の権利の制限</strong></p>
+<p>お客様が米国政府の機関、省又はその他の事業体 (「米国政府」と総称する) である場合、本書に記載の技術データの使用、複製、再製、公表、修正、開示又は転送は、民間機関用の連邦調達規則52.227-14と軍事機関用の国防省連邦調達規則補足252.227-7014及び252.227-7015に基づく限定権利条項の適用を受けます。</p>
+
+<p><strong>IVI Foundation Copyright Notice</strong></p>
+
+<p><span class="DNL">Content from the IVI specifications reproduced with permission from the IVI Foundation.</span></p>
+
+<p><span class="DNL">The IVI Foundation and its member companies make no warranty of any kind with regard to this material, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. The IVI Foundation and its member companies shall not be liable for errors contained herein or for incidental or consequential damages in connection with the furnishing, performance, or use of this material.</span></p><!--Trademarks--><p><strong>商標</strong></p>
+
+<p><span class="DNL">NI</span>の商標については、<em></em><span class="DNL">NI Trademarks and Logo Guidelines</span> (<a href="http://digital.ni.com/express.nsf/bycode/rdtradjp" target="_blank"><span class="DNL">ni.com/trademarks</span></a>) を参照してください。本書中に記載されたその他の製品名及び企業名は、それぞれの企業の商標又は商号です。</p><!--Patents--><p><strong>特許</strong></p>
+<p>NI製品を保護する特許については、ソフトウェアで参照できる特許情報 (<strong>ヘルプ&#8594;特許</strong>)、メディアに含まれている<span class="Monospace">patents.txt</span>ファイル、又は<a href="http://digital.ni.com/express.nsf/bycode/rdlv17ja" target="_blank">ni.com/patents/ja</a>からアクセスできる「ナショナルインスツルメンツ特許情報」<em></em>のうち、該当するリソースから参照してください。</p>
+
+<p>374945T-0112</p>
+</body>
+</html>

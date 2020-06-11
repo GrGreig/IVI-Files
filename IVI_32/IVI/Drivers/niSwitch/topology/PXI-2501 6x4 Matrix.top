@@ -1,0 +1,65 @@
+[Version]
+MajorVersion = 1
+MinorVersion = 0
+
+[TopologyInfo]
+Name = "PXI-2501 6x4 Matrix"
+Hardware = "PXI-2501"
+
+[Characteristics]
+NumOfRows = 4
+NumOfColumns = 6
+WireMode = 2
+
+[SwitchConfiguration]
+Close = ""
+Open = "cjtemp,hlselect,1wire,bc01,bc23,bc02,ab0,ab1"
+
+[InitialState]
+Open = "ch0,ch1,ch2,ch3,ch4,ch5,ch6,ch7,ch8,ch9,ch10,ch11,ch12,ch13,ch14,ch15,ch16,ch17,ch18,ch19,ch20,ch21,ch22,ch23"
+Close = ""
+
+[ChannelList]
+Names = "r0,r1,r2,r3,c0,c1,c2,c3,c4,c5,ab0,ab1"
+
+[ConnectionList]
+r0->c0=ch0
+r0->c1=ch1
+r0->c2=ch2
+r0->c3=ch3
+r0->c4=ch4
+r0->c5=ch5
+r1->c0=ch6
+r1->c1=ch7
+r1->c2=ch8
+r1->c3=ch9
+r1->c4=ch10
+r1->c5=ch11
+r2->c0=ch12
+r2->c1=ch13
+r2->c2=ch14
+r2->c3=ch15
+r2->c4=ch16
+r2->c5=ch17
+r3->c0=ch18
+r3->c1=ch19
+r3->c2=ch20
+r3->c3=ch21
+r3->c4=ch22
+r3->c5=ch23
+r0->ab0=ab0
+r2->ab1=ab1
+
+[ChannelDescriptions]
+r0="Row 0"
+r1="Row 1"
+r2="Row 2"
+r3="Row 3"
+c0="Column 0"
+c1="Column 1"
+c2="Column 2"
+c3="Column 3"
+c4="Column 4"
+c5="Column 5"
+ab0="Analog Bus 0"
+ab1="Analog Bus 1"

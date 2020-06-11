@@ -1,0 +1,78 @@
+Driver Documentation
+
+The IVI_README.txt file can be found in the <Program Files>\IVI Foundation\IVI\Drivers\pi40iv directory. It contains notes about the driver’s level of compliance with the IVI specifications and lists the optional IVI features supported in the driver.
+The pi40iv.chm file can be found in the <Program Files>\IVI Foundation\IVI\Drivers\pi40iv directory. It contains descriptions of all functions, parameters and their valid values or ranges. 
+
+
+Driver Source Code and Examples
+
+pi40iv C driver source code is not available.
+The C driver example can be found in the <Program Files>\IVI Foundation\IVI\Drivers\pi40iv directory.
+
+The NI LabVIEW wrapper VIs and examples can be found in the <LabVIEW>\instr.lib\pi40iv and in the <Program Files>\IVI Foundation\IVI\Drivers\pi40iv\Labview directory.
+Examples of using MATLAB® and Instrument Control Toolbox with IVI-C drivers can be found in the online documentation. 
+
+
+Connecting to the Instrument
+
+The IVI resources page (http://ivifoundation.org/resources/default.aspx) has documents and videos that explain how to get started with an IVI-C driver in different development environments:
+IVI Getting Started Guide for LabVIEW
+IVI Getting Started Guide for LabWindows/CVI
+IVI Getting Started Guide for Microsoft Visual C++ 
+IVI Getting started Guide for MATLAB
+
+Configuring Instrument Settings
+
+An IVI instrument driver implements each readable or writable setting on the instrument, such as the vertical voltage range on an oscilloscope, as an attribute. 
+
+IVI instrument drivers export high-level functions that allow you to set the value of multiple attributes in one call. This can be useful when it is necessary to send settings to an instrument in a particular order.
+
+IVI instrument drivers also allow you to modify and get a value of individual attributes. You do this by calling <Prefix>_GetAttributeVi<data type> and <Prefix>_SetAttributeVi<data type> functions. To use these functions correctly you need to know the date type, valid values, and ID of the attribute you want to access. How you do so depends on the development environment you are using. 
+
+NI LabWindows/CVI Users
+Open the pi40iv.fp file, expand the Configuration class, and select one of the Set/GetAttribute functions.  From the function panel window, click on the Attribute ID control to display a dialog box containing a hierarchical list of the available attributes.
+If you do not see the attribute you want, click on the All Data Types option in the Data Type pane of the dialog box. 
+
+NI LabVIEW Users
+Use a Property Node to access the specific properties of a driver. A property node can be found in the Connectivity>>ActiveX functions palette.  
+
+Microsoft Visual Studio Users
+Refer to the pi40iv.h header file for list of all public IVI attributes.
+
+
+Configuring Driver Settings
+
+IVI instrument drivers implement inherent capabilities such as simulation, range checking, state caching, coercion recording, interchangeability checking, and instrument status checking. A user can enable/disable these features either programmatically using an attribute or statically using a configuration utility.
+
+
+Direct I/O
+
+Pickering Interfaces Ltd. switching modules do not support message-based direct I/O.
+
+The pi40iv IVI driver contains set of direct functions to communicate with modules. Note these functions are not IVI compliant and bypass the IVI engine. It is not recommended to use them along with IVI compliant function calls.
+
+
+Known Issues
+
+No known issues.
+
+
+Contact Support 
+
+If you have feedback or need help using this driver, contact:
+
+Pickering Interfaces Ltd.
+Stephenson Road
+Clacton-on-Sea
+Essex
+CO15 4NL
+UK
+
+Tel. +44 (0)1255-687900
+Fax. +44 (0)1255-425349
+WWW: http://www.pickeringtest.com
+Email (sales): sales@pickeringtest.com
+Email (technical support): support@pickeringtest.com
+
+LabVIEW and LabWindows/CVI are trademarks of National Instruments Corporation -
+www.ni.com.

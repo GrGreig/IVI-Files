@@ -1,0 +1,159 @@
+; Copyright 2019 National Instruments Corporation
+;
+; ni5433k.inf
+;
+
+
+[Version]
+Signature=$WINDOWS NT$
+Class=%ni5433k_className%
+ClassGUID={7879b421-e3e1-42e6-87da-9fc2dcfb4736}
+Provider=%NIString0%
+DriverVer=08/05/2019,19.1.0.49152
+CatalogFile=ni5433k.cat
+DriverPackageDisplayName=%ni5433k_SvcDesc%
+
+[ClassInstall32]
+AddReg=AddClassToRegistry
+
+[ControlFlags]
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_78D51093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_78D61093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_78D71093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_78D81093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_78D91093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_78DA1093
+
+[Manufacturer]
+%NIString0%=pci_Model,NTx86,NTamd64
+
+[pci_Model.NTx86]
+%dev0_dDesc%=dev0_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_78D51093
+%dev1_dDesc%=dev1_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_78D61093
+%dev2_dDesc%=dev2_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_78D71093
+%dev3_dDesc%=dev3_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_78D81093
+%dev4_dDesc%=dev4_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_78D91093
+%dev5_dDesc%=dev5_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_78DA1093
+
+[pci_Model.NTamd64]
+%dev0_dDesc%=dev0_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_78D51093
+%dev1_dDesc%=dev1_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_78D61093
+%dev2_dDesc%=dev2_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_78D71093
+%dev3_dDesc%=dev3_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_78D81093
+%dev4_dDesc%=dev4_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_78D91093
+%dev5_dDesc%=dev5_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_78DA1093
+
+[dev0_Cfg]
+CopyFiles=ni5433k_CopyFiles
+
+[dev0_Cfg.Services]
+AddService= ni5433k, 0x00000002, ni5433k_Service_Inst
+
+
+[dev0_Cfg.HW]
+AddReg = msi_addreg
+
+
+[dev1_Cfg]
+CopyFiles=ni5433k_CopyFiles
+
+[dev1_Cfg.Services]
+AddService= ni5433k, 0x00000002, ni5433k_Service_Inst
+
+
+[dev1_Cfg.HW]
+AddReg = msi_addreg
+
+
+[dev2_Cfg]
+CopyFiles=ni5433k_CopyFiles
+
+[dev2_Cfg.Services]
+AddService= ni5433k, 0x00000002, ni5433k_Service_Inst
+
+
+[dev2_Cfg.HW]
+AddReg = msi_addreg
+
+
+[dev3_Cfg]
+CopyFiles=ni5433k_CopyFiles
+
+[dev3_Cfg.Services]
+AddService= ni5433k, 0x00000002, ni5433k_Service_Inst
+
+
+[dev3_Cfg.HW]
+AddReg = msi_addreg
+
+
+[dev4_Cfg]
+CopyFiles=ni5433k_CopyFiles
+
+[dev4_Cfg.Services]
+AddService= ni5433k, 0x00000002, ni5433k_Service_Inst
+
+
+[dev4_Cfg.HW]
+AddReg = msi_addreg
+
+
+[dev5_Cfg]
+CopyFiles=ni5433k_CopyFiles
+
+[dev5_Cfg.Services]
+AddService= ni5433k, 0x00000002, ni5433k_Service_Inst
+
+
+[dev5_Cfg.HW]
+AddReg = msi_addreg
+
+
+
+[msi_addreg]
+HKR,Interrupt Management,,0x00000010
+HKR,Interrupt Management\MessageSignaledInterruptProperties,,0x00000010
+HKR,Interrupt Management\MessageSignaledInterruptProperties,MSISupported,0x00010001,1
+HKR,Interrupt Management\MessageSignaledInterruptProperties,MessageNumberLimit,0x00010001,1
+
+
+[ni5433k_CopyFiles]
+ni5433k.sys
+
+[SourceDisksFiles]
+ni5433k.sys=1
+
+[SourceDisksNames]
+1=%installationMedia%
+
+[DestinationDirs]
+DefaultDestDir=12
+
+[AddClassToRegistry]
+HKR,,,0,%ni5433k_classDisplayName%
+HKR,,EnumPropPages32,,niMIDeviceIcon.dll
+HKR,,Icon,,101
+
+[ni5433k_Service_Inst]
+DisplayName    = %ni5433k_SvcDesc%
+ServiceType    = 1        ; SERVICE_KERNEL_DRIVER
+StartType      = 3        ; SERVICE_DEMAND_START
+ErrorControl   = 1        ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\ni5433k.sys
+LoadOrderGroup = Base
+
+[Strings]
+NIString0            = "National Instruments"
+dev0_dDesc        = "NI PXIe-5413 (1CH)"
+dev1_dDesc        = "NI PXIe-5413 (2CH)"
+dev2_dDesc        = "NI PXIe-5423 (1CH)"
+dev3_dDesc        = "NI PXIe-5423 (2CH)"
+dev4_dDesc        = "NI PXIe-5433 (1CH)"
+dev5_dDesc        = "NI PXIe-5433 (2CH)"
+ni5433k_className = "MIDevice"
+ni5433k_SvcDesc      = "NI 5433 Kernel Driver"
+installationMedia    = "Installation Media"
+ni5433k_classDisplayName = "NI Modular Instruments"
+
+
+

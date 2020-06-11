@@ -1,0 +1,116 @@
+
+IVI Compliance Category:
+-----------------------
+
+IVI.NET IviFgen  Specific Instrument Driver
+Class Specification version:		4.1
+IVI Generation: 					IVI-2014
+Group Capabilities Supported:
+
+IviFgenBase                          = Supported
+IviFgenStdFunc                       = Supported
+IviFgenArbWfm                        = Supported
+IviFgenArbFrequency                  = Not Supported
+IviFgenArbSeq                        = Supported
+IviFgenTrigger                       = Supported
+IviFgenInternalTrigger               = Not Supported
+IviFgenSoftwareTrigger               = Supported
+IviFgenBurst                         = Not Supported
+IviFgenModulateAM                    = Not Supported
+IviFgenModulateFM                    = Not Supported
+
+
+Optional Features:
+-----------------
+
+Interchangeability Checking 		= False
+State Caching 						= True
+Coercion Recording 					= False
+
+
+
+Driver Identification:
+---------------------
+
+Driver Revision: 			15.0
+Driver Vendor: 				National Instruments
+Component Identifier: 		niFgen
+Description: 				National Instruments Signal Generator Driver
+
+
+
+Hardware Information:
+--------------------
+
+Instrument Manufacturer:		National Instruments
+Supported Instrument Models:	NI 5401, NI 5404, NI 5411, NI 5412, NI 5421, NI 5422, NI 5431, NI 5441, NI 5402, NI 5406, NI 5442, NI 5450, NI 5451
+Supported Bus Interfaces:		PXIe, PXI, PCI
+
+
+
+32-bit Software Information:
+---------------------------
+
+Supported Operating Systems: 		 Windows Server 2008 R2 (64-bit), 
+                                     Windows Server 2012 R2 (64-bit), 
+                                     Windows 7 SP1 (32-bit and 64-bit), 
+                                     Windows 8.1 (32-bit and 64-bit), 
+                                     Windows 10 (32-bit and 64-bit)
+Unsupported Operating Systems: 		Windows 2000
+.NET Minimum Runtime Version:		4.0
+Source Code Availability: 			Source code is not available
+
+
+64-bit Software Information:
+---------------------------
+
+Supported Operating Systems: 		 Windows Server 2008 R2 (64-bit), 
+                                     Windows Server 2012 R2 (64-bit), 
+                                     Windows 7 SP1 (64-bit), 
+                                     Windows 8.1 (64-bit), 
+                                     Windows 10 (64-bit)
+Unsupported Operating Systems:		Windows XP (64-bit)
+.NET Minimum Runtime Version:		4.0
+Source Code Availability: 			Source code is not available
+
+
+Unit Testing:
+------------
+
+Test Setup:
+
+Instrument Model:                     PXI-5421
+Bus Interface:                        PXI 
+Operating System (Service Pack):      Windows Server 2008 R2 (64-bit), Windows Server 2012 R2 (64-bit), Windows 7 SP1, Windows 8.1, Windows 10
+OS Bitness/Application Bitness:       32-bit/32-bit, 64-bit/32-bit, 64-bit/64-bit
+VISA Vendor and Version:              N/A
+IVI.NET Shared Components Version:    1.3
+
+
+Driver Installation Testing:
+---------------------------
+
+Operating System (Service Pack):    Windows Server 2008 R2 (64-bit), Windows Server 2012 R2 (64-bit), Windows 7 SP1, Windows 8.1, Windows 10
+OS Bitness:                         32-bit, 64-bit
+
+
+Driver Test Failures:
+--------------------
+
+Known Issues: 				[None]
+
+
+Note:
+National Instruments has evaluated and/or tested this driver to verify that it meets all applicable requirements of the IVI specifications at the time this compliance document was submitted to the IVI Foundation and agrees to abide by the dispute arbitration provisions in Section 7 of IVI-1.2: Operating Procedures, if the IVI Foundation finds this driver to be non-conformant.
+
+
+
+
+
+
+
+
+
+
+
+

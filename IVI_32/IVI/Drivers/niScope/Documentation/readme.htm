@@ -1,0 +1,724 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="ContentType" content="readme">
+<meta name="ProductCategories" content="311822"/>
+<title>NI-SCOPE 19.5 Readme</title>
+
+<style type="text/css">
+<!--
+/***************************************************/
+/* MINIMAL STYLES */
+/* The following section defines styles that every HTML Help project should need. */
+
+/* Specifies white background color for page and font style for text. */
+body {background-color:#FFFFFF; font-family:Verdana, sans-serif; font-size:8pt; color: #000000;}
+
+/* Use P for normal paragraphs. */
+p { margin-top:6.00pt; margin-bottom:6.00pt; }
+
+br { font-size:4.00pt; }
+
+/* Use H1 for all topic headings. */
+h1 { margin-top:3.00pt; margin-bottom:3.00pt; font-size:150%; font-weight:bold; }
+
+/* Use H2 for second-level headings. */
+h2 { margin-top:9.00pt; margin-bottom:3.00pt; font-size:125%; font-weight:bold; }
+
+/* Use H3 for third-level headings. */
+h3 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold; }
+
+/* Use H4 for fourth-level headings. */
+h4 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold; }
+
+/* H5 and H6 have the same definition as H4 because you should not need this level of heading in one topic. If you need to use H5 or H6, consider breaking up your topic into more than one topic. */
+h5 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold; }
+h6 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold; }
+
+/* Deprecated. Use P for normal paragraphs. */
+p.Body { }
+
+/* Use the Anchor style class for graphic references on a line by themselves. */
+p.Anchor { font-size:125%; }
+
+/* Use the Indent style classes to indent a paragraph. If you need to indent text below a list item, use <br><br> to start the new paragraph within the same set of <li></li> tags. If you need to indent a list within another list, nest the indented list within the first list's set of <ol></ol> or <ul></ul> tags. */
+p.Indent1 { margin-left:12.00pt; margin-bottom:3.00pt; }
+p.Indent2 { margin-left:24.00pt; margin-bottom:3.00pt; }
+p.Indent3 { margin-left:36.00pt; margin-bottom:3.00pt; }
+p.Indent4 { margin-left:48.00pt; margin-bottom:3.00pt; }
+p.Indent5 { margin-left:60.00pt; margin-bottom:3.00pt; }
+
+/* Use the LI style for all list items. */
+li { margin-top:3.00pt; margin-bottom:3.00pt; }
+
+/* Use the OL style for numbered lists. You do not have to type the number for each list item in a numbered list. */
+ol { margin-left:22.00pt; margin-top:3.00pt; margin-bottom:3.00pt; text-indent:0pt; list-style-type: decimal; }
+
+/* Use the OL style for numbered lists. Nested lists will use the bullet types according to the nesting scheme below */
+ol ol {list-style-type:lower-alpha}
+ol ol ol {list-style-type:decimal}
+ol ol ol ol {list-style-type:lower-alpha}
+ol ol ol ol ol {list-style-type:decimal}
+ol ol ol ol ol ol {list-style-type:lower-alpha}
+ol ol ol ol ol ol ol {list-style-type:decimal}
+ol ol ol ol ol ol ol ol {list-style-type:lower-alpha}
+
+
+/* Use the EquationNum style class for numbered lists of equations. You do not have to type the number for each list item in a numbered list. */
+ol.EquationNum { margin-left:36.00pt; text-indent:0pt; list-style-type: decimal; }
+
+/* Use the List-abc style class for lettered lists. You do not have to type the letter for each list item in a lettered list. */
+ol.List-abc { margin-left:22.00pt; text-indent:0pt; list-style-type:lower-alpha; }
+
+/* Use the UL style for bulleted lists. You do not have to type the bullet for each list item in a bulleted list. */
+ul { margin-left:22.00pt; text-indent:0pt; margin-top:3.00pt; margin-bottom:3.00pt; list-style-type: disc; }
+
+/* Use the UL style for bulleted lists. Nested lists will use the bullet types according to the nesting scheme below. */
+ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul ul ul ul ul ul{list-style-image: none;list-style-type: circle}
+
+/* Use the List-Box style class for bulleted lists with boxes instead of bullets. You do not have to type the box for each list item in a box list. */
+ul.List-Box {list-style-image: none;list-style-type: square}
+
+table { font-size:8pt; }
+
+/* Use the Borderless style class for tables that do not need borders, such as for 2-column or 3-column lists with no headings. */
+table.Borderless { border:none; }
+
+/* Use the Bordered style class for tables that need borders. */
+table.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; border-collapse: collapse; }
+
+/* Use the TD style for table cells in Borderless or Borderless-Wide tables. */
+td { vertical-align:top; padding:3px; }
+
+/* Use the Bordered style class for table headings and cells in Bordered or Bordered-Wide tables. */
+.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; }
+
+/* Use the Icon style class for table cells that contain note, caution, warning, or tip icons, or LabVIEW datatype terminals. */
+td.Icon { width:40px; }
+
+/* Use the TH style for table heading cells in Borderless or Borderless-Wide tables. */
+th { font-weight:bold; padding:3px; }
+
+/* Use the Left-Align style class for table headings and cells that you want to left align instead of center align. */
+.Left-Align { text-align:left; }
+
+/***************************************************/
+/* CHARACTER FORMATS */
+/* The following section defines character formats that every HTML Help project should need. */
+
+/* CHARACTER FORMATS Updated to conform with the CSE HTML Validator Pro */
+/* The following section defines character formats that every HTML Help project should need. */
+
+/* Use the Dark-Red format for warnings or cautions. */
+.Dark-Red { color: #800000 }
+
+/* Use the Monospace format for code or syntax examples. */
+.Monospace { font-family: "Courier New",monospace; font-size: 100%; }
+
+/* Use the Monospace-Bold format for messages and responses that the computer automatically prints to the screen. */
+.Monospace-Bold { font-family: "Courier New",monospace; font-weight: bold; font-size: 100%; }
+
+/* Use the Monospace-Italic format to denote text that is a placeholder for a word or value that the user must supply. */
+.Monospace-Italic { font-family: "Courier New",monospace; font-style: italic; font-size: 100%; }
+
+/* small class */
+.smallFont { font-size:87.5%; }
+
+/* Bold class */
+.Bold { font-weight: bold; }
+
+/* Italic class */
+.Italic { font-style: italic; }
+
+/* Use the Platform format to denote a specific platform. */
+.Platform { color: #0000FF; font-weight: bold; }
+
+/* Use the Symbol format for characters not in the Verdana character set. Use this format sparingly. When possible, you should use the correct ASCII code for the symbol or use a graphic to recreate the symbol. */
+.Symbol { font-family: Symbol; }
+
+/* Use the Red-text format to call attention to text that needs information added or edited by techcomm */
+.Red-text {color: #FF0000;}
+
+/* Use the Green-Underline format for the green defintion in the conventions topic */
+.Green-Underline {color: #007700; text-decoration : underline;}
+
+/* Use the glossButton format for the glossary buttons used in the glossary topic */
+.glossButton { font-size:12px; color:black; }
+
+/* Use for text sections and hyphenated words that should not break at line wraps */
+.nobreak{white-space:nowrap}
+
+/* Use for template instructions. */
+.instructions{color:red; font-style:italic}
+
+/*Use for words and text sections that do not need to be localized */
+.DNL { }
+
+/* The following styles define the color of links. */
+a:link { color: #007700 }
+a:visited { color: #7F007F }
+a:link:hover { color: #FF0000 }
+a:link:active { color: #FF0000 }
+
+/***************************************************/
+/* Forms */
+
+form { margin-top:0pt; margin-bottom:3pt; color:black; }
+select { font-size:100%; color:black; }
+
+/*******************************************************/
+/* Margins */
+/* Use these styles for block-level elements inside tables cells or list items where you do not want extra padding at the top or bottom of a cell. */
+.noTopMargin { margin-top:0pt;}
+.noBottomMargin { margin-bottom:0pt;}
+
+/***************************************************/
+/* CODE STYLES */
+/* The following section defines styles that you need to format entire sections of code or syntax examples. If you have just a few words you need to format as a code or syntax example, use the Monospace character format. */
+
+p.Code { margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace; }
+p.Code1 { margin-left:12.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace; }
+p.Code2 { margin-left:24.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace; }
+p.Code3 { margin-left:36.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace; }
+-->
+</style>
+
+</head>
+
+<body>
+	
+<h1>NI-SCOPE 19.5 Readme</h1>
+
+<p>September 2019</p>
+
+<p>This file contains important information about the NI-SCOPE driver, including installation instructions, new features, and known issues.</p>
+
+<p>If you plan to use LabVIEW NXG, refer to <a href="#nxginstructions">LabVIEW NXG Support and Considerations</a>.</p>
+<hr>
+
+<p><a href="#overview">Overview</a></p>
+<p><a href="#requirements">System Requirements</a></p>
+<p><a href="#supportedOSes">Supported Operating Systems</a></p>
+<p><a href="#app">Application Software Support</a></p>
+<p><a href="#installation">Installation Instructions</a></p>
+<p><a href="#updates">Product Security and Critical Updates</a></p>
+<p><a href="#New">New Features</a></p>
+<p><a href="#hardware">Supported Hardware</a></p>
+<p><a href="#changes">Behavior Changes</a></p>
+<p><a href="#known">Known Issues</a></p>
+<p><a href="#fixes">Bug Fixes</a></p>
+<p><a href="#help">Accessing the Help</a></p>
+<p><a href="#examples">Finding Examples</a></p>
+<p><a href="#nxginstructions">LabVIEW NXG Support and Considerations</a></p>
+<p><a href="#autoinstall">Automating the Installation of NI Products</a></p>
+<p><a href="#win10">Using NI Software with Microsoft Windows 10</a></p>
+<p><a href="#win8">Using NI Software with Microsoft Windows 8.1</a></p>
+<p><a href="#win32bit">NI-SCOPE Drops Support for Windows 7 (32- and 64-Bit), Windows Server 2008 R2, and All 32-Bit Windows Operating Systems in 2021</a></p>
+<p><a href="#legal">Legal Information</a></p>
+<hr>
+
+<h2><a name="overview">Overview</a></h2>
+<p>NI-SCOPE is an NI instrument driver that enables you to implement multirecord acquisition, continuous acquisition, multiboard synchronization, more than 50 measurement and analysis functions, and the functionality of traditional oscilloscopes. NI-SCOPE is an interchangeable virtual instrument (IVI)&ndash;compliant instrument driver, and it features a set of operations and properties that exercise the functionality of the oscilloscope and includes an interactive soft front panel and examples.</p>
+
+<h2><a name="requirements">System Requirements</a></h2>
+
+<p>NI-SCOPE 19.5 has the following requirements:</p>
+	<ul>
+		<li>1 GHz or faster 32-bit (x86) or 64-bit (x64) processor</li>
+		<li>1 GB RAM (32-bit) or 2 GB RAM (64-bit)</li>
+		<li>A screen resolution of 1,024 x 768</li>
+        <li>If you are running your application on an RT target, at least 128 MB of memory</li>
+	</ul>
+	
+<h2><a name="supportedOSes">Supported Operating Systems</a></h2>
+
+<p>NI-SCOPE 19.5 supports the following operating systems:</p>
+	<ul>
+		<li>Windows 10/8.1<sup>1</sup>/7 SP1<sup>2</sup></li>
+		<li>Windows Embedded Standard 7 SP1<sup>2</sup></li>
+		<li>Windows Server 2012 R2<sup>1</sup></li>
+		<li>Windows Server 2008 R2 SP1<sup>2</sup></li>
+		<li>Linux
+			<ul>
+				<li>Red Had Enterprise Linux Desktop + Workstation 7.x, 8.x</li>
+				<li>CentOS 7.x, 8.x</li>
+				<li>OpenSUSE Leap 42.3, 15</li>
+			</ul>
+			</li>
+	</ul>
+	
+<p><strong>Note</strong>&nbsp;&nbsp;In 2016, NI-SCOPE dropped support for Windows Vista, Windows XP, Windows Server 2003, and installations of Windows 7 without any service packs. NI-SCOPE will not install or run on an unsupported OS. You cannot deploy or distribute applications that use NI-SCOPE to an unsupported OS. Additionally, after installing NI-SCOPE 19.5, you cannot use any installers built on this computer with any version of LabVIEW, LabWindows&#8482;/CVI&#8482;, NI TestStand&#8482;, or Measurement Studio on an unsupported OS.</p>
+<p>For more information about the changes to our OS support for 2016, refer to <a href="http://www.ni.com/r/OSSupport2016" target="_blank">Why Does My NI ADE Installer Fail on Windows XP/Vista and Windows Server 2003?</a>.</p>
+    
+<p><strong>Note</strong>&nbsp;&nbsp;Support for Windows 32-bit operating systems may require disabling physical address extension (PAE). To learn how this might affect your system and what actions you might need to take, visit <a href="http://www.ni.com/r/PAESupport" target="_blank">ni.com/r/PAESupport</a>.</p>
+    
+<p><sup>1</sup> NI software installs  VC2015 Runtime and .NET 4.6.2. Windows 8.1 and Windows Server 2012 R2 require Microsoft updates to support these items. Refer to Microsoft <a href="http://www.ni.com/r/expfcj" target="_blank">KB2919442</a> and <a href="http://www.ni.com/r/exkd3p" target="_blank">KB2919355</a> for more information about how to install these  updates.</p>
+
+
+<p><sup>2</sup> NI software is signed with a SHA-256 certificate. Windows 7 SP1, Windows Embedded Standard 7 SP1, and Windows Server 2008 R2 SP1 require Microsoft updates to support SHA-256. Refer to Microsoft <a href="http://www.ni.com/r/exf7ig" target="_blank">KB3033929</a> for more information about how to install this security update.</p>
+
+<h2><a name="app">Application Software Support</a></h2>
+<p>NI-SCOPE supports the following application software versions, including service packs. If you are not using NI application software, refer to Microsoft Visual Studio Support.</p>
+
+<table class="Bordered">
+<tr><th class="Bordered">Application Software</th><th class="Bordered">Versions Supported by NI-SCOPE</th></tr>
+<tr><td class="Bordered">LabVIEW</td><td class="Bordered">2016, 2017, 2018, 2019</td></tr>
+<tr><td class="Bordered">LabVIEW Real-Time Module<sup>3</sup></td><td class="Bordered">2016, 2017, 2018, 2019</td></tr>
+<tr><td class="Bordered">LabVIEW NXG</td><td class="Bordered">3.0, 3.1, 4.0</td></tr>
+<tr><td class="Bordered">LabWindows&#8482;/CVI&#8482;</td><td class="Bordered">2013 SP1 or later</td></tr>
+<tr><td class="Bordered">LabWindows/CVI Real-Time Module<sup>3</sup></td><td class="Bordered">2013 SP1 or later</td></tr>
+</table>
+<p><sup>3</sup>No support for the PXIe&#8209;5110/5111/5113, the PXIe&#8209;5163, or the PXIe-5164 and PXIe-517<em>x</em> reconfigurable oscilloscopes.
+
+<h3>Microsoft Visual Studio Support</h3>
+<p>If you are using the NI-SCOPE .NET Class Library, the .NET  Framework 4.0 (minimum) is required. The NI-SCOPE .NET Class Library can be used with the Visual C# or Visual Basic .NET programming languages in any Visual Studio version that can target the .NET  Framework 4.0 or the .NET  Framework 4.5.</p>
+<p>To use the .NET API, you must select the .NET Framework 4.0 Languages Support or the .NET Framework 4.5 Languages Support packages in the NI-SCOPE installer to install the .NET class libraries in addition to the NI device driver. For information about versions of the .NET Framework and the drivers each supports, as well as the download location of the installer files, refer to <a href="http://www.ni.com/r/NETAPIdriversupport" target="_blank">National Instruments .NET Driver Support</a>.</p>
+
+<h2><a name="installation">Installation Instructions</a></h2>
+<p>NI installs NI-SCOPE using NI Package Manager. If you do not already have NI software installed, NI-SCOPE installs NI Package Manager to handle the installation of your NI software. Visit <a href="http://www.ni.com/r/NIPMDownload" target="_blank">ni.com/r/NIPMDownload</a> to download NI Package Manager. Refer to the <a href="http://www.ni.com/r/NIPMManual" target="_blank">NI Package Manager Manual</a> for more information about installing, removing, and upgrading NI software using NI Package Manager.</p>
+
+<p>NI-SCOPE is available for download from <a href="http://ni.com/downloads/drivers" target="_blank">ni.com/downloads/drivers</a>. NI-SCOPE installs NI-DAQmx if it is not already installed or if an earlier version of NI-DAQmx is installed. NI-DAQmx support files will be installed if you have LabVIEW or LabWindows/CVI in your system. However, the only component that NI-SCOPE needs from NI-DAQmx is the device driver. </p>
+ 
+<h3>Upgrading from a Previous Version of NI-SCOPE</h3>
+	<ul><li>From NI-SCOPE 1.0 and 1.1&#8212;NI-SCOPE does not install over NI-SCOPE 1.0 or 1.1. You must uninstall these versions of NI-SCOPE before installing a later version of NI-SCOPE.</li>
+	<li>From NI-SCOPE 1.5 and later&#8212;NI-SCOPE automatically uninstalls any previous version that is greater or equal to 1.5. If you have modified any old examples, these will be overwritten by the new versions.</li></ul>
+
+<h3>Uninstalling NI-SCOPE</h3>
+<p>As part of the NI-SCOPE installation, the following software is installed. To completely remove the NI-SCOPE installation from your system, you must also remove all of the following packages:</p>
+	<ul>
+ 	 <li>NI-DAQmx</li>
+ 	 <li>NI Measurement &amp; Automation Explorer</li>
+	 <li>NI Hierarchical Waveform Storage</li>
+	 <li>NI I/O Trace</li>
+	</ul>
+
+<p><span class="Dark-Red"><strong>Notice</strong>&nbsp;&nbsp;Several of the software packages listed above are shared with other NI software packages. If you attempt to remove a piece of software that something else is dependent on, a message launches to warn you about the software dependencies. You can choose to either uninstall all of the software or to leave the shared software installed. If you choose to uninstall the shared software, some of your other NI software may no longer function correctly.</span></p>
+
+
+
+<!--Critical updates-->
+<h2><a name="updates">Product Security and Critical Updates</a></h2>
+
+<p>Visit <a href="http://www.ni.com/security" target="_blank">ni.com/security</a> to view and subscribe to receive security notifications about NI products. Visit <a href="http://www.ni.com/critical-updates" target="_blank">ni.com/critical-updates</a> for information about critical updates from NI.</p>
+
+<h2><a name="New">New Features</a></h2>
+<ul>
+	<li>You now can create sessions that include multiple instruments of the same model and in the same chassis. This automatically synchronizes all channels of the included instruments, simplifying your test program development and maintenance. Refer to the Initialize or Initialize with Options API reference in the <em>NI High-Speed Digitizers Help</em> for more information.</li>
+	<li>The PXIe-5172 now supports additional bandwidth-limiting filters (80&#0160;MHz, 40&#0160;MHz) and onboard clock rates (200&#0160;MS/s, 150&#0160;MS/s).</li>
+</ul>
+
+ <h2><a name="hardware">Supported Hardware</a></h2>               
+ <p>The following table details the hardware models supported in NI&#8209;SCOPE&#0160;19.5.</p>
+ <table class="Bordered">
+ 
+  <tr>
+    <th class="Bordered">Hardware Device</th>
+    <th class="Bordered">Supported Under Windows 10 (32-bit)/Windows 8.1 (32-bit)/7 (32-bit)</th>
+    <th class="Bordered">Supported Under Windows 10 (64-bit)<sup>1</sup>/Windows 8.1 (64-bit)<sup>1</sup>/7 (64-bit)<sup>1</sup></th>
+     </tr>
+	 <tr>
+	 <th class="Bordered" colspan="3" align="left">NI-DAQmx-Based Oscilloscopes</th>
+	 </tr>
+  <tr>
+    <td class="Bordered">PXI/PXIe/PCI-5105</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+  </tr>
+  <tr>
+    <td class="Bordered">PXI/PXIe/PCI-5114 </td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+  </tr>
+  <tr>
+    <td class="Bordered">PXI/PXIe/PCI-5122</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+  </tr>
+  <tr>
+    <td class="Bordered">PXI/PCI-5124</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+  </tr>  
+  <tr>
+    <td class="Bordered">USB-5132/5133</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    </tr>
+  <tr>
+    <td class="Bordered">PXI/PCI-5142</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+   </tr>
+  <tr>
+    <td class="Bordered">PXI/PCI-5152</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+   </tr>
+  <tr>
+    <td class="Bordered">PXI/PCI-5153</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    </tr>
+  <tr>
+    <td class="Bordered">PXI/PCI-5154</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    </tr>
+  <tr>
+    <td class="Bordered">PXIe-5160/5162</td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+    </tr>
+	<tr>
+    <td class="Bordered">PXIe-5185/5186</td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+    </tr>
+  <tr>
+    <td class="Bordered">PXIe-5622</td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+   </tr>
+  <tr>
+  	<td class="Bordered">PXI-5900</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    </tr>
+  <tr>
+    <td class="Bordered">PXI/PCI-5922</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    </tr>
+	<tr>
+		<th class="Bordered" colspan="3" align="left">SDI-Based Oscilloscopes</th>
+	</tr>
+	<tr>
+		<td class="Bordered">PXIe-5110</td>
+		<td class="Bordered"><div align="center">Yes</div></td>
+		<td class="Bordered"><div align="center">Yes</div></td>
+	<tr>
+	<tr>
+		<td class="Bordered">PXIe-5111</td>
+		<td class="Bordered"><div align="center">Yes</div></td>
+		<td class="Bordered"><div align="center">Yes</div></td>
+	<tr>
+	<tr>
+		<td class="Bordered">PXIe-5113</td>
+		<td class="Bordered"><div align="center">Yes</div></td>
+		<td class="Bordered"><div align="center">Yes</div></td>
+	<tr>
+   <th class="Bordered" colspan="3" align="left">516<em>x</em> Oscilloscopes</th>
+   </tr>
+    <tr>
+		<td class="Bordered">PXIe-5163</td>
+		<td class="Bordered"><div align="center">Yes</div></td>
+		<td class="Bordered"><div align="center">Yes</div></td>
+	</tr>
+    <tr>
+    <td class="Bordered">PXIe-5164</td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+   </tr>
+   <tr>
+   <th class="Bordered" colspan="3" align="left">517<em>x</em> Oscilloscopes</th>
+   </tr>
+   <tr>
+    <td class="Bordered">PXIe-5170</td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+   </tr>
+  <tr>
+    <td class="Bordered">PXIe-5171</td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+   </tr>
+   <tr>
+    <td class="Bordered">PXIe-5172</td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+   </tr>
+  <tr>
+    <td class="Bordered" colspan="3"><sup>1</sup>When you install NI-SCOPE on a 64-bit installation of Windows, InstrumentStudio is installed instead of the SCOPE soft front panel. Use InstrumentStudio to monitor and control your oscilloscope.<br></td>
+  </tr>
+</table>
+
+<p class="Body">Device-specific information about these modules is included in the <em>NI&nbsp;High-Speed&nbsp;Digitizers Help</em>.</p>
+
+<h2><a name="changes">Behavior Changes</a></h2>
+<!--Keep behavior changes for current and two previous releases so this content is easier to find for users who don't upgrade to every version.-->
+<p>NI&#8209;SCOPE&#0160;19.1 introduces the following behavior changes between 19.0 and 19.1:</p>
+		<ul>
+	<li>
+The NI-SCOPE Initialize and Initialize with Options resource name parameters now accept a comma-delimited list of instruments. When you list more than one instrument in resource name, NI-SCOPE creates a single multi-instrument session and synchronizes all channels of the listed instruments. Refer to the <em>NI High-Speed Digitizers Help</em> for more information.
+		</li>
+</ul>
+
+<h2><a name="known">Known Issues</a></h2>
+<p>You can access the software and documentation known issues list online. Visit <a href="http://www.ni.com/r/scope195ki" target="_blank">NI-SCOPE 19.5 Known Issues</a> for an up-to-date list of known issues.</p>
+
+<h2><a name="fixes">Bug Fixes</a></h2>
+<p>The following items are the IDs, versions, and descriptions of a subset of issues fixed in NI-SCOPE releases. This is not an exhaustive list of issues fixed in the current version of NI-SCOPE. If you have a CAR ID, you can search this list to validate that the issue has been fixed.</p>
+
+<div class="DNL">
+
+<table class="Bordered">
+<tr>
+<th class="Bordered">ID</th>
+<th class="Bordered">Fixed Version</th>
+<th class="Bordered">Fixed Issue</th>
+</tr>
+<tr>
+<td class="Bordered">716977</td>
+<td class="Bordered">18.7</td>
+<td class="Bordered"><span class="DNL">Implemented various fetch performance improvements for the PXIe&#8209;5110/5111/5113, PXIe&#8209;5164, PXIe&#8209;5170, PXIe&#8209;5171, and PXIe&#8209;5172.</span></td>
+</tr>
+<tr>
+<td class="Bordered">639493</td>
+<td class="Bordered">17.2</td>
+<td class="Bordered"><span class="DNL">Fixed an issue in which committing a new clocking configuration for the PXIe-5164 without previously phase locking the clock and resetting the device caused LabVIEW to crash.</span></td>
+</tr>
+<tr>
+<td class="Bordered">546023</td>
+<td class="Bordered">16.1</td>
+<td class="Bordered"><span class="DNL">Fixed an issue in which C examples failed to compile in Visual Studio 2015.</span></td>
+</tr>
+</table>
+
+</div>
+
+
+<h2><a name="help">Accessing the Help</a></h2>
+<ul><li>For help with the NI-SCOPE driver, refer to the <em>NI High-Speed Digitizers Help</em>, accessible by selecting <strong>Help&#0187;NI High-Speed Digitzers Help</strong>.</li>
+<li>For help with the NI-SCOPE Soft Front Panel, refer to the <em>NI-SCOPE Soft Front Panel Help</em>, accessible by selecting <strong>Help&#0187;Online Help</strong>. The NI-SCOPE Soft Front Panel is only supported on 32-bit installations of Windows.</li>
+<li>For help with InstrumentStudio, used to configure and monitor NI-SCOPE devices in 64-bit installations of Windows, refer to the <a href="http://www.ni.com/r/instrumentstudiohelp">InstrumentStudio help</a> at ni.com.</ul>
+
+
+
+<h2><a name="examples">Finding Examples</a></h2>
+
+<p>NI-SCOPE ships with several examples for LabVIEW, LabWindows/CVI, Measurement Studio, MSVC, Visual C++, and Microsoft Visual Basic that will help you develop your software. These examples illustrate how to perform the most common operations with your hardware. To find the examples, go to <strong>Start&raquo;Programs&raquo;National Instruments&raquo;NI-SCOPE&raquo;Examples</strong>.</p>
+<p>For LabVIEW examples, select <strong>Help»Find Examples</strong> from LabVIEW to launch the NI Example Finder.
+
+LabVIEW examples for NI-SCOPE are located in the <span class="Monospace">labview\examples\instr\niScope</span> directory. You can modify an example VI to fit an application, or you can copy and paste from one or more examples into a VI that you create.</p>
+
+<h2><a name="nxginstructions">LabVIEW NXG Support and Considerations</a></h2>
+<p>The following sections detail considerations for using LabVIEW NXG with NI-SCOPE.</p>
+<h3>LabVIEW NXG Operating Systems and System Requirements</h3>
+<p>Software support for LabVIEW NXG differs in the following ways:</p>
+<ul>
+<li>System requirements&#8212;Only 64-bit (x64) processors are supported.</li>
+<li>Operating system&#8212;Only 64-bit operating systems are supported. Refer to the <a href="#supportedOSes">Supported Operating Systems</a> section for more information.</li>
+</ul>
+<h3>LabVIEW NXG Hardware Support</h3>
+<p>The following table details the hardware models supported in NI-SCOPE with LabVIEW NXG.</p>
+
+<table class="Bordered">
+  <tr>
+    <th class="Bordered">Hardware Module</th>
+    <th class="Bordered">Supported Under Windows 10/Windows 8.1 (64-bit)/7 (64-bit)</th>
+     </tr>
+	 <tr>
+	 <th class="Bordered" colspan="2" align="left">NI-DAQmx-Based Oscilloscopes</th>
+	 </tr>	
+  <tr>
+    <td class="Bordered">PXI/PXIe/PCI-5105</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+  </tr>
+  <tr>
+    <td class="Bordered">PXI/PXIe/PCI-5114 </td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+  </tr>
+  <tr>
+    <td class="Bordered">PXI/PXIe/PCI-5122</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+  </tr>
+  <tr>
+    <td class="Bordered">PXI/PCI-5124</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+  </tr>  
+  <tr>
+    <td class="Bordered">USB-5132/5133</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    </tr>
+  <tr>
+    <td class="Bordered">PXI/PCI-5142</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+   </tr>
+  <tr>
+    <td class="Bordered">PXI/PCI-5152</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+   </tr>
+  <tr>
+    <td class="Bordered">PXI/PCI-5153</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    </tr>
+  <tr>
+    <td class="Bordered">PXI/PCI-5154</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    </tr>
+  <tr>
+    <td class="Bordered">PXIe-5160/5162</td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+    </tr>
+	<tr>
+	<tr>
+    <td class="Bordered">PXIe-5185/5186</td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+    </tr>
+  <tr>
+    <td class="Bordered">PXIe-5622</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+   </tr>
+  <tr>
+  	<td class="Bordered">PXI-5900</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    </tr>
+  <tr>
+    <td class="Bordered">PXI/PCI-5922</td>
+    <td class="Bordered"><div align="center">Yes</div></td>
+    </tr>
+	<tr>
+		<th class="Bordered" colspan="2" align="left">SDI-Based Oscilloscopes</th>
+	</tr>
+	<tr>
+		<td class="Bordered">PXIe-5110<sup>1</sup></td>
+		<td class="Bordered"><div align="center">Yes</div></td>
+	<tr>
+	<tr>
+		<td class="Bordered">PXIe-5111<sup>1</sup></td>
+		<td class="Bordered"><div align="center">Yes</div></td>
+	<tr>
+	<tr>
+		<td class="Bordered">PXIe-5113<sup>1</sup></td>
+		<td class="Bordered"><div align="center">Yes</div></td>
+	<tr>
+   <th class="Bordered" colspan="2" align="left">516x Oscilloscopes</th>
+   </tr>
+    <tr>
+		<td class="Bordered">PXIe-5163<sup>1</sup></td>
+		<td class="Bordered"><div align="center">Yes</div></td>
+	</tr>
+    <tr>
+    <td class="Bordered">PXIe-5164<sup>1</sup></td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+   </tr>
+   <tr>
+   <th class="Bordered" colspan="2" align="left">517x Oscilloscopes</th>
+   </tr>
+   <tr>
+    <td class="Bordered">PXIe-5170<sup>1</sup></td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+   </tr>
+  <tr>
+    <td class="Bordered">PXIe-5171<sup>1</sup></td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+   </tr>
+   <tr>
+    <td class="Bordered">PXIe-5172<sup>1</sup></td>
+	<td class="Bordered"><div align="center">Yes</div></td>
+   </tr>
+  <tr>
+    <td class="Bordered" colspan="2">
+		<sup>1</sup>External calibration of this module is not supported in LabVIEW&#0160;NXG.
+		</td>
+  </tr>
+</table>
+
+
+<h3>LabVIEW NXG Help</h3>
+<p>View context help in LabVIEW by pressing &lt;Ctrl-H&gt; and hovering over an object.</p>
+<p>Search for items using the search bar in the upper right corner of the LabVIEW window. You can also view context help for the search results.</p>
+<p>Additional documentation is available online at <a href="http://www.ni.com/manuals" target="_blank">ni.com/manuals</a>.</p>
+<h3>LabVIEW NXG Examples</h3>
+<p>Launch LabVIEW and click the <strong>Learning</strong> tab.</p>
+
+<p>LabVIEW lessons  are located in the <strong>Lessons</strong> tab, and LabVIEW Examples are located in the <strong>Examples</strong> tab. Follow the instructions in the lessons and examples.</p>
+
+<h2><a name="autoinstall">Automating the Installation of NI Products</a></h2>
+<p>You can automate the installation of most NI products using command-line arguments to suppress some or all of the installer user interface and dialog boxes.</p>
+
+<p>If the NI product you are installing uses Microsoft .NET 4.0, the .NET installer may run before any NI software installs and may require a reboot before the installation of NI software begins. To avoid a .NET reboot, install .NET 4.0 separately before you install NI software.</p>
+
+<p>For more information about automating the installation of NI products, refer to the following KnowledgeBase articles:</p>
+<ul>
+<li>For more information about silent installations of individual NI products, refer to <a href="http://www.ni.com/r/InstallerAutomation" target="_blank">Customize and Automate Installation of a Single Installer</a>.</li>
+<li>For more information about silent installations of NI products in a suite, such as NI Developer Suite, refer to <a href="http://www.ni.com/r/SuiteInstallerAutomation" target="_blank">Customize and Automate Installation of a Suited Installer</a>.</li>
+<li>To determine what version of NI Installers your product contains, refer to <a href="http://www.ni.com/r/InstallerVersion" target="_blank">Determine Type and Version of My National Instruments Installer</a>.</li>
+</ul>
+    
+<!-- Windows 10 Support Information-->
+<h2><a name="win10">Using NI Software with Microsoft Windows 10</a></h2>
+<p>Microsoft Windows 10 is the latest version of the Windows operating system and features significant changes compared to previous versions. Windows 10 introduces several new capabilities and also combines features from both Windows 7 and Windows 8. For more information about NI support for Windows 10, visit <a href="http://ni.com/windows10" target="_blank">ni.com/windows10</a>.</p>
+
+<!-- Windows 8 Support Information-->
+<h2><a name="win8">Using NI Software with Microsoft Windows 8.1</a></h2>
+
+<p>When you install NI software on Microsoft Windows 8.1, you will notice a few additional tiles in the Apps view, including shortcuts to NI application software products such as NI LabVIEW, Measurement &amp; Automation Explorer (NI MAX), and NI Launcher. For more information about NI support for Windows 8.1, visit <a href="http://ni.com/windows8" target="_blank">ni.com/windows8</a>.</p>
+
+<!-- We are dropping support for various versions of Windows -->
+<h2><a name="win32bit">NI-SCOPE Drops Support for Windows 7 (32- and 64-Bit), Windows Server 2008 R2, and All 32-Bit Windows Operating Systems in 2021</a></h2>
+
+<p>NI-SCOPE will drop support for Windows 7 (32- and 64-bit), Windows Server 2008 R2, and all 32-bit Windows operating systems starting in 2021. Versions of this product that ship after May 1, 2021, may not install or execute correctly on these operating systems. For detailed information about NI operating system support, visit <a href="http://www.ni.com/r/win32bitsupport" target="_blank">ni.com/r/win32bitsupport</a>.</p>
+
+<p>For detailed information about NI application software product life cycles, visit <a href="http://ni.com/info" target="_blank">ni.com/info</a> and enter one of the following Info Codes:</p>
+<table class="Bordered">
+	<tr><th class="Bordered">Product</th>
+<th class="Bordered">Info Code</th></tr>
+	<tr><td class="Bordered"> LabVIEW</td><td class="Bordered"><a href="http://www.ni.com/r/lifecycle" target="_blank">lifecycle</a></td></tr>
+	<tr><td class="Bordered"> LabWindows/CVI</td><td class="Bordered"><a href="http://www.ni.com/r/cvi_lifecycle" target="_blank">cvi_lifecycle</a></td></tr>
+	<tr><td class="Bordered"> Measurement Studio</td><td class="Bordered"><a href="http://www.ni.com/r/mstudiolifecycle" target="_blank">mstudiolifecycle</a></td></tr>
+	<tr><td class="Bordered"> TestStand</td><td class="Bordered"><a href="http://www.ni.com/r/tslcp" target="_blank">tslcp</a></td></tr>
+	<tr><td class="Bordered"> DIAdem</td><td class="Bordered"><a href="http://www.ni.com/r/ddlcp" target="_blank">ddlcp</a></td></tr>
+	<tr><td class="Bordered"> SignalExpress</td><td class="Bordered"><a href="http://www.ni.com/r/selcp" target="_blank">selcp</a></td></tr>
+	<tr><td class="Bordered"> VeriStand</td><td class="Bordered"><a href="http://www.ni.com/r/nivslifecycle" target="_blank">nivslifecycle</a></td></tr>
+</table>
+
+<!--Important Information-->
+<hr>
+
+<h2><a name="legal">Legal Information</a></h2>
+<!--Copyright-->
+<p><strong>Copyright</strong></p>
+<p>&#0169; 1999&ndash;2019 National Instruments. All rights reserved.</p>
+
+<p>Under the copyright laws, this publication may not be reproduced or transmitted in any form, electronic or mechanical, including photocopying, recording, storing in an information retrieval system, or translating, in whole or in part, without the prior written consent of National Instruments Corporation.</p>
+
+<p>NI respects the intellectual property of others, and we ask our users to do the same. NI software is protected by copyright and other intellectual property laws. Where NI software may be used to reproduce software or other materials belonging to others, you may use NI software only to reproduce materials that you may reproduce in accordance with the terms of any applicable license or other legal restriction.</p>
+
+<p><strong>End-User License Agreements and Third-Party Legal Notices</strong></p>
+<p>You can find end-user license agreements (EULAs) and third-party legal notices in the following locations after installation:</p>
+<ul>
+<li>Notices are located in the <span class="Monospace">&lt;National Instruments&gt;\_Legal Information</span> and <span class="Monospace">&lt;National Instruments&gt;</span> directories.</li> 
+<li>EULAs are located in the <span class="Monospace">&lt;National Instruments&gt;\Shared\MDF\Legal\license</span> directory.</li>
+<li>Review <span class="Monospace">&lt;National Instruments&gt;\_Legal Information.txt</span> for information on including legal information in installers built with NI products.</li>
+</ul>
+<p><strong>U.S. Government Restricted Rights</strong></p>
+<p>If you are an agency, department, or other entity of the United States Government (&quot;Government&quot;), the use, duplication, reproduction, release, modification, disclosure or transfer of the technical data included in this manual is governed by the Restricted Rights provisions under Federal Acquisition Regulation 52.227-14 for civilian agencies and Defense Federal Acquisition Regulation Supplement Section 252.227-7014 and 252.227-7015 for military agencies.</p>
+
+<p><strong>IVI Foundation Copyright Notice</strong></p>
+
+<p><span class="DNL">Content from the IVI specifications reproduced with permission from the IVI Foundation.</span></p>
+
+<p><span class="DNL">The IVI Foundation and its member companies make no warranty of any kind with regard to this material, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. The IVI Foundation and its member companies shall not be liable for errors contained herein or for incidental or consequential damages in connection with the furnishing, performance, or use of this material.</span></p>
+
+
+<!--Trademarks-->
+<p><strong>Trademarks</strong></p>
+
+<p>Refer to the <em><span class="DNL">NI Trademarks and Logo Guidelines</span></em> at <a href="http://www.ni.com/r/rdtrad" target="_blank"><span class="DNL">ni.com/trademarks</span></a> for information on <span class="DNL">NI</span> trademarks. Other product and company names mentioned herein are trademarks or trade names of their respective companies.</p>
+
+<!--Patents-->
+<p><strong>Patents</strong></p>
+<p>For patents covering the NI products/technology, refer to the appropriate location: <strong>Help&#0187;Patents</strong> in your software, the <span class="Monospace">patents.txt</span> file on your media, or the <em>NI Patent Notice</em> at <a href="http://www.ni.com/r/rdlv17" target="_blank">ni.com/patents</a>.</p>
+
+<p>375360V-01</p>
+</body>
+</html>

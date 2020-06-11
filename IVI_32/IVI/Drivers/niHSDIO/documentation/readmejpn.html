@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><!-- saved from url=(0189)file:///C:/Users/eking/AppData/Local/Temp/p4v/USAUSLT-0XNGS6Y_perforce_1666/Measurements/HighSpeedDigital/SWCode/hsdioSupport/nihsdioDocs/trunk/17.0/source/nihsdioreadme/eng/readme%231.html --><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="ContentType" content="readme">
+<meta name="ProductCategories" content="320808">
+
+
+<title>NI-HSDIO 19.5 Readme</title>
+
+<style type="text/css">
+<!--
+/***************************************************/
+/* MINIMAL STYLES */
+/* The following section defines styles that every HTML Help project should need. */
+
+/* Specifies White Background color */
+body {background-color:#FFFFFF; font-family:Verdana, sans-serif; font-size:8pt; color: #000000;}
+
+/* The default style of P is red to alert you that you need to apply a style class, such as Body. */
+P { margin-top:6.00pt; margin-bottom:6.00pt;}
+
+BR { font-size:4.00pt; }
+
+/* Use H1 for all topic headings. */
+H1 { margin-top:3.00pt; margin-bottom:3.00pt; font-size:150%; font-weight:bold;  }
+
+/* Use H2 for second-level headings. */
+H2 { margin-top:9.00pt; margin-bottom:3.00pt; font-size:125%; font-weight:bold;  }
+
+/* Use H3 for third-level headings. */
+H3 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+/* Use H4 for fourth-level headings. */
+H4 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+/* H5 and H6 have the same definition as H4 because you should not need this level of heading in one topic. If you need to use H5 or H6, consider breaking up your topic into more than one topic. */
+H5 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+H6 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+/* Use the Body style class for normal paragraphs. */
+P.Body {  }
+
+/* Use the Anchor style class for graphic references on a line by themselves. */
+P.Anchor { font-size:125%;  }
+
+/* Use the Indent style classes to indent a paragraph. If you need to indent text below a list item, use <br><br> to start the new paragraph within the same set of <li></li> tags. If you need to indent a list within another list, nest the indented list within the first list's set of <ol></ol> or <ul></ul> tags. */
+P.Indent1 { margin-left:12.00pt; margin-bottom:3.00pt;  }
+P.Indent2 { margin-left:24.00pt; margin-bottom:3.00pt;  }
+P.Indent3 { margin-left:36.00pt; margin-bottom:3.00pt;  }
+P.Indent4 { margin-left:48.00pt; margin-bottom:3.00pt;  }
+P.Indent5 { margin-left:60.00pt; margin-bottom:3.00pt;  }
+
+/* Use the LI style for all list items. */
+LI { margin-top:3.00pt; margin-bottom:3.00pt; }
+
+/* Use the OL style for numbered lists. You do not have to type the number for each list item in a numbered list. */
+OL { margin-left:22.00pt; margin-top:3.00pt; margin-bottom:3.00pt; text-indent:0pt; list-style-type: decimal; }
+
+/* Use the OL style for numbered lists. Nested lists will use the bullet types according to the nesting scheme below */
+ol ol {list-style-type:lower-alpha}
+ol ol ol {list-style-type:decimal}
+ol ol ol ol {list-style-type:lower-alpha}
+ol ol ol ol ol {list-style-type:decimal}
+ol ol ol ol ol ol {list-style-type:lower-alpha}
+ol ol ol ol ol ol ol {list-style-type:decimal}
+ol ol ol ol ol ol ol ol {list-style-type:lower-alpha}
+
+/* Use the EquationNum style class for numbered lists of equations. You do not have to type the number for each list item in a numbered list. */
+OL.EquationNum { margin-left:36.00pt; text-indent:0pt; list-style-type: decimal; }
+
+/* Use the List-abc style class for lettered lists. You do not have to type the letter for each list item in a lettered list. */
+OL.List-abc { margin-left:22.00pt; text-indent:0pt; list-style-type:lower-alpha; }
+
+/* Use the UL style for bulleted lists. You do not have to type the bullet for each list item in a bulleted list. */
+UL { margin-left:22.00pt; text-indent:0pt; margin-top:3.00pt; margin-bottom:3.00pt; list-style-type: disc; }
+
+/* Use the UL style for bulleted lists. Nested lists will use the bullet types according to the nesting scheme below. */
+ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul ul ul {list-style-image: none;list-style-type: circle}
+ul ul ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+ul ul ul ul ul ul ul ul ul{list-style-image: none;list-style-type: circle}
+
+/* Use the List-Box style class for bulleted lists with boxes instead of bullets. You do not have to type the box for each list item in a box list. */
+UL.List-Box {list-style-image: none;list-style-type: square}
+
+Table { font-size:100%; }
+
+/* Use the Borderless style class for tables that do not need borders, such as for 2-column or 3-column lists with no headings. */
+Table.Borderless { border:none; }
+
+/* Use the Bordered style class for tables that need borders. */
+Table.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; border-collapse: collapse; }
+
+/* Use the TD style for table cells in Borderless or Borderless-Wide tables. */
+TD { vertical-align:top; padding:3px; }
+
+/* Use the Bordered style class for table headings and cells in Bordered or Bordered-Wide tables. */
+.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; }
+
+/* Use the Icon style class for table cells that contain note, caution, warning, or tip icons, or LabVIEW datatype terminals. */
+TD.Icon { width:40px; }
+
+/* Use the TH style for table heading cells in Borderless or Borderless-Wide tables. */
+TH { font-weight:bold; padding:3px; }
+
+/* Use the Left-Align style class for table headings and cells that you want to left align instead of center align. */
+.Left-Align { text-align:left; }
+
+/***************************************************/
+/* CHARACTER FORMATS */
+/* The following section defines character formats that every HTML Help project should need. */
+
+/* CHARACTER FORMATS Updated to conform with the CSE HTML Validator Pro */
+/* The following section defines character formats that every HTML Help project should need. */
+
+/* Use the Dark-Red format for warnings or cautions. */
+.Dark-Red { color: #800000 }
+
+/* Use the Monospace format for code or syntax examples. */
+.Monospace { font-family: "Courier New",monospace; font-size: 100%; }
+
+/* Use the Monospace-Bold format for messages and responses that the computer automatically prints to the screen. */
+.Monospace-Bold { font-family: "Courier New",monospace; font-weight: bold; font-size: 100%; }
+
+/* Use the Monospace-Italic format to denote text that is a placeholder for a word or value that the user must supply. */
+.Monospace-Italic { font-family: "Courier New",monospace; font-style: italic; font-size: 100%; }
+
+/* small class */
+.smallFont { font-size:87.5%; }
+
+/* Bold class */
+.Bold { font-weight: bold; }
+
+/* Italic class */
+.Italic { font-style: italic; }
+
+/* Use the Platform format to denote a specific platform. */
+.Platform { color: #0000FF; font-weight: bold; }
+
+/* Use the Symbol format for characters not in the Verdana character set. Use this format sparingly. When possible, you should use the correct ASCII code for the symbol or use a graphic to recreate the symbol. */
+.Symbol { font-family: Symbol; }
+
+/* Use the Red-text format to call attention to text that needs  information added or edited by techcomm */
+.Red-text {color: #FF0000;}
+
+/* Use the Green-Underline format for the green defintion in the conventions topic */
+.Green-Underline {color: #007700; text-decoration : underline;}
+
+/* Use the glossButton format for the glossary buttons used in the glossary topic */
+.glossButton { font-size:12px; color:black; }
+
+/* Use for text sections and hyphenated words that should not break at line wraps */
+.nobreak{white-space:nowrap}
+
+/* Use for template instructions. */
+.instructions{color:red; font-style:italic}
+
+/*Use for words and text sections that do not need to be localized */
+.DNL { }
+
+/* The following styles define the color of links. */
+a:link { color: #007700 }
+a:visited { color: #7F007F }
+a:link:hover { color: #FF0000 }
+a:link:active { color: #FF0000 }
+
+/***************************************************/
+/* Forms */
+
+form { margin-top:0pt; margin-bottom:3pt; color:black; }
+select { font-size:100%; color:black; }
+
+/*******************************************************/
+/* Margins */
+/* Use these styles for block-level elements inside tables cells or list items where you do not want extra padding at the top or bottom of a cell. */
+.noTopMargin { margin-top:0pt;}
+.noBottomMargin { margin-bottom:0pt;}
+
+/***************************************************/
+/* CODE STYLES */
+/* The following section defines styles that you need to format entire sections of code or syntax examples. If you have just a few words you need to format as a code or syntax example, use the Monospace character format. */
+
+P.Code { margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace;  }
+P.Code1 { margin-left:12.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace;  }
+P.Code2 { margin-left:24.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace;  }
+P.Code3 { margin-left:36.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family: "Courier New",monospace;  }
+-->
+</style>
+</head>
+
+<body>
+<h1>NI-HSDIO 19.5 Readme</h1>
+<p class="Body">2019年9月</p>
+
+<p>このファイルには、サポートされているハードウェア、新機能、修正された主なバグのリスト、および既知の問題など、NI-HSDIOに関する重要な情報が記載されています。<p>LabVIEW NXGをご使用の場合は、<a href="#nxginstructions">LabVIEW NXGのサポートおよび注意事項</a>を参照してください。</p>
+<hr>
+<p class="Body"><a href="#overview">概要</a></p>
+<p class="Body"><a href="#systemrequirements">システム要件</a></p>
+<p class="Body"><a href="#supportedOSes">サポートされているオペレーティングシステム</a></p>
+<p class="Body"><a href="#app">アプリケーションソフトウェアのサポート</a></p>
+<p class="Body"><a href="#installation">インストール手順</a></p>
+<p class="Body"><a href="#updates">製品のセキュリティおよび重要な更新</a></p>
+<p class="Body"><a href="#ivi">IVI Compliance Packageの機能</a></p>
+<p class="Body"><a href="#features">新機能</a></p>
+<p class="Body"><a href="#supportedhardware">サポートされているハードウェア</a></p>
+<p class="Body"><a href="#changes">動作の変更</a></p>
+<p class="Body"><a href="#knownissues">既知の問題</a></p>
+<p class="Body"><a href="#bugfixes">バグの修正</a></p>
+<p class="Body"><a href="#help">ヘルプにアクセスする</a></p>
+<p class="Body"><a href="#examples">サンプルを検索する</a></p>
+<p class="Body"><a href="#nxginstructions">LabVIEW NXGのサポートおよび注意事項</a></p>
+<p class="Body"><a href="#autoinstall">NI製品のインストールを自動化する</a></p>
+<p class="Body"><a href="#win10">NIソフトウェアをMicrosoft Windows 10と使用する</a></p>
+<p class="Body"><a href="#win8">NIソフトウェアをMicrosoft Windows 8.1と使用する</a></p>
+<p class="Body"><a href="#win32bit">NI-HSDIOは、2021年にWindows 7 (32および64ビット)、Windows Server 2008 R2、およびすべての32ビットWindowsオペレーティングシステムのサポートを終了</a></p>
+<p class="Body"><a href="#legal">法的情報</a></p>
+
+
+<hr>
+<h2><a name="overview">概要</a></h2>
+<p>NI-HSDIOは、NI デジタル波形発生器/アナライザを使用するためのサポートを提供します。NI デジタル波形発生器/アナライザをプログラムするには、NI-HSDIO APIを使用してください。</p>
+
+<h2><a name="systemrequirements">システム要件</a></h2>
+
+<h3>最小要件</h3><ul><li>プロセッサ&mdash;1 GHz以上の32ビット (x86) または64ビット (x64) プロセッサ</li>
+	<li>RAM&mdash;1 GB RAM (32ビット) または2 GB RAM (64ビット)</li>
+	<li>1024 x 768の画面解像度</li>
+	<li>すべての緊急アップデートおよびService Packが適用されているWindows 10/8.1/7</li></ul><h2><a name="supportedOSes">サポートされているオペレーティングシステム</a></h2>
+<p class="body">NI-HSDIOは、以下のオペレーティングシステムをサポートしています。</p><ul><li>Windows 10/8.1<sup>1</sup>/7 SP1<sup>2</sup> (32ビットおよび64ビット)</li>
+		<li>Windows Embedded Standard 7 SP1<sup>2</sup></li>
+		<li>Windows Server 2012 R2<sup>1</sup> (64ビット)</li>
+		<li>Windows Server 2008 R2 SP1<sup>2</sup> (64ビット)</li></ul><p><sup>1</sup> NIソフトウェアは、VC2015ランタイムおよび.NET 4.6.2をインストールします。Windows 8.1およびWindows Server 2012 R2でこれらをサポートするには、Microsoft社の更新プログラムを適用する必要があります。これらの更新プログラムのインストール方法については、Microsoft社の<a href="http://digital.ni.com/express.nsf/bycode/expfcj" target="_blank">KB2919442</a>および<a href="http://digital.ni.com/express.nsf/bycode/exkd3p" target="_blank">KB2919355</a>を参照してください。</p>
+
+
+<p><sup>2</sup> NIソフトウェアは、SHA-256証明書により署名されています。Windows 7 SP1、Windows Embedded Standard 7 SP1、およびWindows Server 2008 R2 SP1でSHA-256をサポートするには、Microsoftの更新プログラムが必要です。このセキュリティ更新のインストール方法については、Microsoft社の<a href="http://digital.ni.com/express.nsf/bycode/exf7ig" target="_blank">KB3033929</a>を参照してください。</p>
+<p><strong>メモ</strong>&nbsp;&nbsp;今後のOSサポートについては、「<a href="#win32bit">NI-HSDIOは、2021年にWindows 7 (32および64ビット)、Windows Server 2008 R2、およびすべての32ビットWindowsオペレーティングシステムのサポートを終了します</a>」を参照してください。</p>
+<p class="body"><strong>メモ</strong>&nbsp;&nbsp;2016年に、NI-HSDIOによるWindows Vista、Windows XP、Windows Server 2003、およびサービスパックなしのWindows 7のサポートは終了しました。NI-HSDIO 18.0以降のドライバをサポート対象外OSにインストールしたり、その上で実行したりすることはできません。サポート対象外のOSにNI-HSDIO 18.0以降を使用しているアプリケーションをデプロイしたり、配布したりすることはできません。また、NI-HSDIO 18.0以降がインストールされているコンピュータで作成されたインストーラは、サポート対象外のOS上で実行されている、いかなるバージョンのLabVIEW、LabWindows&trade;/CVI&trade;、NI TestStand&trade;、またはMeasurement Studioとも一緒に使用することはできません。</p>
+<p class="body">2016年に変更されたOSサポートの詳細については、「<a href="http://www.ni.com/r/OSSupport2016" target="_blank">Why Does My NI ADE Installer Fail on Windows XP/Vista and Windows Server 2003?</a>」を参照してください。</p>
+<p class="body"><strong>メモ</strong>&nbsp;&nbsp;Windows 32ビットオペレーティングシステムのサポートでは、物理アドレス拡張 (PAE) を無効にする必要がある場合があります。これによりシステムが受ける影響および必要な対策については、<a href="http://www.ni.com/r/PAESupport" target="_blank">ni.com/r/PAESupport</a>を参照してください。</p>
+<h2><a name="app">アプリケーションソフトウェアのサポート</a></h2>
+<p class="Body">NI-HSDIO 19.5では、以下のバージョンのアプリケーションソフトウェア (サービスパックを含む) がサポートされています。NIアプリケーションソフトウェアを使用していない場合は、「<a href="#visualstudio">Microsoft Visual Studioのサポート</a>」を参照してください。</p>
+<table class="Bordered">
+<tr><th class="Bordered">アプリケーションソフトウェア</th><th class="Bordered">NI-HSDIOでサポートされているバージョン</th></tr>
+<tr><td class="Bordered">LabVIEW</td>
+<td class="Bordered"><span>2016、2017、2018、2019、2019 SP1</span></td></tr>
+<tr><td class="Bordered">LabVIEW NXG</td>
+<td class="Bordered"><span>4.0</span></td></tr>
+<tr><td class="Bordered">LabVIEW Real-Timeモジュール</td>
+<td class="Bordered">2016、2017、2018、2019、2019 SP1</td></tr>
+<tr><td class="Bordered">LabWindows/CVI</td><td class="Bordered"><span>2013以降</span></td></tr>
+<tr><td class="Bordered">LabWindows/CVI Real-Timeモジュール</td><td class="Bordered"><span>2013以降</span></td></tr>
+<tr><td class="Bordered">Microsoft Visual C++ (MSVC)</td><td class="Bordered"><span>6.0以降</span></td></tr>
+</table>
+<p><span class="body"><strong>メモ</strong>&nbsp;&nbsp;NI-HSDIO 19.5では、NI PXIe-6556をLabVIEW Real-Timeモジュールと組み合わせて使用する場合のセルフキャリブレーションはサポートされていません。PXIe-6556をLabVIEW Real-Timeモジュールと組み合わせて使用する環境でPXIe-6556のセルフキャリブレーションを実行するには、NI-HSDIO 15.0とLabVIEW 2012を使用してください。</span></p>
+<h3><a name="visualstudio">Microsoft Visual Studioのサポート</a></h3>
+<p>NI-HSDIO .NETクラスライブラリを使用する場合は、.NET Framework 4.0以上が必要です。NI-HSDIO .NETクラスライブラリは、.NET Framework 4.0または .NET Framework 4.5をターゲットにできる任意のVisual StudioバージョンでVisual C#またはVisual Basic .NETと組み合わせて使用することができます。</p>
+<p>.NET APIを使用するには、NIデバイスドライバの他に.NETクラスライブラリまたは.NETラッパーをインストールする必要があります。.NET Frameworkのバージョンとそれらでサポートされているドライバ、およびインストーラファイルのダウンロード場所については、「<a href="http://www.ni.com/r/NETAPIdriversupport" target="_blank">National Instruments .NET Driver Support</a>」を参照してください。</p>
+<h2><a name="installation">インストール手順</a></h2>
+<p>NI-HSDIOおよびその他のNIソフトウェアは、NI Package Managerを使用してインストールします。NI パッケージマネージャは、<a href="http://www.ni.com/r/NIPMDownload" target="_blank">ni.com/r/NIPMDownload</a>からダウンロードできます。NI パッケージマネージャを使用してNIソフトウェアをインストール、削除、およびアップグレードする方法については、『<a href="http://www.ni.com/r/NIPMManual" target="_blank">NI パッケージマネージャマニュアル</a>』を参照してください。</p>
+<p><strong>メモ</strong><ul><li>Windows Updateが有効になっている場合、Windows UpdateがMicrosoft Visual C++ 2015 ランタイムのインストールと競合して、インストールプロセスが停止することがあります。この問題の詳細と解決法については、<a href="http://www.ni.com/r/exjq43" target="_blank">ni.com/r/exjq43</a>を参照してください。</li>
+  <li>この製品をNIソフトウェアスイートまたはNI製品バンドルの一部として購入した場合は、同梱されているインストールメディアからこの製品をインストールできます。</li></ul><h2><a name="updates" id="updates">製品のセキュリティおよび重要な更新</a></h2>
+
+<p>NI製品のセキュリティに関する通知を表示または受信登録するには、<a href="http://www.ni.com/security" target="_blank">ni.com/security</a>を参照してください。NIからの重要な更新の情報については、<a href="http://ni.com/critical-updates" target="_blank">ni.com/critical-updates</a>を参照してください。</p>
+<h2><a name="ivi">IVI Compliance Packageの機能</a></h2>
+<p class="Body">IVI Compliance Package (ICP) は、NI-HSDIOと一緒にはインストールされなくなりました。NI-HSDIOでは、IVI構成とランタイムがサポートされていますが、以下のIVIコンポーネントはインストールされなくなりました。</p><ul><li>IVI間で移植交換可能なアプリケーションを開発するためのLabVIEWおよびCVI IVIクラスドライバ</li>
+  <li>IVIクラスシミュレーションドライバ</li>
+  <li>IVI-COMアダプタ</li></ul><p><span class="Body">これらの機能を使用するには、ICPを別途インストールする必要があります。ICPは、Software Platform Bundleメディアに含まれています。スタンドアロンのWebディストリビューションは、<a href="http://ni.com/downloads" target="_blank">ni.com/downloads</a>からダウンロードできます。</span></p>
+<h2><a name="features" id="features">新機能</a></h2><ul><li>NI-HSDIO 19.5では、LabVIEW NXG 4.0のサポートが追加されました。</li>
+  <li>NI-HSDIO 19.0では、LabVIEW 2019 (32ビットおよび64ビット) およびLabVIEW NXG 3.1のサポートが追加されました。</li>
+  <li>NI-HSDIO 18.5では、LabVIEW NXG 3.0のサポートが追加されました。</li>
+  <li>NI-HSDIO 18.0では、LabVIEW 2018 (32ビットおよび64ビット) およびLabVIEW NXG 2.1のサポートが追加されました。</li>
+  <li>NI-HSDIO 17.5では、LabVIEW NXG 2.0のサポートが追加されました。</li>
+<li>NI-HSDIO 17.0では、LabVIEW 2017 (32ビットおよび64ビット) のサポートが追加されました。</li>
+<li>NI-HSDIO 16.0では、LabVIEW 2016 (32ビットおよび64ビット) のサポートが追加されました。</li>
+<li>NI-HSDIO 15.0では、LabVIEW 2015 (32ビットおよび64ビット) のサポートが追加されました。</li>
+<li>NI-HSDIO 2.0の新機能</li><ul><li>NI PXIe-6555およびNI PXIe-6556の外部キャリブレーションのサポート</li>
+<li>新しい属性 (NI PXIe-6555および NI PXIe-6556でのみ使用可能)<ul><li>属性コミット方法 (NIHSDIO_ATTR_ATTRIBUTE_COMMITTAL_STRATEGY)</li>
+<li>累積エラービット (NIHSDIO_ATTR_HWC_CUMULATIVE_ERROR_BITS)</li></ul></li>
+ <li>ナショナルインスツルメンツのアプリケーション開発環境 (ADE) で構築されたNI-HSDIOランタイムカスタムインストーラのサポート。このインストーラには、NI デジタル波形発生器/アナライザを使用するアプリケーションをデプロイするために必要な計測器ドライバのランタイムコンポーネントが含まれています。<br><strong>メモ:</strong> <br>ランタイムインストーラには、Measurement &amp; Automation Explorer (MAX) を使用した対話的なハードウェアの構成やテストのサポートは含まれていません。<br>ランタイムインストーラは、NI-HSDIO 1.9.<em>x</em> 以前のバージョンまたはNI-DAQmx 8.9.<em>x</em> 以前のバージョンからのアップグレードをサポートしていません。NI-HSDIOランタイムインストーラをインストールする前にこれらの製品をアンインストールしてください。</li></ul><li>NI-HSDIO 1.9の新機能</li><ul><li>NI PXIe-6555デバイスのサポート。</li>
+<li>複数サンプルパターンマッチングおよび能動負荷機能のサポート (PXIe-6556のみ)。</li>
+<li>NI PXIe-6556の入力スキュー仕様に影響する問題を修正するためのセルフキャリブレーション関数が更新されました。詳細については、<a href="http://www.ni.com/r/6556skew" target="_blank">ni.com/r/6556skew</a>を参照してください。</li>
+<li>PMUの高速化とデジタルパターン機能</li></ul><li>NI-HSDIO 1.8.3では、LabVIEW 2012 (32ビットおよび64ビット) のサポートが追加されました。</li>
+<li>NI-HSDIO 1.8.1の新機能</li><ul><li>NI PXIe-6556デバイスのサポート。</li>
+<li>PPMU強制およびセンス機能のサポート。</li></ul></ul>
+ 
+<h2><a name="supportedhardware">サポートされているハードウェア</a></h2>
+<p class="Body">NI-HSDIOでサポートされているハードウェアモデルは、次のとおりです。</p><ul><li>PXI/PCI-6541</li>
+<li>PXI/PCI-6542</li>
+<li>PXIe-6544</li>
+<li>PXIe-6545</li>
+<li>PXIe-6547</li>
+<li>PXIe-6548</li>
+<li>PXI/PCI-6551</li>
+<li>PXI/PCI-6552</li>
+<li>PXIe-6555</li>
+<li>PXIe-6556</li>
+<li>PXI/PCI-6561</li>
+<li>PXI/PCI-6562</li></ul><p class="body"><strong>メモ</strong>:&nbsp;&nbsp;これらのモジュールのデバイス固有の情報は、『NI&nbsp;デジタル波形発生器/アナライザヘルプ』に記載されています。<em></em></p>
+
+<h2><a name="changes">動作の変更</a></h2><!--Keep behavior changes for current and two previous releases so this content is easier to find for users who don't upgrade to every version.--><ul><li>
+    <p>NI-HSDIO 19.0では、LabVIEWでのExpress VIのサポートが終了しました。以前のバージョンのNI-HSDIOで作成されたExpress VIを使用している既存のコードは引き続き実行可能ですが、Express VIをダイアログボックスから再構成することはできません。</p> <p>Express VIを再構成するには、そのExpress VIを右クリックして、<strong>フロントパネルを開く</strong>&#8594;<strong>変換</strong>を選択します。これにより、Express VIはブロックダイアグラムで構成可能なコードに変換されます。コードをLabVIEW NXGで使用するために、LabVIEW NXGのコード変換ユーティリティを使用して変換する前に、Express VIをコードに変換することをお勧めします。</p></li></ul><h2><a name="knownissues">既知の問題</a></h2>
+<p>ソフトウェアとドキュメントの既知の問題のリストはオンラインで参照できます。NI-HSDIOの既知の問題については、<a href="http://digital.ni.com/express.nsf/bycode/exk5ui" target="_blank">NIウェブサイト</a>の最新リストを参照してください。</p>
+
+
+<h2><a name="bugfixes">バグの修正</a></h2>
+
+<p>以下は、NI-HSDIOで修正された問題の一部のIDとタイトルです。このリストは、NI-HSDIOの現行バージョンで修正された問題をすべて網羅しているわけではありません。バグIDがわかっている場合は、この一覧で修正状況を確認することができます。</p>
+<p class="body">NI-HSDIO 19.5で解決された問題</p>
+<div class="DNL">
+  <table class="bordered">
+    <tbody>
+      <tr>
+        <th class="bordered">ID</th>
+        <th class="bordered">修正された問題</th>
+      </tr>
+      <tr>
+        <td class="bordered">738295</td>
+        <td class="bordered">Fixed an issue in which LabVIEW crashed during execution of niHSDIO Self Test.vi with NI-HSDIO 19.0.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p class="body">NI-HSDIO 18.0で解決された問題</p>
+
+<div class="DNL">
+<table class="bordered">
+<tbody><tr>
+<th class="bordered">ID</th>
+<th class="bordered">修正された問題</th>
+</tr>
+<tr>
+<td class="bordered"> 663968  </td>
+<td class="bordered">Fixed an issue in which a blue screen appeared when accessing a device simultaneously from a generation and acquisition session. </td></tr>
+</tbody></table>
+</div>
+
+<p class="body">NI-HSDIO 2.0で解決された問題</p>
+
+<div class="DNL">
+<table class="bordered">
+<tbody><tr>
+<th class="bordered">ID</th>
+<th class="bordered">修正された問題</th>
+</tr>
+<tr>
+<td class="bordered">333216 </td>
+<td class="bordered">Fixed an issue in which intermittent failures were occurring when  using Hardware Compare on the NI 6551 or NI 6552 at frequencies between
+ 48 Hz and 65 Hz. </td> 
+ 
+</tr>
+<tr>
+<td class="bordered"> 373229  </td>
+<td class="bordered">Fixed an issue in which calling self-calibration on an NI PXIe-6555 or NI PXIe-6556 when using LabVIEW Real Time 
+caused Property Node errors. </td></tr>
+<tr> <td class="bordered"> 394554</td> <td class="bordered">Fixed an issue in which PFI lines 24 through 31 were not  defined in nihsdio.h. </td>
+</tr>
+</tbody></table>
+</div>
+
+<h2><a name="help">ヘルプにアクセスする</a></h2>
+<p>NI-HSDIO APIおよびNIデジタル波形発生器/アナライザについては、<span class="Body"><strong>スタート&#8594;すべてのプログラム&#8594;National Instruments&#8594;NI-HSDIO&#8594;ドキュメント</strong></span>からアクセス可能な『NI-HSDIOヘルプ』を参照してください。</p>
+<p class="Body">このドキュメントセットには、以下のドキュメントが含まれています。</p>
+<table class="Bordered">
+  <tbody>
+    <tr>
+      <th class="Bordered">ドキュメント</th>
+      <th class="Bordered">形式</th>
+      <th class="Bordered">説明</th>
+    </tr>
+    <tr>
+      <td class="Bordered">NI デジタル波形発生器/アナライザヘルプ<em></em></td>
+      <td class="Bordered">HTML/Windowsヘルプ</td>
+      <td class="Bordered">セッションを開き、構成、信号生成を開始、セッションを閉じるまでの手順が記載されています。また、プログラミングおよび基本概念の情報も記載されています。</td>
+    </tr>
+    <tr>
+      <td class="Bordered">NI デジタル波形発生器/アナライザスタートアップガイド (使用デバイス用)<em></em></td>
+      <td class="Bordered">印刷版およびPDF</td>
+      <td class="Bordered">デバイスのソフトウェアのインストールおよびハードウェアの取り付け、MAX構成、信号接続、およびトラブルシューティングについての情報が記載されています。</td>
+    </tr>
+    <tr>
+      <td class="Bordered">デバイスの仕様<em></em></td>
+      <td class="Bordered">PDF</td>
+      <td class="Bordered">NIデバイスの機能仕様と有効な動作条件が記載されています。</td>
+    </tr>
+    <tr>
+      <td class="Bordered">NI-HSDIO Readme<em></em></td>
+      <td class="Bordered">HTML (このドキュメント)</td>
+      <td class="Bordered">サポートされているハードウェア、オペレーティングシステム、新機能、修正された問題、および法的注意事項が記載されています。</td>
+    </tr>
+  </tbody>
+</table>
+<p class="Body">最新バージョンのドキュメントおよび新しくリリースされたドキュメントについては、<span class="Monospace">ni.com/manuals</span>を参照してください。</p>
+<p class="Body"><strong>メモ</strong>&nbsp;&nbsp;PDFファイルを表示するには、Adobe Acrobat Readerが必要です。アドビシステムズ社のホームページ (<a href="http://get.adobe.com/jp/reader" target="_blank">get.adobe.com/jp/reader</a>) からAcrobat Readerをダウンロードしてください。</p>
+<h2><a name="examples">ファイルの場所と例</a></h2>
+<h3>インストールされるソフトウェア</h3><ul><li><span class="Monospace-Italic">&lt;NIDocDir&gt;</span>は、<span class="Monospace">Users\Public\Public Documents\National Instruments</span>フォルダのエイリアスです。</li>
+	<li><span class="Monospace-Italic">&lt;IVIROOTDIR32&gt;</span>は、次のNational Instrumentsファイルフォルダの場所のエイリアスです。<ul><li><strong> (32ビット)</strong> <span class="Monospace">Program Files\IVI Foundation\IVI\</span></li>
+		<li><strong>(64ビット)</strong> <span class="Monospace">Program Files (x86)\IVI Foundation\IVI\</span><table class="Borderless">
+			<tbody><tr>
+				<td class="Borderless"><strong>メモ</strong></td>
+				<td><span class="Monospace-Italic">$(IVIROOTDIR32)</span> は、ターゲットシステムの環境変数として構成されています。</td>
+			</tr>
+			<tr>
+				<td class="Borderless"></td>
+				<td class="Borderless">インストール済みのIVIをアップグレードした場合、ファイルは次の場所にある場合があります。<ul><li><strong>(32ビット)</strong> <span class="Monospace">Program Files\IVI Foundation\IVI\</span></li>
+					<li><strong>(64ビット)</strong> <span class="Monospace">Program Files (x86)\IVI\</span></li></ul></td>
+			</tr>
+		</tbody></table>
+		</li></ul></li>
+	<li><span class="Monospace-Italic">&lt;IVIROOTDIR64&gt;</span>は、次のNational Instrumentsファイルフォルダの場所のエイリアスです。<ul><li><strong>(64ビット)</strong> <span class="Monospace">Program Files\IVI Foundation\IVI\</span><table class="Borderless">
+			<tbody><tr>
+				<td class="Borderless"><strong>メモ</strong></td>
+				<td><span class="Monospace-Italic">$(IVIROOTDIR64)</span> は、ターゲットシステムの環境変数として構成されています。</td>
+			</tr>
+		</tbody></table>
+		</li></ul></li></ul><h4>ファイルの場所</h4>
+
+<table class="Bordered">
+	<tbody><tr>
+		<th class="Bordered">コンポーネント</th>
+		<th class="Bordered">インストールされる場所</th>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-HSDIO</td>
+		<td class="Bordered"><span class="Monospace-Italic">&lt;IVIROOTDIR32&gt;</span><span class="Monospace">&yen;Drivers&yen;niHSDIO</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-HSDIO関数パネル</td>
+		<td class="Bordered"><span class="Monospace-Italic">&lt;IVIROOTDIR32&gt;</span><span class="Monospace">&yen;Drivers&yen;niHSDIO&yen;niHSDIO.fp</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-HSDIOサンプル</td>
+		<td class="Bordered"><span class="Monospace-Italic">&lt;NIDocDir&gt;</span><span class="Monospace">\NI-HSDIO\Examples</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-HSDIOヘッダファイル</td>
+		<td class="Bordered"><span class="Monospace-Italic">&lt;IVIROOTDIR32&gt;</span><span class="Monospace">\Include</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-HSDIOインポートライブラリファイル (32ビット)</td>
+		<td class="Bordered"><span class="Monospace-Italic">&lt;IVIROOTDIR32&gt;</span><span class="Monospace">&yen;Lib</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-HSDIOインポートライブラリファイル (64ビット)</td>
+		<td class="Bordered"><span class="Monospace-Italic">&lt;IVIROOTDIR32&gt;</span><span class="Monospace">&yen;Lib_x64</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-HSDIO DLL (32ビット)</td>
+		<td class="Bordered"><span class="Monospace-Italic">&lt;IVIROOTDIR32&gt;</span><span class="Monospace">&yen;Bin</span></td>
+	</tr>
+</tbody></table>
+
+<h4>その他の64ビットオペレーティングシステムのファイルの場所</h4>
+
+<table class="Bordered">
+	<tbody><tr>
+		<th class="Bordered">コンポーネント</th>
+		<th class="Bordered">インストールされる場所</th>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-HSDIO関数パネル</td>
+		<td class="Bordered"><span class="Monospace-Italic">&lt;IVIROOTDIR64&gt;</span><span class="Monospace">&yen;Drivers&yen;niHSDIO&yen;niHSDIO.fp</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-HSDIOヘッダファイル</td>
+		<td class="Bordered"><span class="Monospace-Italic">&lt;IVIROOTDIR64&gt;</span><span class="Monospace">\Include</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-HSDIOインポートライブラリファイル (64ビット)</td>
+		<td class="Bordered"><span class="Monospace-Italic">&lt;IVIROOTDIR64&gt;</span><span class="Monospace">\Lib_x64</span></td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI-HSDIO DLL (64ビット)</td>
+		<td class="Bordered"><span class="Monospace-Italic">&lt;IVIROOTDIR64&gt;</span><span class="Monospace">\Bin</span></td>
+	</tr>
+</tbody></table>
+<h2><a name="nxginstructions">LabVIEW NXGのサポートおよび注意事項</a></h2>
+<p>NI-HSDIOをLabVIEW NXGと組み合わせて使用する場合は、以下のことについて注意してください。</p>
+<h3>LabVIEW NXGのオペレーティングシステムおよびシステム要件</h3>
+<p>LabVIEW NXGのソフトウェアサポートは、以下の点で異なります。</p><ul><li>システム要件&#8213;64ビット (x64) プロセッサのみをサポートします。</li>
+<li>オペレーティングシステム&#8213;64ビットのオペレーティングシステムのみをサポートします。詳細については、「<a href="#supportedOSes">サポートされているオペレーティングシステム</a>」セクションを参照してください。</li></ul><h3>LabVIEW NXGのハードウェアサポート</h3><ul><li>PXI/PCI-6541</li>
+<li>PXI/PCI-6542</li>
+<li>PXIe-6544</li>
+<li>PXIe-6545</li>
+<li>PXIe-6547</li>
+<li>PXIe-6548</li>
+<li>PXI/PCI-6551</li>
+<li>PXI/PCI-6552</li>
+<li>PXIe-6555</li>
+<li>PXIe-6556</li>
+<li>PXI/PCI-6561</li>
+<li>PXI/PCI-6562</li></ul><h3><a name="nxginstructions">NI-HSDIO - LabVIEW NXG用をインストールする</a></h3>
+<p>LabVIEW NXGのインストールは、パッケージマネージャを使用して行います。NI-HSDIO - LabVIEW NXG用をインストールするには、次の手順を実行します。</p>
+<ol>
+<li>LabVIEW NXGのダウンロードページを開くには、<a href="http://ni.com/info" target="_blank">ni.com/info</a>でInfo Codeに「<span class="Monospace">NXGDownload</span>」と入力してください。</li>
+<li><strong>Download LabVIEW NXG 4.0</strong>をクリックします。</li>
+<li>NI パッケージマネージャがインストールされ、自動的にダウンロードウィンドウが開きます。</li>
+<li><strong>LabVIEW NXG Suite</strong>を選択し、緑の<strong>インストール</strong>ボタンをクリックします。</li>
+<li><strong>LabVIEW NXG 4.0</strong>と<strong>NI-HSDIO</strong>を選択します。</li>
+<li>インストーラの指示に従ってLabVIEW NXG 4.0とNI-HSDIOをダウンロードします。</li>
+</ol>
+
+<h3>LabVIEW NXGヘルプ</h3>
+<p>&lt;Ctrl-H&gt;を押してマウスカーソルをオブジェクトの上に置くと、LabVIEWのコンテキストヘルプが表示されます。</p>
+<p>LabVIEWウィンドウの右上隅にある検索バーを使用して項目を検索します。検索結果のコンテキストヘルプを参照することもできます。</p>
+<p>その他のドキュメントは、<a href="http://ni.com/manuals" target="_blank">ni.com/manuals</a>で参照できます。</p>
+<h3>LabVIEW NXGサンプル</h3>
+<p>LabVIEWを起動して<strong>学習</strong>タブをクリックします。</p>
+
+<p>LabVIEWのレッスンは<strong>レッスン</strong>タブにあり、LabVIEWのサンプルは<strong>サンプル</strong>タブにあります。レッスンとサンプルの手順に従ってください。<!--Begin Windows Readme Boilerplate content--></p>
+<h2><a name="autoinstall" id="autoinstall">NI製品のインストールを自動化する</a></h2>
+
+<p class="Body">コマンドライン引数を使用してインストーラのユーザインタフェースおよびダイアログボックスの一部またはすべてを非表示にすることにより、ほとんどのNI製品のインストールを自動化できます。ただし、2012年8月リリース (NIインストーラのバージョン 3.1以降を使用した製品) 以降は、NIソフトウェアのサイレントインストール時またはその前に追加ステップを実行する必要がある場合があります。</p>
+
+<p class="Body">インストールしようとしているNI製品にMicrosoft .NET 4.0が使用されている場合は、NIソフトウェアがインストールされる前に.NETインストーラが実行されるため、NIソフトウェアのインストールが始まる前にマシンの再起動が必要になる場合があります。.NETによる再起動を回避するには、NIソフトウェアをインストールする前に別途.NET 4.0をインストールしてください。</p>
+
+<p class="Body">NI製品のインストールの自動化の詳細については、以下の技術サポートデータベース記事を参照してください。</p><ul><li>個々のNI製品のサイレントインストールについては、技術サポートデータベース4CJDP38M (<a href="http://digital.ni.com/express.nsf/bycode/InstallerAutomation" target="_blank">単一インストーラのインストールのカスタマイズと自動化</a>) を参照してください。</li>
+	<li>NI Developer Suiteなど、パッケージ化されたNI製品のサイレントインストールに関する情報は、技術サポートデータベース4GGGDQH0 (<a href="http://digital.ni.com/express.nsf/bycode/SuiteInstallerAutomation" target="_blank">スイートインストーラのインストールをカスタマイズおよび自動化する</a>) を参照してください。</li>
+	<li>製品に含まれているNIインストーラのバージョンを確認するには、技術サポートデータベース4CJDR18M (<a href="http://digital.ni.com/express.nsf/bycode/InstallerVersion" target="_blank">ナショナルインスツルメンツのインストーラの種類とバージョンを確認する</a>) を参照してください。</li></ul><!-- Windows 10 Support Information--><h2><a name="win10">NIソフトウェアをMicrosoft Windows 10と使用する</a></h2>
+<p>Windowsオペレーティングシステムの最新バージョンであるMicrosoft Windows 10では、以前のバージョンと比べて機能が大幅に変更されています。Windows 10には、新機能が追加されているほか、Windows 7とWindows 8からの機能も統合されています。NIのWindows 10サポートについては、<a href="http://ni.com/windows10" target="_blank">ni.com/windows10</a>を参照してください。</p><!-- Windows 8 Support Information --><h2><a name="win8">NIソフトウェアをMicrosoft Windows 8.1と使用する</a></h2>
+
+<p class="Body">ナショナルインスツルメンツのソフトウェアをMicrosoft Windows 8.1にインストールすると、NI LabVIEW、Measurement &amp; Automation Explorer (NI MAX)、およびNI 起動ツールなどのNIアプリケーションソフトウェア製品へのショートカットを含む新しいタイルがアプリ画面に表示されます。NIのWindows 8.1サポートについては、<a href="http://ni.com/windows8" target="_blank">ni.com/windows8</a>を参照してください。</p><!-- We are dropping support for various versions of Windows --><h2><a name="win32bit">NI-HSDIOは、2021年にWindows 7 (32および64ビット)、Windows Server 2008 R2、およびすべての32ビットWindowsオペレーティングシステムのサポートを終了</a></h2>
+
+<p>NI-HSDIOは、2021年にWindows 7 (32および64ビット)、Windows Server 2008 R2、およびすべての32ビットWindowsオペレーティングシステムのサポートを終了します。この製品の2021年5月1日以降に出荷されるバージョンは、これらのOSにインストールしたり、その上で実行したりすることはできません。NIオペレーティングシステムのサポートの詳細については、<a href="http://www.ni.com/r/win32bitsupport" target="_blank">ni.com/r/win32bitsupport</a>を参照してください。</p>
+
+<p>NIアプリケーションソフトウェアの製品ライフサイクルの詳細については、<a href="http://ni.com/info" target="_blank">ni.com/info</a>で以下のInfo Codeを入力してください。</p>
+<table class="Bordered">
+	<tr><th class="Bordered">製品</th>
+<th class="Bordered">Info Code</th></tr>
+	<tr><td class="Bordered">LabVIEW</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/lifecycle" target="_blank">lifecycle</a></td></tr>
+	<tr><td class="Bordered">LabWindows/CVI</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/cvi_lifecycle" target="_blank">cvi_lifecycle</a></td></tr>
+	<tr><td class="Bordered">Measurement Studio</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/mstudiolifecycle" target="_blank">mstudiolifecycle</a></td></tr>
+	<tr><td class="Bordered">TestStand</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/tslcp" target="_blank">tslcp</a></td></tr>
+	<tr><td class="Bordered">DIAdem</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/ddlcp" target="_blank">ddlcp</a></td></tr>
+	<tr><td class="Bordered">SignalExpress</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/selcp" target="_blank">selcp</a></td></tr>
+	<tr><td class="Bordered">VeriStand</td><td class="Bordered"><a href="http://digital.ni.com/express.nsf/bycode/nivslifecycle" target="_blank">nivslifecycle</a></td></tr>
+</table><!--Important Information--><hr>
+
+<h2><a name="legal">法的情報</a></h2><!--Copyright--><p class="Body"><strong>著作権</strong></p>
+<p class="Body">&copy; 2003-2019 National Instruments. All rights reserved.</p>
+
+<p class="Body">著作権法に基づき、National Instruments Corporationの書面による事前の許可なく、本書のすべて又は一部を写真複写、記録、情報検索システムへの保存、及び翻訳を含め、電子的又は機械的ないかなる形式によっても複製又は転載することを禁止します。</p>
+
+<p class="Body">NIは他者の知的財産を尊重しており、お客様も同様の方針に従われますようお願いいたします。NIソフトウェアは著作権法その他知的財産権に関する法律により保護されています。NIソフトウェアを用いて他者に帰属するソフトウェアその他のマテリアルを複製することは、適用あるライセンスの条件その他の法的規制に従ってそのマテリアルを複製できる場合に限り可能であるものとします。</p>
+
+<p class="Body"><strong>エンドユーザ使用許諾契約及び他社製品の法的注意事項</strong></p>
+<p class="Body">エンドユーザ使用許諾契約 (EULA) 及び他社製品の法的注意事項はインストール後の以下の場所にあります。</p><ul><li>注意事項は、<span class="Monospace">&lt;National Instruments&gt;&yen;_Legal Information</span>及び<span class="Monospace">&lt;National Instruments&gt;</span>ディレクトリにあります。</li>
+	<li>EULAは、<span class="Monospace">&lt;National Instruments&gt;&yen;Shared&yen;MDF&yen;Legal&yen;license</span>ディレクトリにあります。</li>
+	<li>NI製品で作成したインストーラに法律情報を組み込む方法については、<span class="Monospace">&lt;National Instruments&gt;&yen;_Legal Information.txt</span>を確認してください。</li></ul><p><strong>米国政府の権利の制限</strong></p>
+<p>お客様が米国政府の機関、省又はその他の事業体 (「米国政府」と総称する) である場合、本書に記載の技術データの使用、複製、再製、公表、修正、開示又は転送は、民間機関用の連邦調達規則52.227-14と軍事機関用の国防省連邦調達規則補足252.227-7014及び252.227-7015に基づく限定権利条項の適用を受けます。</p>
+<p><strong>IVI Foundation Copyright Notice</strong></p>
+
+<p><span class="DNL">Content from the IVI specifications reproduced with permission from the IVI Foundation.</span></p>
+
+<p><span class="DNL">The IVI Foundation and its member companies make no warranty of any kind with regard to this material, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. The IVI Foundation and its member companies shall not be liable for errors contained herein or for incidental or consequential damages in connection with the furnishing, performance, or use of this material.</span></p><!--Trademarks--><p class="Body"><strong>商標</strong></p>
+
+
+<p class="Body"><span class="DNL">NI</span>の商標については、<em></em><span class="DNL">NI Trademarks and Logo Guidelines</span> (<a href="http://digital.ni.com/express.nsf/bycode/rdtrad" target="_blank"><span class="DNL">ni.com/trademarks</span></a>) を参照してください。本書中に記載されたその他の製品名及び企業名は、それぞれの企業の商標又は商号です。</p><!--Patents--><p class="Body"><strong>特許</strong></p>
+<p class="Body">NI製品を保護する特許については、ソフトウェアで参照できる特許情報 (<strong>ヘルプ&#8594;特許</strong>)、メディアに含まれている<span class="Monospace">patents.txt</span>ファイル、又は<a href="http://digital.ni.com/express.nsf/bycode/rdlv17ja" target="_blank">ni.com/patents/ja</a>からアクセスできる「ナショナルインスツルメンツ特許情報」<em></em>のうち、該当するリソースから参照してください。</p><!--end Windows Readme Boilerplate content--><p>375376H-0112</p>
+
+
+</body></html>

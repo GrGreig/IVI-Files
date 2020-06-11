@@ -1,0 +1,60 @@
+[Version]
+MajorVersion = 1
+MinorVersion = 0
+
+[TopologyInfo]
+Name = "SCXI-1191"
+Hardware = "SCXI-1191"
+SCXIDescriptorTail = "INSTR"
+
+[Characteristics]
+NumOfRows = 4
+NumOfCollumns = 16
+WireMode = 1
+
+[SwitchConfiguration]
+Close = ""
+Open = ""
+
+[InitialState]
+Open = ""
+Close = "sw0A,sw3B,sw0C,sw3D"
+;On the 1191,opening a relay won't change the actual hardware state of the relay. So listing
+;relays in the 'Open' string won't change the hardware state. Inorder to set the relays at 
+;power up state during niswitch_initialize, the appropriate relays in each of the pods 
+;are being closed.
+
+[ChannelList]
+Names = "ch0A,ch1A,ch2A,ch3A,comA,ch0B,ch1B,ch2B,ch3B,comB,ch0C,ch1C,ch2C,ch3C,comC,ch0D,ch1D,ch2D,ch3D,comD"
+
+[MuxList]
+comA = "ch0A,ch1A,ch2A,ch3A"
+comB = "ch0B,ch1B,ch2B,ch3B"
+comC = "ch0C,ch1C,ch2C,ch3C"
+comD = "ch0D,ch1D,ch2D,ch3D"
+
+[ConnectionList]
+ch0A->comA=sw0A
+ch1A->comA=sw1A
+ch2A->comA=sw2A
+ch3A->comA=sw3A
+
+ch0B->comB=sw0B
+ch1B->comB=sw1B
+ch2B->comB=sw2B
+ch3B->comB=sw3B
+
+ch0C->comC=sw0C
+ch1C->comC=sw1C
+ch2C->comC=sw2C
+ch3C->comC=sw3C
+
+ch0D->comD=sw0D
+ch1D->comD=sw1D
+ch2D->comD=sw2D
+ch3D->comD=sw3D
+
+[ChannelDescriptions]
+
+[RequiresSlot]
+	

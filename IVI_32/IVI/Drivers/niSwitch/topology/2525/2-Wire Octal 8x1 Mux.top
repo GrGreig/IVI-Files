@@ -1,0 +1,98 @@
+[InitialState]
+Open Line001 = "k0,k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21,k22,k23,k24,k25,k26,k27,k28,k29,"
+Open Line002 = "k30,k31,k32,k33,k34,k35,k36,k37,k38,k39,k40,k41,k42,k43,k44,k45,k46,k47,k48,k49,k50,k51,k52,k53,k54,k55,k56,"
+Open Line003 = "k57,k58,k59,k60,k61,k62,k63,kbc01,kbc23,kbc45,kbc67,kbc89,kbc1011,kbc1213,kbc1415,kbc02,kbc46,kbc810,kbc1214,"
+Open Line004 = "kbc04,kbc812,kbc08"
+Close Line001 = ""
+
+[ChannelList]
+Names Line001 = "ch0,ch1,ch2,ch3,ch4,ch5,ch6,ch7,ch8,ch9,ch10,ch11,ch12,ch13,ch14,ch15,ch16,ch17,ch18,ch19,ch20,ch21,ch22,ch23,"
+Names Line002 = "ch24,ch25,ch26,ch27,ch28,ch29,ch30,ch31,ch32,ch33,ch34,ch35,ch36,ch37,ch38,ch39,ch40,ch41,ch42,ch43,ch44,ch45,"
+Names Line003 = "ch46,ch47,ch48,ch49,ch50,ch51,ch52,ch53,ch54,ch55,ch56,ch57,ch58,ch59,ch60,ch61,ch62,ch63,com0,com2,com4,com6,"
+Names Line004 = "com8,com10,com12,com14"
+
+[MuxList]
+com0 Line001 = "ch0,ch1,ch2,ch3,ch4,ch5,ch6,ch7"
+
+com2 Line001 = "ch8,ch9,ch10,ch11,ch12,ch13,ch14,ch15"
+
+com4 Line001 = "ch16,ch17,ch18,ch19,ch20,ch21,ch22,ch23"
+
+com6 Line001 = "ch24,ch25,ch26,ch27,ch28,ch29,ch30,ch31"
+
+com8 Line001 = "ch32,ch33,ch34,ch35,ch36,ch37,ch38,ch39"
+
+com10 Line001 = "ch40,ch41,ch42,ch43,ch44,ch45,ch46,ch47"
+
+com12 Line001 = "ch48,ch49,ch50,ch51,ch52,ch53,ch54,ch55"
+
+com14 Line001 = "ch56,ch57,ch58,ch59,ch60,ch61,ch62,ch63"
+
+
+
+[ConnectionList]
+ch0->com0=k0
+ch1->com0=k1
+ch2->com0=k2
+ch3->com0=k3
+ch4->com0=k4,kbc01
+ch5->com0=k5,kbc01
+ch6->com0=k6,kbc01
+ch7->com0=k7,kbc01
+ch8->com2=k8
+ch9->com2=k9
+ch10->com2=k10
+ch11->com2=k11
+ch12->com2=k12,kbc23
+ch13->com2=k13,kbc23
+ch14->com2=k14,kbc23
+ch15->com2=k15,kbc23
+ch16->com4=k16
+ch17->com4=k17
+ch18->com4=k18
+ch19->com4=k19
+ch20->com4=k20,kbc45
+ch21->com4=k21,kbc45
+ch22->com4=k22,kbc45
+ch23->com4=k23,kbc45
+ch24->com6=k24
+ch25->com6=k25
+ch26->com6=k26
+ch27->com6=k27
+ch28->com6=k28,kbc67
+ch29->com6=k29,kbc67
+ch30->com6=k30,kbc67
+ch31->com6=k31,kbc67
+ch32->com8=k32
+ch33->com8=k33
+ch34->com8=k34
+ch35->com8=k35
+ch36->com8=k36,kbc89
+ch37->com8=k37,kbc89
+ch38->com8=k38,kbc89
+ch39->com8=k39,kbc89
+ch40->com10=k40
+ch41->com10=k41
+ch42->com10=k42
+ch43->com10=k43
+ch44->com10=k44,kbc1011
+ch45->com10=k45,kbc1011
+ch46->com10=k46,kbc1011
+ch47->com10=k47,kbc1011
+ch48->com12=k48
+ch49->com12=k49
+ch50->com12=k50
+ch51->com12=k51
+ch52->com12=k52,kbc1213
+ch53->com12=k53,kbc1213
+ch54->com12=k54,kbc1213
+ch55->com12=k55,kbc1213
+ch56->com14=k56
+ch57->com14=k57
+ch58->com14=k58
+ch59->com14=k59
+ch60->com14=k60,kbc1415
+ch61->com14=k61,kbc1415
+ch62->com14=k62,kbc1415
+ch63->com14=k63,kbc1415
+

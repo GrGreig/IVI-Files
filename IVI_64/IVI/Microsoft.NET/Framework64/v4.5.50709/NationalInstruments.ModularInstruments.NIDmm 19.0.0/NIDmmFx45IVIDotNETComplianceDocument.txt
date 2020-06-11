@@ -1,0 +1,114 @@
+
+IVI Compliance Category:
+-----------------------
+
+IVI.NET IviDmm Specific Instrument Driver
+Class Specification version:              4.1
+IVI Generation:                           IVI-2014
+Group Capabilities Supported:
+
+IviDmmBase                              = Supported
+IviDmmACMeasurement                     = Supported
+IviDmmFrequencyMeasurement              = Supported
+IviDmmTemperatureMeasurement            = Not Supported
+IviDmmThermocouple                      = Not Supported
+IviDmmResistanceTemperatureDevice       = Not Supported
+IviDmmThermistor                        = Not Supported
+IviDmmMultiPoint                        = Supported
+IviDmmTriggerSlope                      = Supported
+IviDmmSoftwareTrigger                   = Supported
+IviDmmDeviceInfo                        = Supported
+IviDmmAutoRangeValue                    = Supported
+IviDmmAutoZero                          = Supported
+IviDmmPowerLineFrequency                = Supported
+
+
+
+Optional Features:
+------------------
+
+Interchangeability Checking             = True
+State Caching                           = True
+Coercion Recording                      = True
+
+
+
+Driver Identification:
+-----------------------
+
+Driver Revision:                19.0
+Driver Vendor:                  National Instruments
+Component Identifier:           niDMM
+Description:                    National Instruments Digital Multimeters Driver
+
+
+
+Hardware Information:
+--------------------
+
+Instrument Manufacturer:        National Instruments
+Supported Instrument Models:    NI PCI-4065, NI PCIe-4065, NI PXI-4065, NI USB-4065,
+                                NI PCI-4070, NI PXI-4070, NI PXI-4071, NI PXI-4072,
+                                NI PXIe-4080, NI PXIe-4081, NI PXIe-4082
+
+Supported Bus Interfaces:       PCI, PCIe, PXI, PXIe, USB
+
+
+
+32-bit Software Information:
+-----------------------
+
+Supported Operating Systems:         Windows Server 2008 R2 (64-bit),
+                                     Windows Server 2012 R2 (64-bit),
+                                     Windows 7 (32-bit and 64-bit),
+                                     Windows 8.1 (32-bit and 64-bit),
+                                     Windows 10 (32-bit and 64-bit)
+Unsupported Operating Systems:       N/A
+.NET Minimum Runtime Version:        4.5
+Source Code Availability:            Source code is not available
+
+
+
+64-bit Software Information:
+-----------------------
+
+Supported Operating Systems:         Windows Server 2008 R2 (64-bit),
+                                     Windows Server 2012 R2 (64-bit),
+                                     Windows 7 (64-bit),
+                                     Windows 8.1 (64-bit),
+                                     Windows 10 (64-bit)
+Unsupported Operating Systems:       N/A
+.NET Minimum Runtime Version:        4.5
+Source Code Availability:            Source code is not available
+
+
+
+Unit Testing:
+------------
+
+Test Setup 1:
+
+Instrument Model (Firmware Revision):   NI-DMM PXI-4071 (Rev L)
+Bus Interface:                          PXI
+Operating System (Service Pack):        Windows 7 (SP1)
+OS Bitness/Application Bitness:         32-bit/32-bit, 64-bit/64-bit
+VISA Vendor and Version:                NI-VISA 15.2
+IVI .NET Shared Components Version:     1.4
+
+
+Driver Installation Testing:
+---------------------------
+
+Operating System (Service Pack):        Windows 7 (SP1)
+OS Bitness:                             32-bit and 64-bit
+
+
+Driver Test Failures:
+--------------------
+
+Known Issues:                           None
+
+Note:
+National Instruments has evaluated and/or tested this driver to verify that it meets all applicable requirements of the IVI specifications
+at the time this compliance document was submitted to the IVI Foundation and agrees to abide by the dispute arbitration provisions
+in Section 7 of IVI-1.2: Operating Procedures, if the IVI Foundation finds this driver to be non-conformant.

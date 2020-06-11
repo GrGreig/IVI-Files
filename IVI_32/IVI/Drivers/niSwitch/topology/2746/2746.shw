@@ -1,0 +1,17 @@
+[SwitchNames]
+k01a = 0
+k23a = 16
+k01b = 32
+k23b = 48
+kcoma = 64
+kcomb = 80
+k01c = 128
+k23c = 144
+k01d = 160
+k23d = 176
+kcomc = 192
+kcomd = 208
+
+[Misc]
+isNonLatchingSwitch = 0
+relayClosedCounting = 0

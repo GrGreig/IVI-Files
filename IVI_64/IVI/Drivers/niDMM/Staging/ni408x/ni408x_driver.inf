@@ -1,0 +1,100 @@
+; Copyright 2019 National Instruments Corporation
+;
+; ni408x_driver.inf
+;
+
+
+[Version]
+Signature=$WINDOWS NT$
+Class=%ni408x_driver_className%
+ClassGUID={7879b421-e3e1-42e6-87da-9fc2dcfb4736}
+Provider=%NIString0%
+DriverVer=08/07/2019,19.1.0.49152
+CatalogFile=ni408x_driver.cat
+DriverPackageDisplayName=%ni408x_driver_SvcDesc%
+
+[ClassInstall32]
+AddReg=AddClassToRegistry
+
+[ControlFlags]
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_76521093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_76D81093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_76D91093
+
+[Manufacturer]
+%NIString0%=pci_Model,NTx86,NTamd64
+
+[pci_Model.NTx86]
+%dev0_dDesc%=dev0_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76521093
+%dev1_dDesc%=dev1_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76D81093
+%dev2_dDesc%=dev2_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76D91093
+
+[pci_Model.NTamd64]
+%dev0_dDesc%=dev0_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76521093
+%dev1_dDesc%=dev1_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76D81093
+%dev2_dDesc%=dev2_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_76D91093
+
+[dev0_Cfg]
+CopyFiles=ni408x_driver_CopyFiles
+
+[dev0_Cfg.Services]
+AddService= ni408x_driver, 0x00000002, ni408x_driver_Service_Inst
+
+
+
+[dev1_Cfg]
+CopyFiles=ni408x_driver_CopyFiles
+
+[dev1_Cfg.Services]
+AddService= ni408x_driver, 0x00000002, ni408x_driver_Service_Inst
+
+
+
+[dev2_Cfg]
+CopyFiles=ni408x_driver_CopyFiles
+
+[dev2_Cfg.Services]
+AddService= ni408x_driver, 0x00000002, ni408x_driver_Service_Inst
+
+
+
+
+
+
+[ni408x_driver_CopyFiles]
+ni408x_driver.sys
+
+[SourceDisksFiles]
+ni408x_driver.sys=1
+
+[SourceDisksNames]
+1=%installationMedia%
+
+[DestinationDirs]
+DefaultDestDir=12
+
+[AddClassToRegistry]
+HKR,,,0,%ni408x_driver_classDisplayName%
+HKR,,EnumPropPages32,,niMIDeviceIcon.dll
+HKR,,Icon,,101
+
+[ni408x_driver_Service_Inst]
+DisplayName    = %ni408x_driver_SvcDesc%
+ServiceType    = 1        ; SERVICE_KERNEL_DRIVER
+StartType      = 3        ; SERVICE_DEMAND_START
+ErrorControl   = 1        ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\ni408x_driver.sys
+LoadOrderGroup = Base
+
+[Strings]
+NIString0            = "National Instruments"
+dev0_dDesc        = "NI PXIe-4080"
+dev1_dDesc        = "NI PXIe-4081"
+dev2_dDesc        = "NI PXIe-4082"
+ni408x_driver_className = "MIDevice"
+ni408x_driver_SvcDesc      = "NI PXIe-408x driver"
+installationMedia    = "Installation Media"
+ni408x_driver_classDisplayName = "NI Modular Instruments"
+
+
+

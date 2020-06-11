@@ -1,0 +1,49 @@
+[Version]
+MajorVersion = 1
+MinorVersion = 0
+
+[TopologyInfo]
+Name = "PXI-2590 1-Wire MUX"
+Hardware = "PXI-2590"
+
+[Characteristics]
+NumOfRows = 1
+NumOfColumns = 4
+WireMode = 1
+
+[SwitchConfiguration]
+Close = ""
+Open = ""
+
+[InitialState]
+Open = "mux01,mux0123,mux23"
+Close = ""
+
+[ChannelList]
+Names = "ch0,ch1,ch2,ch3,com"
+
+[ConnectionList]
+ch0->com=""
+ch1->com=""
+ch2->com=""
+ch3->com=""
+
+[LazyOpenConectionList]
+ch0->com=mux01,mux0123
+ch1->com=mux0123
+ch2->com=mux23
+
+[LazyCloseConectionList]
+ch1->com=mux01
+ch2->com=mux0123
+ch3->com=mux23,mux0123
+
+[MuxList]
+com="ch0,ch1,ch2,ch3"
+
+[ChannelDescriptions]
+ch0="Channel 0"
+ch1="Channel 1"
+ch2="Channel 2"
+ch3="Channel 3"
+com="Common"

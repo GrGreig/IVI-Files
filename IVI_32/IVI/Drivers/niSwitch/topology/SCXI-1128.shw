@@ -1,0 +1,127 @@
+[Version]
+MajorVersion = 1
+MinorVersion = 0
+
+[HardwareInfo]
+Name = "SCXI-1128"
+
+[Hardware]
+Bus = SCXI
+Model = 0x346
+
+[Characteristics]
+Bandwidth = 1500000.0
+MaxDcVoltage = 250.0
+MaxAcVoltage = 250.0
+MaxSwitchingAcCurrent = 0.03
+MaxSwitchingDcCurrent = 0.03
+MaxCarryAcCurrent = 0.03
+MaxCarryDcCurrent = 0.03
+MaxSwitchingAcPower = 0.3
+MaxSwitchingDcPower = 0.3
+MaxCarryAcPower = 0.3
+MaxCarryDcPower = 0.3
+CharacteristicImpedance = 1200
+SettlingTime = 0.5
+
+[Registers]
+;SettlingTime is in micro-seconds
+SettlingTime = 500
+ClockPeriod = 62.5E-9
+SupportsDebounce = 1
+;when scanning, module is break before make ONLY
+BBMonly	= 1
+
+[SwitchNames]
+ch0 = 0
+ch1 = 1
+ch2 = 2
+ch3 = 3
+ch4 = 4
+ch5 = 5
+ch6 = 6
+ch7 = 7
+ch8 = 8
+ch9 = 9
+ch10 = 10
+ch11 = 11
+ch12 = 12
+ch13 = 13
+ch14 = 14
+ch15 = 15
+ch16 = 16
+ch17 = 17
+ch18 = 18
+ch19 = 19
+ch20 = 20
+ch21 = 21
+ch22 = 22
+ch23 = 23
+ch24 = 24
+ch25 = 25
+ch26 = 26
+ch27 = 27
+ch28 = 28
+ch29 = 29
+ch30 = 30
+ch31 = 31
+;Switches 32 to 63 do not exist, but we pretend they do so that 1 wire scanning will work.
+ch32 = 32
+ch33 = 33
+ch34 = 34
+ch35 = 35
+ch36 = 36
+ch37 = 37
+ch38 = 38
+ch39 = 39
+ch40 = 40
+ch41 = 41
+ch42 = 42
+ch43 = 43
+ch44 = 44
+ch45 = 45
+ch46 = 46
+ch47 = 47
+ch48 = 48
+ch49 = 49
+ch50 = 50
+ch51 = 51
+ch52 = 52
+ch53 = 53
+ch54 = 54
+ch55 = 55
+ch56 = 56
+ch57 = 57
+ch58 = 58
+ch59 = 59
+ch60 = 60
+ch61 = 61
+ch62 = 62
+ch63 = 63
+
+bc01  = 101
+bc23  = 102
+bc02  = 123
+cjtemp   = 99
+
+; Selects 1-wire or 2-wire mode
+1wire    = 264
+; Selects + and - signals for 1 wire mode
+hlselect = 265
+
+ab0      = 150
+ab1      = 151
+ab2      = 152
+ab3      = 153
+
+[SCXISwitchNumbers]
+;Only list those switches that have been renumbered below 512
+bc01  = 501
+bc23  = 523
+bc02  = 502
+cjtemp   = 32768
+
+ab0      = 600
+ab1      = 601
+ab2      = 602
+ab3      = 603

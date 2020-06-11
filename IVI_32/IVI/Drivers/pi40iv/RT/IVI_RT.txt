@@ -1,0 +1,13 @@
+*****************************************************************************
+*  Pickering PXI IVI-RT Switch Driver - pi40ivrt32
+* ---------------------------------------------------------------------------                                           
+*  Copyright - 2003. Pickering Interfaces Ltd. - www.pickeringtest.com
+*
+*****************************************************************************
+
+Copy pi40ivrt32.dll 	to	 \ni-rt\system Folder
+
+
+To use it with LabVIEW RT
+
+Copy LabVIEW\pi40ivrt 	to 	 Program Files\National Instruments\LabVIEW (version)\instr.lib folder 

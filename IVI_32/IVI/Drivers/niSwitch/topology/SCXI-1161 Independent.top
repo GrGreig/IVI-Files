@@ -1,0 +1,78 @@
+[Version]
+MajorVersion = 1
+MinorVersion = 0
+
+[TopologyInfo]
+Name = "SCXI-1161 Independent"
+Hardware = "SCXI-1161"
+SCXIDescriptorTail = "INSTR"
+
+[Characteristics]
+NumOfRows = 1
+NumOfColumns = 32
+WireMode = 1
+
+[SwitchConfiguration]
+Close = ""
+Open = ""
+
+[InitialState]
+Open = ""
+;Open = "ch0,ch1,ch2,ch3,ch4,ch5,ch6,ch7"
+Close = ""
+
+[ChannelList]
+Names = "nc0,no0,com0,nc1,no1,com1,nc2,no2,com2,nc3,no3,com3,nc4,no4,com4,nc5,no5,com5,nc6,no6,com6,nc7,no7,com7"
+
+[MuxList]
+com0="nc0,no0"
+com1="nc1,no1"
+com2="nc2,no2"
+com3="nc3,no3"
+com4="nc4,no4"
+com5="nc5,no5"
+com6="nc6,no6"
+com7="nc7,no7"
+                
+[LazyCloseConectionList]
+no0->com0 = ch0
+no1->com1 = ch1
+no2->com2 = ch2
+no3->com3 = ch3
+no4->com4 = ch4
+no5->com5 = ch5
+no6->com6 = ch6
+no7->com7 = ch7
+
+[LazyOpenConectionList]
+nc0->com0 = ch0
+nc1->com1 = ch1
+nc2->com2 = ch2
+nc3->com3 = ch3
+nc4->com4 = ch4
+nc5->com5 = ch5
+nc6->com6 = ch6
+nc7->com7 = ch7
+
+[ConnectionList]
+no0->com0 = ""
+no1->com1 = ""
+no2->com2 = ""
+no3->com3 = ""
+no4->com4 = ""
+no5->com5 = ""
+no6->com6 = ""
+no7->com7 = ""
+nc0->com0 = ""
+nc1->com1 = ""
+nc2->com2 = ""
+nc3->com3 = ""
+nc4->com4 = ""
+nc5->com5 = ""
+nc6->com6 = ""
+nc7->com7 = ""
+
+[ChannelDescriptions]
+
+[RequiresSlot]
+

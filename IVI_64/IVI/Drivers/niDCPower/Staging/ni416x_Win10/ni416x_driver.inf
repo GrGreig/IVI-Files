@@ -1,0 +1,88 @@
+; Copyright 2019 National Instruments Corporation
+;
+; ni416x_driver.inf
+;
+
+
+[Version]
+Signature=$WINDOWS NT$
+Class=%ni416x_driver_className%
+ClassGUID={7879b421-e3e1-42e6-87da-9fc2dcfb4736}
+Provider=%NIString0%
+DriverVer=08/08/2019,19.1.0.49152
+CatalogFile=ni416x_driver.cat
+DriverPackageDisplayName=%ni416x_driver_SvcDesc%
+
+[ClassInstall32]
+AddReg=AddClassToRegistry
+
+[ControlFlags]
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_786F1093
+ExcludeFromSelect=PCI\VEN_1093&DEV_C4C4&SUBSYS_78FF1093
+
+[Manufacturer]
+%NIString0%=pci_Model,NTx86,NTamd64
+
+[pci_Model.NTx86]
+%dev0_dDesc%=dev0_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_786F1093
+%dev1_dDesc%=dev1_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_78FF1093
+
+[pci_Model.NTamd64]
+%dev0_dDesc%=dev0_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_786F1093
+%dev1_dDesc%=dev1_Cfg, PCI\VEN_1093&DEV_C4C4&SUBSYS_78FF1093
+
+[dev0_Cfg]
+CopyFiles=ni416x_driver_CopyFiles
+
+[dev0_Cfg.Services]
+AddService= ni416x_driver, 0x00000002, ni416x_driver_Service_Inst
+
+
+
+[dev1_Cfg]
+CopyFiles=ni416x_driver_CopyFiles
+
+[dev1_Cfg.Services]
+AddService= ni416x_driver, 0x00000002, ni416x_driver_Service_Inst
+
+
+
+
+
+
+[ni416x_driver_CopyFiles]
+ni416x_driver.sys
+
+[SourceDisksFiles]
+ni416x_driver.sys=1
+
+[SourceDisksNames]
+1=%installationMedia%
+
+[DestinationDirs]
+DefaultDestDir=12
+
+[AddClassToRegistry]
+HKR,,,0,%ni416x_driver_classDisplayName%
+HKR,,EnumPropPages32,,niMIDeviceIcon.dll
+HKR,,Icon,,101
+
+[ni416x_driver_Service_Inst]
+DisplayName    = %ni416x_driver_SvcDesc%
+ServiceType    = 1        ; SERVICE_KERNEL_DRIVER
+StartType      = 3        ; SERVICE_DEMAND_START
+ErrorControl   = 1        ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\ni416x_driver.sys
+LoadOrderGroup = Base
+
+[Strings]
+NIString0            = "National Instruments"
+dev0_dDesc        = "NI PXIe-4163"
+dev1_dDesc        = "NI PXIe-4162"
+ni416x_driver_className = "MIDevice"
+ni416x_driver_SvcDesc      = "NI PXIe-416x driver"
+installationMedia    = "Installation Media"
+ni416x_driver_classDisplayName = "NI Modular Instruments"
+
+
+

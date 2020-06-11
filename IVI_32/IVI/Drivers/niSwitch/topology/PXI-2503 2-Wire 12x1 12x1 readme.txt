@@ -1,0 +1,1 @@
+The "PXI-2503 2-Wire 12x1 12x1.top" file is used to configure the PXI-2503 as two independant 12x1 two-wire multiplexers.  Channels 0-11 will connect to common0 and channels 12-23 will connect to common2.  Configuration of the PXI-2503 can be done in T&M explorer, or using the init_with_options function.
